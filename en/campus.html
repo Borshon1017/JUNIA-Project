@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Discover JUNIA's 3 campuses: Lille, Bordeaux and Châteauroux. Accommodation, transport, student life, services and facilities. Everything you need to prepare your arrival.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Campuses — JUNIA, School of Transitions</title>
+<link rel="stylesheet" href="../page.css">
+<style>
+.campus-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;margin-top:2.8rem;}
+.c-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);transition:all .3s var(--ease);}
+.c-card:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(63,42,86,.1);}
+.c-top{height:150px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:1.3rem;}
+.c-abbr{position:absolute;top:.7rem;right:1rem;font-size:2.8rem;font-weight:900;color:rgba(255,255,255,.1);line-height:1;}
+.c-tag{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.28rem;position:relative;z-index:1;}
+.c-name{font-size:1.2rem;font-weight:900;color:#fff;position:relative;z-index:1;}
+.c-body{background:var(--w);padding:1.5rem;}
+.c-desc{font-size:.88rem;color:var(--im);line-height:1.65;margin-bottom:1.1rem;}
+.c-services{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem;}
+.c-srv{background:var(--ps);color:var(--p);font-size:.67rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;}
+.c-links{display:flex;flex-direction:column;gap:.4rem;}
+.c-link{font-size:.82rem;font-weight:600;color:var(--p);text-decoration:none;display:flex;align-items:center;gap:.35rem;}
+.c-link:hover{text-decoration:underline;}
+.c-lille{background:#2a1a3a;}
+.c-bx{background:#3a1a08;}
+.c-ch{background:#1a3020;}
+@media(max-width:900px){.campus-hero-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body><nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Education</a></li>
+    <li><a href="programmes.html">Programs</a></li>
+    <li><a href="ecole.html">The School</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Companies</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Search" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search programmes, campus…" autocomplete="off" aria-label="Search">
+        <button class="search-clear" id="searchClear" aria-label="Clear">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Search suggestions"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch to French">EN / FR</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Apply →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <span class="cur">Student Life &amp; Campus</span>
+</div>
+<section class="page-hero hero-campus">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-in">
+    <div class="eyebrow">Student Life &amp; Campus</div>
+    <h1>Making the most of<br>your student experience</h1>
+    <p class="sub">JUNIA has 3 campuses — Lille, Bordeaux and Châteauroux — each offering a complete student environment: accommodation, transport, student associations, facilities and health services.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Meet our teams →</a>
+      <a href="campus.html#support" class="btn btn-gw btn-lg">Student services</a>
+    </div>
+  </div>
+</section>
+<a id="lille"></a>
+<section class="content-sec">
+  <span class="slbl rv">Our campuses</span>
+  <h2 class="sttl rv">3 campuses to study in France</h2>
+  <p class="ssub rv">JUNIA is present on 3 campuses in France. Each campus provides a complete study environment with modern facilities and an active student life.</p>
+  <div class="campus-hero-grid rv">
+    <div class="c-card">
+      <div class="c-top c-lille">
+        <div class="c-abbr">LIL</div>
+        <div class="c-tag">Main campus · Northern France</div>
+        <div class="c-name">Lille Campus</div>
+      </div>
+      <div class="c-body">
+        <p class="c-desc">Lille campus is JUNIA's historic and main campus. Located in the greater Lille area, it hosts all three HEI, ISEN and ISA programmes. Lille is a vibrant student city, capital of Hauts-de-France, 1h from Paris and 30 min from Brussels by train.</p>
+        <div class="c-services">
+          <span class="c-srv">HEI · ISEN · ISA</span><span class="c-srv">Accommodation</span>
+          <span class="c-srv">Transport</span><span class="c-srv">Healthcare</span><span class="c-srv">Student clubs</span>
+        </div>
+        <div class="c-links">
+          <a href="campus.html#lille" class="c-link">→ Discover the campus and city</a>
+          <a href="campus.html#lille" class="c-link">→ Accommodation in Lille</a>
+          <a href="campus.html#lille" class="c-link">→ Public transport</a>
+          <a href="campus.html#lille" class="c-link">→ Student associations</a>
+          <a href="contact.html" class="c-link">→ Meet our teams in Lille</a>
+        </div>
+      </div>
+    </div>
+    <div class="c-card">
+      <div class="c-top c-bx">
+        <div class="c-abbr">BDX</div>
+        <div class="c-tag">Campus · South-West France</div>
+        <div class="c-name">Bordeaux Campus</div>
+      </div>
+      <div class="c-body">
+        <p class="c-desc">Bordeaux campus welcomes JUNIA students in the Bordeaux metropolitan area, renowned for its quality of life and economic dynamism. Bordeaux is an attractive city close to the Atlantic and Pyrenees, with a strong industrial and technology ecosystem.</p>
+        <div class="c-services">
+          <span class="c-srv">Accommodation</span><span class="c-srv">Transport</span>
+          <span class="c-srv">Student life</span><span class="c-srv">Facilities</span>
+        </div>
+        <div class="c-links">
+          <a href="campus.html#bordeaux" class="c-link">→ Discover the campus and city</a>
+          <a href="campus.html#bordeaux" class="c-link">→ Accommodation in Bordeaux</a>
+          <a href="contact.html" class="c-link">→ Meet our teams in Bordeaux</a>
+        </div>
+      </div>
+    </div>
+    <div class="c-card">
+      <div class="c-top c-ch">
+        <div class="c-abbr">CHX</div>
+        <div class="c-tag">Campus · Indre · Châteauroux</div>
+        <div class="c-name">Châteauroux Campus</div>
+      </div>
+      <div class="c-body">
+        <p class="c-desc">The Châteauroux campus offers a calmer, human-scale study environment. Located in the Indre department, it is particularly suited to ISA programme students. A campus focused on nature, agricultural research and the environment.</p>
+        <div class="c-services">
+          <span class="c-srv">ISA</span><span class="c-srv">Accommodation</span>
+          <span class="c-srv">Nature</span><span class="c-srv">Research</span>
+        </div>
+        <div class="c-links">
+          <a href="campus.html#chateauroux" class="c-link">→ Discover the campus</a>
+          <a href="contact.html" class="c-link">→ Meet our teams in Châteauroux</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<a id="support"></a>
+<section class="content-sec alt">
+  <span class="slbl rv">Student services</span>
+  <h2 class="sttl rv">Support for all students</h2>
+  <p class="ssub rv">JUNIA offers a comprehensive range of services to support students throughout their studies.</p>
+  <div class="card-grid rv">
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="card-ttl">Accommodation</div><div class="card-txt">Student residences, private apartments, colocation: JUNIA helps you find accommodation on and around each campus. International students receive specific support.</div></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="1" y="3" width="22" height="15" rx="2"/><path d="M1 9h22"/><path d="M5 3v6M19 3v6"/><circle cx="7" cy="21" r="1"/><circle cx="17" cy="21" r="1"/><path d="M5 18v3M19 18v3"/></svg></div><div class="card-ttl">Transport</div><div class="card-txt">Each campus is well connected to the city and region by public transport. Cycling facilities and car parks are also available on campus.</div></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M3 9h18"/><path d="M3 15h18"/><line x1="12" y1="6" x2="12" y2="18"/></svg></div><div class="card-ttl">Health &amp; well-being</div><div class="card-txt">A health service is available on each campus: GP, psychologist, nurse. JUNIA is committed to the physical and mental well-being of all students.</div></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="card-ttl">Student associations</div><div class="card-txt">More than 40 student associations on all campuses: sport, culture, humanitarian, entrepreneurship. A rich and diverse student life.</div></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="4" r="2"/><path d="M5 9l7-2 7 2"/><path d="M9 22V12l3-2 3 2v10"/><path d="M7 22l2-7"/><path d="M17 22l-2-7"/></svg></div><div class="card-ttl">Disability mission</div><div class="card-txt">JUNIA has a dedicated disability mission. Specific arrangements are available for students with disabilities: facilities, academic adjustments, dedicated support.</div></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12"/><path d="M12 12h.01"/></svg></div><div class="card-ttl">Career Centre</div><div class="card-txt">The Career Centre accompanies students from year 1 in their professional project: CV workshops, interview preparation, job fairs, networking events.</div></div>
+  </div>
+</section>
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Come and visit our campuses</h2>
+    <p>Open Days in Lille, Bordeaux and Châteauroux. Meet our teams and students and discover life on campus in person.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Open Days &amp; contacts →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Apply</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Engineering School. JUNIA brings together HEI, ISEN and ISA to train engineers for energy, digital and environmental transitions. Present in Lille, Bordeaux and Châteauroux since 1885.</p>
+      <div class="feco">Eco-designed site · A+ Carbon Score</div>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Energy &amp; Industry</a></li>
+        <li><a href="isen.html">ISEN — Digital &amp; AI</a></li>
+        <li><a href="isa.html">ISA — Agriculture</a></li>
+        <li><a href="formations.html">All programmes</a></li>
+        <li><a href="admissions.html">Apply</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">The School</div>
+      <ul class="flinks">
+        <li><a href="ecole.html">Our values</a></li>
+        <li><a href="campus.html">Our campuses</a></li>
+        <li><a href="ecole.html">CSR Policy</a></li>
+        <li><a href="ecole.html">JUNIA Alumni</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="admissions.html">Applications</a></li>
+        <li><a href="entreprises.html">Companies</a></li>
+        <li><a href="international.html">International</a></li>
+        <li><a href="accessibilite.html">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — School of Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks">
+      <a href="mentions-legales.html">Legal notices</a>
+      <a href="confidentialite.html">Privacy</a>
+      <a href="index.html">Home</a>
+    </div>
+  </div>
+</footer>
+<script src="../page.js"></script>
+<script src="en-page.js"></script>
+<script>
+(function(){
+  var btn = document.getElementById('langToggle');
+  if(btn) btn.addEventListener('click', function(){ window.location.href='../campus.html'; });
+})();
+</script>
+</body>
+</html>

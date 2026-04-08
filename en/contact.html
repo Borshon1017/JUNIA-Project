@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>Contact — JUNIA</title>
+<link rel="stylesheet" href="../page.css">
+<link rel="alternate" hreflang="fr" href="../contact.html">
+<link rel="alternate" hreflang="en" href="contact.html">
+<style>
+.contact-layout{display:grid;grid-template-columns:1fr 360px;gap:3rem;align-items:start;}
+.form-section{background:var(--w);border-radius:var(--r);border:1px solid var(--br);padding:2.4rem;}
+.form-section h2{font-size:1.45rem;font-weight:900;color:var(--ink);letter-spacing:-.03em;margin-bottom:.35rem;}
+.form-intro{font-size:.92rem;color:var(--im);line-height:1.7;margin-bottom:2rem;}
+.fgrp{margin-bottom:1.15rem;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.fgrp label{display:block;font-size:.8rem;font-weight:700;color:var(--ink);margin-bottom:.36rem;}
+.fgrp label .req{color:var(--c);margin-left:2px;}
+.fgrp input,.fgrp select,.fgrp textarea{width:100%;font-family:var(--fh);font-size:.87rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--br);border-radius:10px;padding:.6rem .82rem;outline:none;transition:border-color .18s,box-shadow .18s;}
+.fgrp input:focus,.fgrp select:focus,.fgrp textarea:focus{border-color:var(--p);box-shadow:0 0 0 3px rgba(63,42,86,.1);}
+.fgrp textarea{resize:vertical;min-height:110px;line-height:1.6;}
+.fgrp select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7070' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right .82rem center;padding-right:2.2rem;cursor:pointer;}
+.fgrp.hidden{display:none;}
+.radio-inline{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:.35rem;}
+.radio-stack{display:flex;flex-direction:column;gap:.55rem;margin-top:.35rem;}
+.ri{display:flex;align-items:flex-start;gap:.5rem;cursor:pointer;}
+.ri input{width:16px;height:16px;flex-shrink:0;margin-top:2px;accent-color:var(--p);cursor:pointer;}
+.ri span{font-size:.86rem;color:var(--is);line-height:1.5;}
+.fdivider{height:1px;background:var(--br);margin:1.5rem 0;}
+.fsec-title{font-size:.68rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--c);margin-bottom:1rem;display:block;}
+.gdpr-box{background:var(--bg);border:1px solid var(--br);border-radius:10px;padding:1rem 1.1rem;font-size:.77rem;color:var(--im);line-height:1.65;margin-top:.5rem;}
+.gdpr-box a{color:var(--p);}
+.submit-btn{width:100%;background:var(--c);color:#fff;font-family:var(--fh);font-size:.95rem;font-weight:700;border:none;border-radius:99px;padding:.88rem 2rem;cursor:pointer;transition:all .22s;margin-top:1.2rem;letter-spacing:.01em;}
+.submit-btn:hover{background:var(--cd);transform:translateY(-2px);box-shadow:0 8px 22px rgba(255,92,57,.3);}
+.contact-sidebar{display:flex;flex-direction:column;gap:1rem;}
+.cc{background:var(--w);border:1px solid var(--br);border-radius:var(--r);padding:1.5rem;}
+.cc-ico{width:40px;height:40px;border-radius:10px;background:var(--ps);display:flex;align-items:center;justify-content:center;margin-bottom:.75rem;flex-shrink:0;}
+.cc-ico svg{width:20px;height:20px;color:var(--p);}
+.cc-ico-sym{font-size:1.2rem;font-weight:900;color:var(--p);line-height:1;}
+.cc-title{font-size:.93rem;font-weight:800;color:var(--ink);margin-bottom:.3rem;}
+.cc-text{font-size:.83rem;color:var(--im);line-height:1.6;}
+.cc-tel{font-size:.93rem;font-weight:700;color:var(--p);margin-top:.5rem;display:block;text-decoration:none;}
+.cc-tel:hover{color:var(--pm);}
+.cc-addr{font-size:.82rem;color:var(--im);line-height:1.7;margin-top:.35rem;}
+@media(max-width:880px){.contact-layout{grid-template-columns:1fr;}.frow{grid-template-columns:1fr;}}
+@media(max-width:480px){.form-section{padding:1.3rem;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Education</a></li>
+    <li><a href="programmes.html">Programs</a></li>
+    <li><a href="ecole.html">The School</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Companies</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Search" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search programmes, campus..." autocomplete="off" aria-label="Search">
+        <button class="search-clear" id="searchClear" aria-label="Clear">&#x2715;</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Search suggestions"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch to French">EN / FR</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Apply &#x2192;</a>
+  </div>
+  <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">&#x203A;</span>
+  <span class="cur">Contact</span>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-in">
+    <div class="eyebrow">Contact us</div>
+    <h1>Would you like to get<br>in touch with our teams?</h1>
+    <p class="sub">Fill in your details in the form below. We will respond by connecting you with the right person as quickly as possible.</p>
+  </div>
+</section>
+
+<section class="content-sec">
+  <span class="slbl rv">Direct contacts</span>
+  <h2 class="sttl rv">Who should you contact?</h2>
+  <div class="card-grid rv">
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div><div class="card-ttl">Admissions &amp; Applications</div><div class="card-txt">Questions about Parcoursup, parallel admissions, work-study or international admissions.</div><a href="tel:+33328384858" style="font-size:.88rem;font-weight:700;color:var(--p);display:block;margin-top:.7rem;text-decoration:none;">☎ +33 (0)3 28 38 48 58</a></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="card-ttl">International Students</div><div class="card-txt">You are a foreign student or wish to study abroad during your JUNIA programme.</div><a href="tel:+33328384860" style="font-size:.88rem;font-weight:700;color:var(--p);display:block;margin-top:.7rem;text-decoration:none;">☎ +33 (0)3 28 38 48 60</a></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="card-ttl">Companies &amp; Partnerships</div><div class="card-txt">Recruitment, work-study, sponsorship, apprenticeship tax, research partnerships or space rental.</div><a href="tel:+33328384862" style="font-size:.88rem;font-weight:700;color:var(--p);display:block;margin-top:.7rem;text-decoration:none;">☎ +33 (0)3 28 38 48 62</a></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg></div><div class="card-ttl">Press &amp; Communications</div><div class="card-txt">Interview requests, press visuals, journalist accreditations, institutional information.</div></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="4" r="1.5"/><path d="M9 9h6l1 6h3"/><path d="M9 9l-1 5h4l1 4a5 5 0 1 1-7.4-4.1"/></svg></div><div class="card-ttl">Disability Mission</div><div class="card-txt">Specific support for students with disabilities. Confidential and caring.</div></div>
+    <div class="card"><div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="8" y1="14" x2="16" y2="14"/></svg></div><div class="card-ttl">Career Centre</div><div class="card-txt">Internship, work-study and job offers. Post offers for companies recruiting JUNIA profiles.</div></div>
+  </div>
+</section>
+
+<section class="content-sec alt" id="formulaire">
+  <div class="contact-layout rv">
+    <div class="form-section">
+      <h2>Student contact form</h2>
+      <p class="form-intro">Fill in this form and we will connect you with the right person. Response within 48 working hours.</p>
+      <form id="contactForm" action="merci.html" method="GET" novalidate>
+
+        <span class="fsec-title">General information</span>
+        <div class="frow">
+          <div class="fgrp"><label for="prenom">First name <span class="req">*</span></label><input type="text" id="prenom" name="prenom" required placeholder="Your first name"></div>
+          <div class="fgrp"><label for="nom">Last name <span class="req">*</span></label><input type="text" id="nom" name="nom" required placeholder="Your last name"></div>
+        </div>
+        <div class="fgrp"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required placeholder="your@email.com"></div>
+
+        <div class="fdivider"></div>
+        <span class="fsec-title">Location</span>
+        <div class="fgrp">
+          <label>Are you a French student? <span class="req">*</span></label>
+          <div class="radio-inline">
+            <label class="ri"><input type="radio" name="etudiant_fr" value="oui" checked><span>Yes</span></label>
+            <label class="ri"><input type="radio" name="etudiant_fr" value="non"><span>No</span></label>
+          </div>
+        </div>
+        <div class="fgrp hidden" id="pays_group">
+          <label for="pays">Which country do you study in? <span class="req">*</span></label>
+          <select id="pays" name="pays">
+            <option value="">Select a country</option>
+            <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Angola</option><option>Argentina</option><option>Armenia</option><option>Australia</option><option>Austria</option><option>Azerbaijan</option><option>Bahrain</option><option>Bangladesh</option><option>Belgium</option><option>Bolivia</option><option>Bosnia-Herzegovina</option><option>Brazil</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cambodia</option><option>Cameroon</option><option>Canada</option><option>Chile</option><option>China</option><option>Colombia</option><option>Congo</option><option>Costa Rica</option><option>Croatia</option><option>Cuba</option><option>Czech Republic</option><option>Denmark</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Estonia</option><option>Ethiopia</option><option>Finland</option><option>France</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Greece</option><option>Guatemala</option><option>Guinea</option><option>Haiti</option><option>Honduras</option><option>Hungary</option><option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Ivory Coast</option><option>Jamaica</option><option>Japan</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kuwait</option><option>Kyrgyzstan</option><option>Latvia</option><option>Lebanon</option><option>Libya</option><option>Lithuania</option><option>Luxembourg</option><option>Madagascar</option><option>Malaysia</option><option>Mali</option><option>Malta</option><option>Mexico</option><option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Morocco</option><option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nepal</option><option>Netherlands</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option><option>North Korea</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Panama</option><option>Paraguay</option><option>Peru</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Romania</option><option>Russia</option><option>Rwanda</option><option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Sierra Leone</option><option>Singapore</option><option>Slovakia</option><option>Slovenia</option><option>Somalia</option><option>South Africa</option><option>South Korea</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Sweden</option><option>Switzerland</option><option>Syria</option><option>Tajikistan</option><option>Tanzania</option><option>Thailand</option><option>Togo</option><option>Tunisia</option><option>Turkey</option><option>Turkmenistan</option><option>Ukraine</option><option>United Arab Emirates</option><option>United Kingdom</option><option>United States</option><option>Uruguay</option><option>Uzbekistan</option><option>Venezuela</option><option>Vietnam</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option>
+          </select>
+        </div>
+
+        <div class="fdivider"></div>
+        <span class="fsec-title">Study interests</span>
+        <div class="fgrp">
+          <label for="diplome">What qualification are you studying for? <span class="req">*</span></label>
+          <select id="diplome" name="diplome" required>
+            <option value="">Select</option>
+            <option>Baccalaureate / A-Levels</option><option>BTS (Vocational degree)</option><option>CPGE (Preparatory class)</option><option>BUT (University degree)</option><option>Bachelor&#x2019;s degree</option><option>Master&#x2019;s degree</option><option>Not currently studying</option><option>Other</option>
+          </select>
+        </div>
+        <div class="fgrp">
+          <label for="niveau">What is your current study level? <span class="req">*</span></label>
+          <select id="niveau" name="niveau" required>
+            <option value="">Select</option>
+            <option value="lycee">Secondary school</option>
+            <option value="bachelor">Bachelor level</option>
+            <option value="master">Master level</option>
+          </select>
+        </div>
+        <div class="fgrp hidden" id="sub_lycee"><label for="niv_lycee">Year <span class="req">*</span></label><select id="niv_lycee" name="niv_lycee"><option value="">Select</option><option>Year 10 (Seconde)</option><option>Year 11 (Premi&#xe8;re)</option><option>Year 12 / Final year (Terminale)</option></select></div>
+        <div class="fgrp hidden" id="sub_bts"><label for="niv_bts">BTS year <span class="req">*</span></label><select id="niv_bts" name="niv_bts"><option value="">Select</option><option>BTS Year 1</option><option>BTS Year 2</option></select></div>
+        <div class="fgrp hidden" id="sub_cpge"><label for="niv_cpge">CPGE year <span class="req">*</span></label><select id="niv_cpge" name="niv_cpge"><option value="">Select</option><option>CPGE Year 1</option><option>CPGE Year 2</option></select></div>
+        <div class="fgrp hidden" id="sub_but"><label for="niv_but">BUT year <span class="req">*</span></label><select id="niv_but" name="niv_but"><option value="">Select</option><option>BUT Year 1</option><option>BUT Year 2</option><option>BUT Year 3</option></select></div>
+        <div class="fgrp hidden" id="sub_licence"><label for="niv_licence">Bachelor year <span class="req">*</span></label><select id="niv_licence" name="niv_licence"><option value="">Select</option><option>Year 1</option><option>Year 2</option><option>Year 3</option></select></div>
+        <div class="fgrp hidden" id="sub_master"><label for="niv_master">Master year <span class="req">*</span></label><select id="niv_master" name="niv_master"><option value="">Select</option><option>Master Year 1</option><option>Master Year 2</option></select></div>
+
+        <div class="fdivider"></div>
+        <span class="fsec-title">Campus choice</span>
+        <div class="fgrp">
+          <label for="campus_sel">Which campus interests you? <span class="req">*</span></label>
+          <select id="campus_sel" name="campus" required>
+            <option value="">Select</option>
+            <option value="lille">Lille</option>
+            <option value="bordeaux">Bordeaux</option>
+            <option value="chateauroux">Ch&#xe2;teauroux</option>
+          </select>
+        </div>
+        <div class="fgrp hidden" id="prog_lille">
+          <label for="programme_lille">Which programme interests you in Lille? <span class="req">*</span></label>
+          <select id="programme_lille" name="programme_lille">
+            <option value="">Select</option>
+            <option>HEI &#x2014; Energy, building and industrial transitions</option>
+            <option>ISA &#x2014; Agricultural, food and environmental transitions</option>
+            <option>ISEN &#x2014; Digital, electronic and intelligent systems transitions</option>
+            <option>XP &#x2014; Professional transitions and new careers</option>
+          </select>
+        </div>
+        <div class="fgrp hidden" id="prog_bordeaux">
+          <label for="programme_bordeaux">Which programme interests you in Bordeaux? <span class="req">*</span></label>
+          <select id="programme_bordeaux" name="programme_bordeaux">
+            <option value="">Select</option>
+            <option>ISEN &#x2014; Digital, electronic and intelligent systems transitions</option>
+          </select>
+        </div>
+        <div class="fgrp hidden" id="prog_chateauroux">
+          <label for="programme_chateauroux">Which programme interests you in Ch&#xe2;teauroux?</label>
+          <select id="programme_chateauroux" name="programme_chateauroux">
+            <option value="">Select</option>
+            <option>HEI &#x2014; Energy, building and industrial transitions</option>
+          </select>
+        </div>
+
+        <div class="fdivider"></div>
+        <span class="fsec-title">Your message</span>
+        <div class="fgrp"><label for="message">What is your question? <span class="req">*</span></label><textarea id="message" name="message" rows="5" required placeholder="Describe your enquiry..."></textarea></div>
+
+        <div class="fdivider"></div>
+        <span class="fsec-title">Personal data</span>
+        <div class="fgrp">
+          <label>By submitting this form, I agree that the data entered may be used by JUNIA to process my request. <span class="req">*</span></label>
+          <div class="radio-inline" style="margin-top:.5rem;">
+            <label class="ri"><input type="radio" name="rgpd_accept" value="oui" required><span>Yes</span></label>
+            <label class="ri"><input type="radio" name="rgpd_accept" value="non"><span>No</span></label>
+          </div>
+        </div>
+        <div class="fgrp">
+          <label>Would you like to follow JUNIA&#x2019;s news and programmes? <span class="req">*</span></label>
+          <div class="radio-stack" style="margin-top:.4rem;">
+            <label class="ri"><input type="radio" name="newsletter" value="oui"><span>Yes, I agree that JUNIA may use the information provided to send me its newsletter by email</span></label>
+            <label class="ri"><input type="radio" name="newsletter" value="non" checked><span>No, I do not wish to receive the newsletter</span></label>
+          </div>
+        </div>
+        <div class="gdpr-box">The information collected on this form is recorded in a computer file by JUNIA, the Data Controller, for the purpose of processing your request. In accordance with the GDPR, you have the right of access, rectification, opposition and withdrawal of consent. Contact: JUNIA &#x2013; 2 rue Norbert Segard &#x2013; 59800 Lille or <a href="mailto:junia.dpo@junia.com">junia.dpo@junia.com</a>. <a href="confidentialite.html">Privacy policy &#x2192;</a></div>
+        <button type="submit" class="submit-btn">Send my enquiry &#x2192;</button>
+      </form>
+    </div>
+
+    <div class="contact-sidebar">
+      <div class="cc"><div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="cc-title">Lille Campus &#x2014; Head office</div><div class="cc-addr">2 rue Norbert S&#xe9;gard BP 41290<br>59014 Lille Cedex, France</div><a class="cc-tel" href="tel:+33328384858">☎ +33 (0)3 28 38 48 58</a></div>
+      <div class="cc"><div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="cc-title">Bordeaux Campus</div><div class="cc-addr">1 rue du 8 Mai 1945<br>33520 Bruges, France</div></div>
+      <div class="cc"><div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="cc-title">Ch&#xe2;teauroux Campus</div><div class="cc-addr">2 all&#xe9;e Doyen Denis Leroy<br>36000 Ch&#xe2;teauroux, France</div></div>
+      <div class="cc"><div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="cc-title">Open Days &amp; Events</div><div class="cc-text">Meet our teams at open days, fairs and campus immersions throughout the year.</div><a href="campus.html" class="btn btn-p" style="font-size:.82rem;margin-top:1rem;display:inline-flex;">Our campuses &#x2192;</a></div>
+      <div class="cc"><div class="cc-ico cc-ico-sym">↓</div><div class="cc-title">Download our brochures</div><div class="cc-text">HEI, ISEN, ISA, work-study and companies brochures — all free to download.</div><a href="brochures.html" class="btn btn-g" style="font-size:.82rem;margin-top:1rem;display:inline-flex;">Our brochures &#x2192;</a></div>
+      <div class="cc"><div class="cc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="cc-title">Subscribe to the newsletter</div><div class="cc-text">Stay up to date with the latest news from JUNIA and its programmes.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Come and meet us</h2>
+    <p>Open days, student fairs, campus immersions: find JUNIA near you throughout the year.</p>
+    <div class="cta-btns">
+      <a href="campus.html" class="btn btn-c btn-lg">Discover our campuses &#x2192;</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Apply</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div><span class="flogo">JUNIA</span><p class="fdesc">Engineering School. JUNIA brings together HEI, ISEN and ISA to train engineers for energy, digital and environmental transitions. Present in Lille, Bordeaux and Ch&#xe2;teauroux since 1885.</p><div class="feco">&#x1f33f; Eco-designed site &#xb7; A+ Carbon Score</div></div>
+    <div><div class="fcolh">Programmes</div><ul class="flinks"><li><a href="hei.html">HEI &#x2014; Energy &amp; Industry</a></li><li><a href="isen.html">ISEN &#x2014; Digital &amp; AI</a></li><li><a href="isa.html">ISA &#x2014; Agriculture</a></li><li><a href="formations.html">All programmes</a></li><li><a href="admissions.html">Apply</a></li></ul></div>
+    <div><div class="fcolh">The School</div><ul class="flinks"><li><a href="ecole.html">Our values</a></li><li><a href="campus.html">Our campuses</a></li><li><a href="ecole.html">CSR Policy</a></li><li><a href="ecole.html">JUNIA Alumni</a></li></ul></div>
+    <div><div class="fcolh">Contact</div><ul class="flinks"><li><a href="contact.html">Contact form</a></li><li><a href="admissions.html">Applications</a></li><li><a href="international.html">International</a></li><li><a href="accessibilite.html">Accessibility</a></li></ul></div>
+  </div>
+  <div class="fbot">
+    <span>&#xa9; 2025 JUNIA &#x2014; School of Transitions &#xb7; Lille &#xb7; Bordeaux &#xb7; Ch&#xe2;teauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Legal notices</a><a href="confidentialite.html">Privacy</a><a href="index.html">Home</a></div>
+  </div>
+</footer>
+
+<script src="../page.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('input[name="etudiant_fr"]').forEach(function(r){
+    r.addEventListener('change',function(){ document.getElementById('pays_group').classList.toggle('hidden',this.value==='oui'); });
+  });
+  var subMap={'BTS (Vocational degree)':'sub_bts','CPGE (Preparatory class)':'sub_cpge','BUT (University degree)':'sub_but','Bachelor\'s degree':'sub_licence','Master\'s degree':'sub_master'};
+  var allSubs=['sub_lycee','sub_bts','sub_cpge','sub_but','sub_licence','sub_master'];
+  document.getElementById('diplome').addEventListener('change',function(){
+    allSubs.forEach(function(id){document.getElementById(id).classList.add('hidden');});
+    if(subMap[this.value]) document.getElementById(subMap[this.value]).classList.remove('hidden');
+  });
+  document.getElementById('niveau').addEventListener('change',function(){
+    allSubs.forEach(function(id){document.getElementById(id).classList.add('hidden');});
+    if(this.value==='lycee') document.getElementById('sub_lycee').classList.remove('hidden');
+  });
+  var progMap={lille:'prog_lille',bordeaux:'prog_bordeaux',chateauroux:'prog_chateauroux'};
+  document.getElementById('campus_sel').addEventListener('change',function(){
+    ['prog_lille','prog_bordeaux','prog_chateauroux'].forEach(function(id){document.getElementById(id).classList.add('hidden');});
+    if(progMap[this.value]) document.getElementById(progMap[this.value]).classList.remove('hidden');
+  });
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    var r=document.querySelector('input[name="rgpd_accept"]:checked');
+    if(!r||r.value!=='oui'){e.preventDefault();alert('Please accept the use of your data to submit the form.');}
+  });
+  // Lang toggle → FR
+  var lt=document.getElementById('langToggle');
+  if(lt) lt.addEventListener('click',function(){ window.location.href='../contact.html'; });
+})();
+</script>
+</body>
+</html>

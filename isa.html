@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>ISA — Ingénieur Agri-Alimentaire & Environnement — JUNIA</title>
+<meta name="description" content="ISA, programme Grande École de JUNIA : formations ingénieur en agroécologie, alimentation durable, sciences du vivant et transitions agricoles. Accrédité CTI.">
+<link rel="stylesheet" href="page.css">
+<style>
+.isa-hero{background:#0f2a10;}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;}
+.spec-card{background:var(--w);border:1px solid var(--br);border-radius:var(--r);padding:1.6rem;transition:all .3s var(--ease);}
+.spec-card:hover{box-shadow:0 6px 20px rgba(26,64,32,.08);}
+.spec-ico{width:46px;height:46px;border-radius:12px;background:var(--ps);display:flex;align-items:center;justify-content:center;margin-bottom:.8rem;}
+.spec-ico svg{width:22px;height:22px;color:var(--c);}
+.spec-ttl{font-size:.98rem;font-weight:800;color:var(--ink);margin-bottom:.4rem;}
+.spec-txt{font-size:.85rem;color:var(--im);line-height:1.65;}
+.year-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2rem;}
+.year-col{border-radius:var(--r);overflow:hidden;}
+.year-head{background:#1a4020;color:#fff;text-align:center;padding:.7rem .5rem;font-size:.72rem;font-weight:800;letter-spacing:.05em;}
+.year-body{background:#eef5ee;padding:1rem .8rem;min-height:140px;}
+.year-body ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+.year-body li{font-size:.76rem;color:#1a4020;font-weight:600;line-height:1.4;display:flex;gap:.35rem;align-items:flex-start;}
+.year-body li::before{content:"·";flex-shrink:0;}
+.debouche-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.8rem;}
+.deb-card{background:#0f2a10;border-radius:var(--r);padding:1.4rem;text-align:center;}
+.deb-ico{display:flex;align-items:center;justify-content:center;margin-bottom:.6rem;}
+.deb-ico svg{width:28px;height:28px;color:var(--c);}
+.deb-ttl{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.3rem;}
+.deb-txt{font-size:.76rem;color:rgba(255,255,255,.4);line-height:1.5;}
+@media(max-width:1024px){.spec-grid{grid-template-columns:repeat(2,1fr);}.year-grid{grid-template-columns:repeat(2,1fr) 1fr;}.debouche-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.spec-grid,.year-grid,.debouche-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" hreflang="en" href="en/isa.html">
+<link rel="alternate" hreflang="fr" href="isa.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a><span class="sep">›</span>
+  <a href="programmes.html">Programmes</a><span class="sep">›</span>
+  <span class="cur">ISA</span>
+</div>
+
+<!-- HERO -->
+<section class="page-hero isa-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-in">
+    <div class="eyebrow">Programme Grande École · JUNIA ISA</div>
+    <h1>ISA — Ingénieur<br>des transitions agricoles</h1>
+    <p class="sub">ISA forme des ingénieurs capables de relever les défis de l'alimentation durable, de la transition agroécologique et de la gestion de l'environnement. Un programme unique en France, ancré dans les sciences du vivant et les enjeux planétaires de demain.</p>
+    <div class="hero-btns">
+      <a href="admissions.html" class="btn btn-c btn-lg">Candidater à ISA →</a>
+      <a href="brochures.html" class="btn btn-gw btn-lg">Télécharger la brochure</a>
+    </div>
+  </div>
+</section>
+
+<!-- CHIFFRES CLÉS -->
+<section class="content-sec">
+  <div class="stat-bar rv" style="grid-template-columns:repeat(4,1fr);">
+    <div class="stat-cell"><span class="stat-n">Unique</span><span class="stat-l">Programme en France dans cette configuration</span></div>
+    <div class="stat-cell"><span class="stat-n">5 ans</span><span class="stat-l">Durée totale du cursus (Bac → Bac+5)</span></div>
+    <div class="stat-cell"><span class="stat-n">CTI</span><span class="stat-l">Accrédité — Diplôme Grade Master</span></div>
+    <div class="stat-cell"><span class="stat-n">97%</span><span class="stat-l">Taux d'insertion pro à 6 mois</span></div>
+  </div>
+</section>
+
+<!-- PRÉSENTATION -->
+<section class="content-sec alt">
+  <div class="info-grid center rv">
+    <div>
+      <span class="slbl">Identité & Positionnement</span>
+      <h2 class="sttl" style="text-align:left;">ISA, l'ingénieur du vivant<br>au service de la planète</h2>
+      <p style="font-size:.95rem;color:var(--is);line-height:1.8;margin-bottom:1.4rem;">ISA — Institut Supérieur d'Agriculture — est le programme Grande École de JUNIA dédié aux transitions agricoles, alimentaires et environnementales. Dans un monde confronté aux défis de la sécurité alimentaire, du changement climatique et de l'épuisement des ressources naturelles, ISA forme des ingénieurs capables de proposer des solutions durables et innovantes.</p>
+      <p style="font-size:.95rem;color:var(--is);line-height:1.8;margin-bottom:1.8rem;">ISA se distingue par une approche rigoureusement scientifique des sciences agronomiques, couplée à une vision systémique des filières alimentaires et à un fort ancrage en management. Les ingénieurs ISA interviennent tout au long de la chaîne de valeur agricole et alimentaire : de la parcelle à l'assiette, de la recherche à la direction d'entreprise.</p>
+      <div class="feat-list">
+        <div class="feat-item"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div><div class="feat-ttl">Agroécologie & Sciences du vivant</div><div class="feat-txt">Biologie végétale et animale, génétique, microbiologie, écologie des agroécosystèmes.</div></div></div>
+        <div class="feat-item"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div><div><div class="feat-ttl">Sciences alimentaires & Qualité</div><div class="feat-txt">Technologie alimentaire, qualité et sécurité sanitaire, innovation produit, réglementation.</div></div></div>
+        <div class="feat-item"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div><div class="feat-ttl">Management & Développement durable</div><div class="feat-txt">Gestion de projets agricoles, économie, développement international, RSE et reporting.</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="background:#0f2a10;border-radius:22px;padding:2.2rem;position:relative;overflow:hidden;">
+        
+        <div style="position:relative;z-index:1;">
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.4rem;">Programme ISA</div>
+          <div style="font-size:3.5rem;font-weight:900;color:rgba(255,255,255,.08);line-height:1;margin-bottom:1rem;">ISA</div>
+          <div style="display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:.78rem;font-weight:700;padding:.38rem 1rem;border-radius:99px;margin-bottom:1.2rem;">Transitions agricoles, alimentaires &amp; environnementales</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem;">
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Agroécologie &amp; Production durable</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Sciences &amp; Technologies alimentaires</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Biotechnologies &amp; Biologie appliquée</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Environnement &amp; Gestion des ressources</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Développement international &amp; Management</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPÉCIALITÉS -->
+<section class="content-sec">
+  <span class="slbl rv">Spécialités & Domaines</span>
+  <h2 class="sttl rv">Les domaines de spécialisation ISA</h2>
+  <p class="ssub rv">À partir de la 3e année, les étudiants ISA se spécialisent selon leur projet professionnel : agronomie, alimentation, environnement ou développement international.</p>
+  <div class="spec-grid rv">
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0z"/></svg></div>
+      <div class="spec-ttl">Agroécologie & Production agricole durable</div>
+      <div class="spec-txt">Systèmes de production agroécologique, agriculture de conservation, permaculture, agroforesterie, élevage durable, biodiversité et services écosystémiques.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20.94c1.5.6 3.4.4 5-1.4 1.6-1.8 2-4.1 1-6.5-.2-.5-.5-1-.9-1.5C16.2 10.5 15 9 12 9s-4.2 1.5-5.1 2.54c-.4.5-.7 1-.9 1.5-1 2.4-.6 4.7 1 6.5 1.6 1.8 3.5 2 5 1.4z"/><path d="M12 9V5"/><path d="M10 4c.5-1 2.5-1 3 0"/></svg></div>
+      <div class="spec-ttl">Sciences & Technologie alimentaires</div>
+      <div class="spec-txt">Formulation et innovation produits alimentaires, procédés de transformation, conservation, emballage durable, qualité sensorielle, nutrition et santé.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m17 6-2.5-2.5"/><path d="m14 8-1-1"/><path d="m7 18 2.5 2.5"/><path d="m3.5 14.5.5.5"/><path d="m10 10.5 1.5 1.5"/><path d="M2 9c6.667 6 13.333 0 20 6"/></svg></div>
+      <div class="spec-ttl">Biotechnologies & Biologie appliquée</div>
+      <div class="spec-txt">Génie génétique, fermentation industrielle, biologie moléculaire appliquée à l'agriculture et à l'alimentation, bioinformatique, santé végétale et phytopathologie.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"/></svg></div>
+      <div class="spec-ttl">Environnement & Gestion des ressources</div>
+      <div class="spec-txt">Gestion de l'eau et des sols, évaluation environnementale, écotoxicologie, solutions basées sur la nature, adaptation au changement climatique.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <div class="spec-ttl">Développement international & Agri-business</div>
+      <div class="spec-txt">Marchés agricoles mondiaux, projets de développement dans les pays émergents, coopération internationale, supply chains alimentaires globales.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
+      <div class="spec-ttl">Management des filières agri-alimentaires</div>
+      <div class="spec-txt">Direction d'entreprises agroalimentaires, marketing alimentaire, finance, RSE sectorielle, management de la qualité (ISO 22000, BRC, IFS).</div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSUS -->
+<section class="content-sec alt">
+  <span class="slbl rv">Cursus</span>
+  <h2 class="sttl rv">Le parcours ISA en 5 ans</h2>
+  <p class="ssub rv">Sciences fondamentales, sciences du vivant, agronomie, technologie alimentaire et management : un cursus complet et progressif.</p>
+  <div class="year-grid rv">
+    <div class="year-col">
+      <div class="year-head">Année 1</div>
+      <div class="year-body"><ul>
+        <li>Mathématiques</li><li>Chimie générale</li><li>Biologie cellulaire</li><li>Physique</li><li>Anglais</li><li>Expression</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 2</div>
+      <div class="year-body"><ul>
+        <li>Biochimie</li><li>Microbiologie</li><li>Agronomie générale</li><li>Statistiques</li><li>Projet intégré</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 3</div>
+      <div class="year-body"><ul>
+        <li>Sciences végétales</li><li>Technologie alimentaire</li><li>Gestion &amp; Économie</li><li>Stage (12 sem.)</li><li>Langue 2</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 4</div>
+      <div class="year-body"><ul>
+        <li>Spécialité choisie</li><li>Projets terrain</li><li>Démonstrateur ISA</li><li>Stage (20 sem.)</li><li>International possible</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 5</div>
+      <div class="year-body"><ul>
+        <li>Approfondissement</li><li>Projet de fin d'études</li><li>Stage ingénieur (6 mois)</li><li>Mémoire &amp; soutenance</li><li>Diplôme CTI</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- DÉBOUCHÉS -->
+<section class="content-sec dark" style="background:#071509;">
+  <span class="slbl rv">Carrières</span>
+  <h2 class="sttl rv">Où travaillent les ingénieurs ISA ?</h2>
+  <p class="ssub rv">Les diplômés ISA s'insèrent dans l'ensemble des maillons des filières agri-alimentaires, environnementales et de développement durable.</p>
+  <div class="debouche-grid rv">
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4z"/><path d="M11.47 17.47 13 19l-1.53 1.53a3.5 3.5 0 0 1-4.94 0L5 19l1.53-1.53a3.5 3.5 0 0 1 4.94 0z"/></svg></div><div class="deb-ttl">Agri-alimentaire</div><div class="deb-txt">Danone, Bel, Bonduelle, InVivo, coopératives agricoles, PME agroalimentaires…</div></div>
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div class="deb-ttl">Environnement & RSE</div><div class="deb-txt">Bureaux d'études environnementaux, collectivités, agences de l'eau, associations…</div></div>
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3h6"/><path d="M9 3v8L4 19a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 19L15 11V3"/><line x1="6.5" y1="15" x2="17.5" y2="15"/></svg></div><div class="deb-ttl">Recherche & Développement</div><div class="deb-txt">INRAE, CIRAD, centres techniques agroalimentaires, R&amp;D industrielle…</div></div>
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="deb-ttl">Développement international</div><div class="deb-txt">ONG, FAO, projets de coopération internationale, gouvernements, fonds de développement…</div></div>
+  </div>
+  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;" class="rv">
+    <div class="dcard" style="flex:1;min-width:200px;text-align:center;">
+      <div style="font-size:2.2rem;font-weight:900;color:var(--c);">97%</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.45);">Insertion à 6 mois</div>
+    </div>
+    <div class="dcard" style="flex:1;min-width:200px;text-align:center;">
+      <div style="font-size:2.2rem;font-weight:900;color:var(--c);">42 000</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.45);">Alumni dans le réseau</div>
+    </div>
+    <div class="dcard" style="flex:1;min-width:200px;text-align:center;">
+      <div style="font-size:2.2rem;font-weight:900;color:var(--c);">&gt; 35k€</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.45);">Salaire médian 1er emploi</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMES LIÉS -->
+<section class="content-sec">
+  <span class="slbl rv">Complémentarité</span>
+  <h2 class="sttl rv">Découvrir aussi HEI et ISEN</h2>
+  <div class="card-grid rv">
+    <a href="hei.html" style="text-decoration:none;" class="card">
+      <div class="card-ico" style="background:#ede8f4;font-size:1.1rem;font-weight:900;color:var(--p);">HEI</div>
+      <div class="card-ttl">HEI — Transitions énergétiques</div>
+      <div class="card-txt">Énergie, bâtiment durable, industrie 4.0, smart grids. Le programme de l'ingénieur généraliste de JUNIA.</div>
+    </a>
+    <a href="isen.html" style="text-decoration:none;" class="card">
+      <div class="card-ico" style="background:#e8edf4;font-size:1.1rem;font-weight:900;color:#1a2d42;">ISEN</div>
+      <div class="card-ttl">ISEN — Transitions numériques</div>
+      <div class="card-txt">IA, cybersécurité, systèmes embarqués, électronique. Le programme du numérique de JUNIA.</div>
+    </a>
+    <a href="programmes.html" style="text-decoration:none;" class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div class="card-ttl">Comparer les programmes</div>
+      <div class="card-txt">Tronc commun, différences, spécialités, campus : tout pour choisir entre HEI, ISEN et ISA.</div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" style="background:#0f2a10;">
+  <div class="cta-band-in">
+    <h2>Rejoindre ISA à JUNIA</h2>
+    <p>Parcoursup, admissions parallèles, alternance ou admission internationale : intégrez ISA et devenez ingénieur des transitions agricoles.</p>
+    <div class="cta-btns">
+      <a href="admissions.html" class="btn btn-c btn-lg">Candidater à ISA →</a>
+      <a href="brochures.html" class="btn btn-gw btn-lg">Télécharger la brochure ISA</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA pour former les ingénieurs des transitions. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
+      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Énergie &amp; Industrie</a></li>
+        <li><a href="isen.html">ISEN — Numérique &amp; IA</a></li>
+        <li><a href="isa.html">ISA — Agriculture &amp; Alimentation</a></li>
+        <li><a href="programmes.html">Comparer les programmes</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Formations</div>
+      <ul class="flinks">
+        <li><a href="formations.html">Cycle Ingénieur</a></li>
+        <li><a href="formations.html">Alternance</a></li>
+        <li><a href="formations.html">Masters &amp; MS</a></li>
+        <li><a href="admissions.html">Candidater</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="accessibilite.html">Accessibilité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="index.html">Accueil</a></div>
+  </div>
+</footer>
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>HEI — Ingénieur Généraliste, Énergie & Transitions — JUNIA</title>
+<meta name="description" content="HEI, programme Grande École de JUNIA : formations ingénieur en énergie, bâtiment durable, industrie 4.0 et transitions énergétiques. Accrédité CTI depuis 1885.">
+<link rel="stylesheet" href="page.css">
+<style>
+.hei-hero{background:#3F2A56;}
+.spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;}
+.spec-card{background:var(--w);border:1px solid var(--br);border-radius:var(--r);padding:1.6rem;transition:all .3s var(--ease);}
+.spec-card:hover{box-shadow:0 6px 20px rgba(63,42,86,.08);}
+.spec-ico{width:46px;height:46px;border-radius:12px;background:var(--ps);display:flex;align-items:center;justify-content:center;margin-bottom:.8rem;}
+.spec-ico svg{width:22px;height:22px;color:var(--c);}
+.spec-ttl{font-size:.98rem;font-weight:800;color:var(--ink);margin-bottom:.4rem;}
+.spec-txt{font-size:.85rem;color:var(--im);line-height:1.65;}
+.year-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.8rem;margin-top:2rem;}
+.year-col{border-radius:var(--r);overflow:hidden;}
+.year-head{background:var(--p);color:#fff;text-align:center;padding:.7rem .5rem;font-size:.72rem;font-weight:800;letter-spacing:.05em;}
+.year-body{background:var(--ps);padding:1rem .8rem;min-height:140px;}
+.year-body ul{list-style:none;display:flex;flex-direction:column;gap:.45rem;}
+.year-body li{font-size:.76rem;color:var(--p);font-weight:600;line-height:1.4;display:flex;gap:.35rem;align-items:flex-start;}
+.year-body li::before{content:"·";flex-shrink:0;}
+.debouche-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.8rem;}
+.deb-card{background:var(--pd);border-radius:var(--r);padding:1.4rem;text-align:center;}
+.deb-ico{display:flex;align-items:center;justify-content:center;margin-bottom:.6rem;}
+.deb-ico svg{width:28px;height:28px;color:var(--c);}
+.deb-ttl{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:.3rem;}
+.deb-txt{font-size:.76rem;color:rgba(255,255,255,.45);line-height:1.5;}
+@media(max-width:1024px){.spec-grid{grid-template-columns:repeat(2,1fr);}.year-grid{grid-template-columns:repeat(2,1fr) 1fr;}.debouche-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.spec-grid,.year-grid,.debouche-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" hreflang="en" href="en/hei.html">
+<link rel="alternate" hreflang="fr" href="hei.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a><span class="sep">›</span>
+  <a href="programmes.html">Programmes</a><span class="sep">›</span>
+  <span class="cur">HEI</span>
+</div>
+
+<!-- HERO -->
+<section class="page-hero hei-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-in">
+    <div class="eyebrow">Programme Grande École · JUNIA HEI</div>
+    <h1>HEI — Ingénieur<br>des transitions énergétiques</h1>
+    <p class="sub">Depuis 1885, HEI forme des ingénieurs généralistes capables de concevoir et piloter les transitions énergétiques, industrielles et urbaines. Smart grids, bâtiment durable, industrie 4.0 : une formation d'ingénieur au cœur des enjeux de demain.</p>
+    <div class="hero-btns">
+      <a href="admissions.html" class="btn btn-c btn-lg">Candidater à HEI →</a>
+      <a href="brochures.html" class="btn btn-gw btn-lg">Télécharger la brochure</a>
+    </div>
+  </div>
+</section>
+
+<!-- CHIFFRES CLÉS -->
+<section class="content-sec">
+  <div class="stat-bar rv" style="grid-template-columns:repeat(4,1fr);">
+    <div class="stat-cell"><span class="stat-n">1885</span><span class="stat-l">Fondation de HEI</span></div>
+    <div class="stat-cell"><span class="stat-n">5 ans</span><span class="stat-l">Durée du cursus (Bac → Bac+5)</span></div>
+    <div class="stat-cell"><span class="stat-n">CTI</span><span class="stat-l">Accrédité Commission des Titres d'Ingénieur</span></div>
+    <div class="stat-cell"><span class="stat-n">97%</span><span class="stat-l">Taux d'insertion pro à 6 mois</span></div>
+  </div>
+</section>
+
+<!-- PRÉSENTATION -->
+<section class="content-sec alt">
+  <div class="info-grid center rv">
+    <div>
+      <span class="slbl">Identité & Positionnement</span>
+      <h2 class="sttl" style="text-align:left;">HEI, l'ingénieur généraliste<br>engagé dans les transitions</h2>
+      <p style="font-size:.95rem;color:var(--is);line-height:1.8;margin-bottom:1.4rem;">HEI — Hautes Études d'Ingénieur — est l'un des trois programmes Grande École de JUNIA. Fondé en 1885, c'est l'un des plus anciens programmes d'ingénieur en France. HEI forme des ingénieurs généralistes, polyvalents et engagés, capables d'intervenir sur des problématiques complexes à l'intersection de l'énergie, du bâtiment, de l'industrie et des systèmes urbains.</p>
+      <p style="font-size:.95rem;color:var(--is);line-height:1.8;margin-bottom:1.8rem;">Le fil conducteur de HEI : les transitions. Transition énergétique, transition industrielle, transition urbaine. Chaque étudiant HEI est formé pour comprendre ces enjeux en profondeur et y apporter des réponses techniques, humaines et systémiques.</p>
+      <div class="feat-list">
+        <div class="feat-item"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="14" r="7"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72"/><path d="M14.85 2.75c-4.37 6.03-6.02 9.42-8.03 17.72"/></svg></div><div><div class="feat-ttl">Diplôme CTI — Grade Master</div><div class="feat-txt">Reconnu en France et dans toute l'Europe (accord de Bologne). Équivalent bac+5.</div></div></div>
+        <div class="feat-item"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11.5V17c2 1.5 8 1.5 12 0v-5.5"/><line x1="22" y1="9" x2="22" y2="14"/></svg></div><div><div class="feat-ttl">Membre CGE</div><div class="feat-txt">JUNIA est membre de la Conférence des Grandes Écoles. Label de qualité pédagogique reconnu.</div></div></div>
+        <div class="feat-item"><div class="feat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div><div class="feat-ttl">Ingénieur-citoyen</div><div class="feat-txt">Formation intégrant les sciences humaines, l'éthique professionnelle et l'engagement sociétal.</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="background:var(--pd);border-radius:22px;padding:2.2rem;position:relative;overflow:hidden;">
+        
+        <div style="position:relative;z-index:1;">
+          <div style="font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.4rem;">Programme HEI</div>
+          <div style="font-size:3.5rem;font-weight:900;color:rgba(255,255,255,.08);line-height:1;margin-bottom:1rem;">HEI</div>
+          <div class="prog-badge" style="margin-bottom:1.2rem;">Transitions énergétiques &amp; industrielles</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:.6rem;">
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Énergie &amp; Smart Grids</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Bâtiment durable &amp; Smart Building</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Industrie 4.0 &amp; Systèmes de production</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Mobilités &amp; Villes durables</span></li>
+            <li style="display:flex;gap:.7rem;align-items:flex-start;"><span style="color:var(--c);font-weight:700;flex-shrink:0;">→</span><span style="font-size:.88rem;color:rgba(255,255,255,.6);">Sciences humaines &amp; Management</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPÉCIALITÉS -->
+<section class="content-sec">
+  <span class="slbl rv">Spécialités & Domaines</span>
+  <h2 class="sttl rv">Les domaines de spécialisation HEI</h2>
+  <p class="ssub rv">À partir de la 3e année, les étudiants HEI choisissent leur voie de spécialisation parmi les grands domaines de l'ingénierie des transitions.</p>
+  <div class="spec-grid rv">
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+      <div class="spec-ttl">Énergie & Smart Grids</div>
+      <div class="spec-txt">Systèmes de production et de distribution d'énergie, réseaux intelligents, stockage d'énergie, intégration des énergies renouvelables. Conception des infrastructures énergétiques de demain.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 20h20"/><path d="M5 20V10l7-7 7 7v10"/><path d="M9 20v-6h6v6"/><line x1="12" y1="3" x2="12" y2="7"/></svg></div>
+      <div class="spec-ttl">Bâtiment durable & Smart Building</div>
+      <div class="spec-txt">Performance énergétique des bâtiments, rénovation thermique, gestion technique des bâtiments (GTB), bâtiments à énergie positive (BEPOS), certifications HQE et BREEAM.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16z"/><line x1="2" y1="14" x2="22" y2="14"/></svg></div>
+      <div class="spec-ttl">Industrie 4.0 & Systèmes de production</div>
+      <div class="spec-txt">Automatisation avancée, robotique collaborative, cobots, IoT industriel, maintenance prédictive, jumeaux numériques, lean manufacturing appliqué aux transitions.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="22" x2="21" y2="22"/><rect x="2" y="8" width="8" height="14"/><rect x="14" y="4" width="8" height="18"/><line x1="10" y1="22" x2="10" y2="12"/><line x1="14" y1="22" x2="14" y2="8"/></svg></div>
+      <div class="spec-ttl">Ville en transition & Mobilités</div>
+      <div class="spec-txt">Smart city, gestion des réseaux urbains, mobilités douces et électriques, planification territoriale, infrastructures durables. La ville de demain pensée par l'ingénieur.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+      <div class="spec-ttl">Génie industriel & Management</div>
+      <div class="spec-txt">Pilotage de projets industriels complexes, supply chain responsable, management des transitions organisationnelles, conduite du changement en entreprise.</div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+      <div class="spec-ttl">Environnement & Développement durable</div>
+      <div class="spec-txt">Analyse du cycle de vie (ACV), bilan carbone, normes ISO 14001, éco-conception industrielle, gestion des ressources et des déchets industriels.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CURSUS -->
+<section class="content-sec alt">
+  <span class="slbl rv">Cursus</span>
+  <h2 class="sttl rv">Le parcours HEI en 5 ans</h2>
+  <p class="ssub rv">De la prépa intégrée au diplôme d'ingénieur, un parcours progressif et cohérent articulé autour des transitions.</p>
+  <div class="year-grid rv">
+    <div class="year-col">
+      <div class="year-head">Année 1</div>
+      <div class="year-body"><ul>
+        <li>Mathématiques</li><li>Physique</li><li>Chimie générale</li><li>Informatique</li><li>Expression/Communication</li><li>Anglais</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 2</div>
+      <div class="year-body"><ul>
+        <li>Maths appliquées</li><li>Électrotechnique</li><li>Thermodynamique</li><li>Mécanique</li><li>Projet pluridisciplinaire</li><li>Orientation HEI</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 3</div>
+      <div class="year-body"><ul>
+        <li>Systèmes énergétiques</li><li>Automatique</li><li>Génie des procédés</li><li>Stage (12 sem.)</li><li>Management</li><li>Langue 2</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 4</div>
+      <div class="year-body"><ul>
+        <li>Spécialité choisie</li><li>Projets industriels</li><li>Démonstrateurs</li><li>Stage (20 sem.)</li><li>International possible</li>
+      </ul></div>
+    </div>
+    <div class="year-col">
+      <div class="year-head">Année 5</div>
+      <div class="year-body"><ul>
+        <li>Approfondissement</li><li>Projet de fin d'études</li><li>Stage ingénieur (6 mois)</li><li>Mémoire &amp; soutenance</li><li>Diplôme CTI</li>
+      </ul></div>
+    </div>
+  </div>
+  <div style="margin-top:2rem;" class="rv">
+    <div class="card" style="background:var(--ps);border:none;display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap;">
+      <div class="card-ico" style="flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/><path d="M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+      <div>
+        <div class="card-ttl">Disponible en alternance</div>
+        <div class="card-txt">Le cursus HEI est disponible en contrat d'apprentissage à partir de la 3e année (cycle ingénieur). Rémunération garantie, diplôme CTI identique.</div>
+      </div>
+      <a href="formations.html#alternance" class="btn btn-p" style="margin-left:auto;flex-shrink:0;">En savoir plus →</a>
+    </div>
+  </div>
+</section>
+
+<!-- DÉBOUCHÉS -->
+<section class="content-sec dark">
+  <span class="slbl rv">Carrières</span>
+  <h2 class="sttl rv">Où travaillent les ingénieurs HEI ?</h2>
+  <p class="ssub rv">Les diplômés HEI intègrent des secteurs clés de l'économie, portés par les grandes transitions de notre siècle.</p>
+  <div class="debouche-grid rv">
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="deb-ttl">Énergie & Utilities</div><div class="deb-txt">EDF, Engie, TotalEnergies, RTE, Enedis, fournisseurs d'énergies renouvelables…</div></div>
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 20h20"/><path d="M5 20V10l7-7 7 7v10"/><path d="M9 20v-6h6v6"/><line x1="12" y1="3" x2="12" y2="7"/></svg></div><div class="deb-ttl">Construction & BTP</div><div class="deb-txt">Eiffage, Vinci, Bouygues Construction, Spie, Immeuble durable…</div></div>
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v16z"/><line x1="2" y1="14" x2="22" y2="14"/></svg></div><div class="deb-ttl">Industrie & Manufacturing</div><div class="deb-txt">Renault, Airbus, Michelin, Décathlon, grands groupes industriels régionaux…</div></div>
+    <div class="deb-card"><div class="deb-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="3" y1="22" x2="21" y2="22"/><rect x="2" y="8" width="8" height="14"/><rect x="14" y="4" width="8" height="18"/><line x1="10" y1="22" x2="10" y2="12"/><line x1="14" y1="22" x2="14" y2="8"/></svg></div><div class="deb-ttl">Collectivités & Smart City</div><div class="deb-txt">Métropoles, bureaux d'études, agences d'urbanisme, sociétés de conseil en transitions…</div></div>
+  </div>
+  <div style="margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;" class="rv">
+    <div class="dcard" style="flex:1;min-width:200px;text-align:center;">
+      <div style="font-size:2.2rem;font-weight:900;color:var(--c);">97%</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.45);">Insertion à 6 mois</div>
+    </div>
+    <div class="dcard" style="flex:1;min-width:200px;text-align:center;">
+      <div style="font-size:2.2rem;font-weight:900;color:var(--c);">42 000</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.45);">Alumni dans le réseau</div>
+    </div>
+    <div class="dcard" style="flex:1;min-width:200px;text-align:center;">
+      <div style="font-size:2.2rem;font-weight:900;color:var(--c);">&gt; 36k€</div>
+      <div style="font-size:.82rem;color:rgba(255,255,255,.45);">Salaire médian 1er emploi</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMMES LIÉS -->
+<section class="content-sec">
+  <span class="slbl rv">Complémentarité</span>
+  <h2 class="sttl rv">Découvrir aussi ISEN et ISA</h2>
+  <p class="ssub rv">HEI, ISEN et ISA forment ensemble les trois visions de l'ingénieur JUNIA. Chaque programme a son identité propre.</p>
+  <div class="card-grid rv">
+    <a href="isen.html" style="text-decoration:none;" class="card">
+      <div class="card-ico" style="background:#e8edf4;font-size:1.1rem;font-weight:900;color:#1a2d42;">ISEN</div>
+      <div class="card-ttl">ISEN — Transitions numériques</div>
+      <div class="card-txt">Intelligence artificielle, cybersécurité, systèmes embarqués, électronique. Le programme du numérique de JUNIA.</div>
+    </a>
+    <a href="isa.html" style="text-decoration:none;" class="card">
+      <div class="card-ico" style="background:#e8f4ea;font-size:1.1rem;font-weight:900;color:#1a3420;">ISA</div>
+      <div class="card-ttl">ISA — Transitions agricoles</div>
+      <div class="card-txt">Agroécologie, alimentation durable, sciences du vivant, environnement. Le programme agri-alimentaire de JUNIA.</div>
+    </a>
+    <a href="programmes.html" style="text-decoration:none;" class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div class="card-ttl">Comparer les programmes</div>
+      <div class="card-txt">Consultez la page Programmes pour comparer HEI, ISEN et ISA : tronc commun, différences, et comment choisir.</div>
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Rejoindre HEI à JUNIA</h2>
+    <p>Parcoursup, admissions parallèles, alternance ou admission internationale : plusieurs voies permettent d'intégrer HEI. Notre équipe vous accompagne.</p>
+    <div class="cta-btns">
+      <a href="admissions.html" class="btn btn-c btn-lg">Candidater à HEI →</a>
+      <a href="brochures.html" class="btn btn-gw btn-lg">Télécharger la brochure HEI</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA pour former les ingénieurs des transitions. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
+      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Énergie &amp; Industrie</a></li>
+        <li><a href="isen.html">ISEN — Numérique &amp; IA</a></li>
+        <li><a href="isa.html">ISA — Agriculture &amp; Alimentation</a></li>
+        <li><a href="programmes.html">Comparer les programmes</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Formations</div>
+      <ul class="flinks">
+        <li><a href="formations.html">Cycle Ingénieur</a></li>
+        <li><a href="formations.html">Alternance</a></li>
+        <li><a href="formations.html">Masters &amp; MS</a></li>
+        <li><a href="admissions.html">Candidater</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="accessibilite.html">Accessibilité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="index.html">Accueil</a></div>
+  </div>
+</footer>
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>

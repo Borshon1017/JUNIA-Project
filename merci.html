@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>Message envoyé — JUNIA</title>
+<link rel="stylesheet" href="page.css">
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<section class="content-sec" style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;">
+  <div style="max-width:540px;">
+    <div style="width:72px;height:72px;border-radius:50%;background:var(--ps);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--p)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></div>
+    <h1 style="font-size:2.2rem;font-weight:900;color:var(--ink);margin-bottom:1rem;">Message envoyé !</h1>
+    <p style="font-size:1rem;color:var(--im);line-height:1.75;margin-bottom:2rem;">Notre équipe a bien reçu votre demande et vous répondra sous 48h ouvrées. Pensez à vérifier vos spams si vous ne recevez pas de réponse.</p>
+    <div style="display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap;">
+      <a href="index.html" class="btn btn-p btn-lg">Retour à l'accueil →</a>
+      <a href="formations.html" class="btn btn-g btn-lg">Nos formations</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div><span class="flogo">JUNIA</span><p class="fdesc">Grande École d'Ingénieurs depuis 1885.</p><div class="feco">Site éco-conçu · Score A+ Carbon</div></div>
+    <div><div class="fcolh">Navigation</div><ul class="flinks"><li><a href="index.html">Accueil</a></li><li><a href="formations.html">Formations</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="fcolh">L'École</div><ul class="flinks"><li><a href="ecole.html">Nos valeurs</a></li><li><a href="campus.html">Nos campus</a></li></ul></div>
+    <div><div class="fcolh">Légal</div><ul class="flinks"><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="confidentialite.html">Confidentialité</a></li></ul></div>
+  </div>
+  <div class="fbot"><span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span></div>
+</footer>
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>
