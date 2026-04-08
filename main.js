@@ -86,16 +86,58 @@ const SEARCH_DATA = [
   { title: 'Brochures & Documents', titleEN: 'Brochures & Documents', cat: 'Documents', catEN: 'Documents', icon: '↓', href: 'brochures.html' },
 ];
 
+// ─── SEARCH BAR (LAZY INIT — no DOM elements until first open) ───
 const searchWrap = document.getElementById('searchWrap');
 const searchBtn = document.getElementById('searchBtn');
-const searchPanel = document.getElementById('searchPanel');
-const searchInput = document.getElementById('searchInput');
-const searchClear = document.getElementById('searchClear');
-const searchDropdown = document.getElementById('searchDropdown');
-
+let searchPanel, searchInput, searchClear, searchDropdown;
 let searchOpen = false;
 
+function initSearchUI() {
+  if (searchPanel) return;
+  searchPanel = document.createElement('div');
+  searchPanel.className = 'search-panel';
+  searchPanel.id = 'searchPanel';
+  searchPanel.setAttribute('role', 'search');
+  searchPanel.setAttribute('aria-hidden', 'true');
+
+  searchInput = document.createElement('input');
+  searchInput.className = 'search-input';
+  searchInput.type = 'text';
+  searchInput.placeholder = 'Rechercher formations, campus…';
+  searchInput.autocomplete = 'off';
+  searchInput.setAttribute('aria-label', 'Recherche');
+
+  searchClear = document.createElement('button');
+  searchClear.className = 'search-clear';
+  searchClear.setAttribute('aria-label', 'Effacer');
+  searchClear.textContent = '✕';
+
+  searchDropdown = document.createElement('div');
+  searchDropdown.className = 'search-dropdown';
+  searchDropdown.setAttribute('role', 'listbox');
+  searchDropdown.setAttribute('aria-label', 'Suggestions de recherche');
+
+  searchPanel.append(searchInput, searchClear);
+  searchWrap.append(searchPanel, searchDropdown);
+
+  searchClear.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); renderResults(''); });
+  searchInput.addEventListener('input', (e) => renderResults(e.target.value));
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
+    if (e.key === 'Enter') { const f = searchDropdown.querySelector('.sdrop-item'); if (f) f.click(); }
+    if (e.key === 'ArrowDown') { const items = searchDropdown.querySelectorAll('.sdrop-item'); if (items.length) items[0].focus(); e.preventDefault(); }
+  });
+  searchDropdown.addEventListener('keydown', (e) => {
+    const items = [...searchDropdown.querySelectorAll('.sdrop-item')];
+    const idx = items.indexOf(document.activeElement);
+    if (e.key === 'ArrowDown' && idx < items.length - 1) { items[idx + 1].focus(); e.preventDefault(); }
+    if (e.key === 'ArrowUp') { idx > 0 ? items[idx - 1].focus() : searchInput.focus(); e.preventDefault(); }
+    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
+  });
+}
+
 function openSearch() {
+  initSearchUI();
   searchOpen = true;
   searchWrap.classList.add('open');
   searchPanel.setAttribute('aria-hidden', 'false');
@@ -105,6 +147,7 @@ function openSearch() {
 }
 
 function closeSearch() {
+  if (!searchPanel) return;
   searchOpen = false;
   searchWrap.classList.remove('open', 'has-results');
   searchPanel.setAttribute('aria-hidden', 'true');
@@ -132,24 +175,13 @@ function renderResults(query) {
     results.forEach((item, idx) => {
       const title = isEN ? item.titleEN : item.title;
       const cat = isEN ? item.catEN : item.cat;
-      html += `
-        <a class="sdrop-item" href="${item.href}" role="option">
-          <span class="sdrop-icon">${item.icon}</span>
-          <span>
-            <span class="sdrop-title">${highlight(title, q)}</span>
-            <span class="sdrop-cat">${cat}</span>
-          </span>
-        </a>`;
-      if (idx === 2 && results.length > 3 && q === '') {
-        html += `<div class="sdrop-divider"></div>`;
-      }
+      html += `<a class="sdrop-item" href="${item.href}" role="option"><span class="sdrop-icon">${item.icon}</span><span><span class="sdrop-title">${highlight(title, q)}</span><span class="sdrop-cat">${cat}</span></span></a>`;
+      if (idx === 2 && results.length > 3 && q === '') html += `<div class="sdrop-divider"></div>`;
     });
   }
 
   searchDropdown.innerHTML = html;
   searchWrap.classList.add('has-results');
-
-  // Close on item click
   searchDropdown.querySelectorAll('.sdrop-item').forEach(item => {
     item.addEventListener('click', closeSearch);
   });
@@ -166,29 +198,8 @@ function highlight(text, query) {
 
 if (searchBtn) {
   searchBtn.addEventListener('click', () => searchOpen ? closeSearch() : openSearch());
-  searchClear.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); renderResults(''); });
-  searchInput.addEventListener('input', (e) => renderResults(e.target.value));
-  searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
-    if (e.key === 'Enter') {
-      const first = searchDropdown.querySelector('.sdrop-item');
-      if (first) { first.click(); }
-    }
-    if (e.key === 'ArrowDown') {
-      const items = searchDropdown.querySelectorAll('.sdrop-item');
-      if (items.length) items[0].focus();
-      e.preventDefault();
-    }
-  });
-  searchDropdown.addEventListener('keydown', (e) => {
-    const items = [...searchDropdown.querySelectorAll('.sdrop-item')];
-    const idx = items.indexOf(document.activeElement);
-    if (e.key === 'ArrowDown' && idx < items.length - 1) { items[idx + 1].focus(); e.preventDefault(); }
-    if (e.key === 'ArrowUp') { idx > 0 ? items[idx - 1].focus() : searchInput.focus(); e.preventDefault(); }
-    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
-  });
   document.addEventListener('click', (e) => {
-    if (searchOpen && !searchWrap.contains(e.target)) closeSearch();
+    if (searchOpen && searchWrap && !searchWrap.contains(e.target)) closeSearch();
   });
 }
 

@@ -5,11 +5,9 @@
 <meta name="description" content="JUNIA, Grande École d'Ingénieurs à Lille, Bordeaux et Châteauroux. HEI, ISEN et ISA : 3 programmes CTI pour former les ingénieurs des transitions énergétiques, numériques et agricoles.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#3F2A56">
-<meta name="color-scheme" content="light">
 <title>JUNIA — Grande École des Transitions</title>
 <link rel="stylesheet" href="styles.css" media="all">
 <link rel="alternate" hreflang="en" href="en/index.html">
-<link rel="alternate" hreflang="fr" href="index.html">
 </head>
 <body>
 
@@ -28,254 +26,158 @@
   <div class="nav-r">
     <div class="search-wrap" id="searchWrap">
       <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+        <svg viewBox="0 0 24 24"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm5.5.5L22 22"/></svg>
       </button>
-      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
-        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
-        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
-      </div>
-      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
     </div>
     <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
     <a href="brochures.html" class="btn btn-g">Brochure</a>
     <a href="admissions.html" class="btn btn-p">Candidater →</a>
   </div>
-  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav"><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-text">
-    <div class="eyebrow"><span class="edot"></span>Grande École d'Ingénieurs · Lille · CTI · Depuis 1885</div>
-    <h1>Former les<br><span class="h1a">ingénieurs</span><br><span class="h1s">de demain</span></h1>
+    <p class="eyebrow">Grande École d'Ingénieurs · Lille · CTI · Depuis 1885</p>
+    <h1>Former les <span class="h1a">ingénieurs</span><span class="h1s">de demain</span></h1>
     <p class="hero-sub">JUNIA réunit HEI, ISEN et ISA pour former des ingénieurs prêts à relever les transitions énergétiques, numériques et alimentaires du 21e siècle. Moteur d'innovations depuis 1885.</p>
     <div class="hero-btns">
       <a href="formations.html" class="btn btn-p btn-lg">Trouver ma formation →</a>
       <a href="contact.html" class="btn btn-op btn-lg">Portes ouvertes</a>
     </div>
     <div class="hero-stats">
-      <div class="hs"><span class="hsn">5 000+</span><span class="hsl">Étudiants</span></div>
-      <div class="hs"><span class="hsn">97%</span><span class="hsl">Insertion pro.</span></div>
-      <div class="hs"><span class="hsn">180+</span><span class="hsl">Partenaires int.</span></div>
+      <span class="hs"><b class="hsn">5 000+</b><span class="hsl">Étudiants</span></span>
+      <span class="hs"><b class="hsn">97%</b><span class="hsl">Insertion pro.</span></span>
+      <span class="hs"><b class="hsn">180+</b><span class="hsl">Partenaires int.</span></span>
     </div>
   </div>
   <div class="hero-vis">
     <div class="hv-main">
-      <div class="hv-body">
-        <div class="hv-tag">Programme Grande École</div>
-        <div class="hv-ttl">Ingénieur diplômé<br>en 5 ans</div>
-        <div class="hv-pill">Grande école des transitions</div>
-      </div>
+      <p class="hv-tag">Programme Grande École</p>
+      <p class="hv-ttl">Ingénieur diplômé<br>en 5 ans</p>
+      <p class="hv-pill">Grande école des transitions</p>
     </div>
     <div class="hv-sub1">
-      <div class="hv-tag" style="font-size:.61rem;">Campus</div>
-      <div style="font-family:var(--fh);font-size:.92rem;font-weight:800;color:#fff;line-height:1.25;margin-top:.28rem;">Lille · Bordeaux<br>& Châteauroux</div>
+      <p class="hv-tag">Campus</p>
+      <p>Lille · Bordeaux<br>&amp; Châteauroux</p>
     </div>
     <div class="hv-sub2">
-      <div class="hv-sub2-n">#1</div>
-      <div class="hv-sub2-l">Hauts-de-<br>France</div>
+      <b class="hv-sub2-n">#1</b>
+      <span class="hv-sub2-l">Hauts-de-France</span>
     </div>
     <div class="hv-float">
-      <div class="hv-fi"></div>
-      <div><div class="hv-ft">Parcoursup ouvert</div><div class="hv-fb">Candidatures 2025–26</div></div>
+      <p class="hv-ft">Parcoursup ouvert</p>
+      <p class="hv-fb">Candidatures 2025–26</p>
     </div>
   </div>
 </section>
 
 <!-- FORMATIONS -->
 <section class="sec progs" id="formations">
-  <span class="slbl">Formations & Admissions</span>
   <h2 class="sttl rv">Un parcours pour chaque ambition</h2>
   <p class="ssub rv">De bac+3 à bac+5, formation initiale ou alternance — JUNIA s'adapte à votre profil et votre projet professionnel.</p>
-  <div class="tabs rv">
-    <button class="tab on" onclick="setTab(this)">Tous</button>
-    <button class="tab" onclick="setTab(this)">Formation initiale</button>
-    <button class="tab" onclick="setTab(this)">Alternance</button>
-    <button class="tab" onclick="setTab(this)">Masters</button>
-    <button class="tab" onclick="setTab(this)">International</button>
-  </div>
   <div class="pgrid">
-    <a href="formations.html" class="pc rv" aria-label="Cycle Ingénieur Grande École — détails">
-      <div class="pct"><div class="pct-bg g1"></div><div class="pbadge">Bac → Bac+5</div><div class="pico"></div></div>
-      <div class="pcb">
-        <div class="pttl">Cycle Ingénieur Grande École</div>
-        <div class="pdesc">5 ans d'études, diplôme CTI. Cycle préparatoire intégré puis spécialisation HEI, ISEN ou ISA. Transitions technologiques et environnementales.</div>
-        <div class="pcf"><span class="pmeta">Prépa intégrée · 5 ans</span><div class="parr">→</div></div>
-      </div>
+    <a href="formations.html" class="pc rv g1" aria-label="Cycle Ingénieur Grande École — détails">
+      <span class="pbadge">Bac → Bac+5</span>
+      <h3 class="pttl">Cycle Ingénieur Grande École</h3>
+      <p class="pdesc">5 ans d'études, diplôme CTI. Cycle préparatoire intégré puis spécialisation HEI, ISEN ou ISA. Transitions technologiques et environnementales.</p>
+      <span class="pmeta">Prépa intégrée · 5 ans</span>
     </a>
-    <a href="formations.html#alternance" class="pc rv" aria-label="Ingénieur en Alternance — détails">
-      <div class="pct"><div class="pct-bg g2"></div><div class="pbadge">Alternance</div><div class="pico"></div></div>
-      <div class="pcb">
-        <div class="pttl">Ingénieur en Alternance</div>
-        <div class="pdesc">Combinez études et entreprise. Un diplôme d'ingénieur CTI et une expérience terrain solide dès la 1re année. Financement possible.</div>
-        <div class="pcf"><span class="pmeta">Bac+2 requis · 3 ans</span><div class="parr">→</div></div>
-      </div>
+    <a href="formations.html#alternance" class="pc rv g2" aria-label="Ingénieur en Alternance — détails">
+      <span class="pbadge">Alternance</span>
+      <h3 class="pttl">Ingénieur en Alternance</h3>
+      <p class="pdesc">Combinez études et entreprise. Un diplôme d'ingénieur CTI et une expérience terrain solide dès la 1re année. Financement possible.</p>
+      <span class="pmeta">Bac+2 requis · 3 ans</span>
     </a>
-    <a href="formations.html" class="pc rv" aria-label="Masters et Mastères Spécialisés — détails">
-      <div class="pct"><div class="pct-bg g3"></div><div class="pbadge">Bac+5</div><div class="pico"></div></div>
-      <div class="pcb">
-        <div class="pttl">Masters & Mastères Spécialisés</div>
-        <div class="pdesc">Approfondissez une expertise en partenariat avec les meilleures universités mondiales. MS labellisés CGE, doubles diplômes.</div>
-        <div class="pcf"><span class="pmeta">Bac+4 requis · 1–2 ans</span><div class="parr">→</div></div>
-      </div>
+    <a href="formations.html" class="pc rv g3" aria-label="Masters et Mastères Spécialisés — détails">
+      <span class="pbadge">Bac+5</span>
+      <h3 class="pttl">Masters &amp; Mastères Spécialisés</h3>
+      <p class="pdesc">Approfondissez une expertise en partenariat avec les meilleures universités mondiales. MS labellisés CGE, doubles diplômes.</p>
+      <span class="pmeta">Bac+4 requis · 1–2 ans</span>
     </a>
-    <a href="formations.html" class="pc rv" aria-label="Bachelor Développeur Informatique — détails">
-      <div class="pct"><div class="pct-bg g4"></div><div class="pbadge">Bac+3</div><div class="pico"></div></div>
-      <div class="pcb">
-        <div class="pttl">Bachelor Développeur Informatique</div>
-        <div class="pdesc">Intégrez rapidement le monde du développement logiciel. Formation intensive, projets réels, en 3 ans après le bac.</div>
-        <div class="pcf"><span class="pmeta">Bac requis · 3 ans</span><div class="parr">→</div></div>
-      </div>
+    <a href="formations.html" class="pc rv g4" aria-label="Bachelor Développeur Informatique — détails">
+      <span class="pbadge">Bac+3</span>
+      <h3 class="pttl">Bachelor Développeur Informatique</h3>
+      <p class="pdesc">Intégrez rapidement le monde du développement logiciel. Formation intensive, projets réels, en 3 ans après le bac.</p>
+      <span class="pmeta">Bac requis · 3 ans</span>
     </a>
-    <a href="formations.html" class="pc rv" aria-label="Formation Continue et VAE — détails">
-      <div class="pct"><div class="pct-bg g5"></div><div class="pbadge">Pro</div><div class="pico"></div></div>
-      <div class="pcb">
-        <div class="pttl">Formation Continue & VAE</div>
-        <div class="pdesc">Évoluez en restant en activité. Programmes flexibles, finançables CPF, conçus pour les professionnels. Rentrée décalée disponible.</div>
-        <div class="pcf"><span class="pmeta">Tous profils · Modulaire</span><div class="parr">→</div></div>
-      </div>
+    <a href="formations.html" class="pc rv g5" aria-label="Formation Continue et VAE — détails">
+      <span class="pbadge">Pro</span>
+      <h3 class="pttl">Formation Continue &amp; VAE</h3>
+      <p class="pdesc">Évoluez en restant en activité. Programmes flexibles, finançables CPF, conçus pour les professionnels. Rentrée décalée disponible.</p>
+      <span class="pmeta">Tous profils · Modulaire</span>
     </a>
-    <a href="international.html" class="pc rv" aria-label="Doubles Diplômes Internationaux — détails">
-      <div class="pct"><div class="pct-bg g6"></div><div class="pbadge">International</div><div class="pico"></div></div>
-      <div class="pcb">
-        <div class="pttl">Doubles Diplômes Internationaux</div>
-        <div class="pdesc">180+ universités partenaires sur 5 continents. Partez 1 an à l'étranger via Erasmus+ et revenez diplômé de deux institutions reconnues.</div>
-        <div class="pcf"><span class="pmeta">Erasmus+ · 180 univ.</span><div class="parr">→</div></div>
-      </div>
+    <a href="international.html" class="pc rv g6" aria-label="Doubles Diplômes Internationaux — détails">
+      <span class="pbadge">International</span>
+      <h3 class="pttl">Doubles Diplômes Internationaux</h3>
+      <p class="pdesc">180+ universités partenaires sur 5 continents. Partez 1 an à l'étranger via Erasmus+ et revenez diplômé de deux institutions reconnues.</p>
+      <span class="pmeta">Erasmus+ · 180 univ.</span>
     </a>
-  </div>
-</section>
-
-<!-- NUMBERS -->
-<section class="nsec" id="chiffres">
-  <span class="slbl">JUNIA en chiffres</span>
-  <h2 class="sttl rv">Des résultats qui prouvent tout</h2>
-  <p class="ssub rv">Une école qui tient ses promesses — mesurée, suivie, publiée chaque année.</p>
-  <div class="ngrid">
-    <div class="nc rv"><span class="nico"></span><span class="nval" data-t="97" data-s="%">97%</span><span class="nlbl">Taux d'insertion pro à 6 mois</span></div>
-    <div class="nc rv"><span class="nico"></span><span class="nval" data-t="5000" data-s="">5 000</span><span class="nlbl">Étudiants sur 3 campus</span></div>
-    <div class="nc rv"><span class="nico"></span><span class="nval" data-t="180" data-s="+">180+</span><span class="nlbl">Universités partenaires dans le monde</span></div>
-    <div class="nc rv"><span class="nico"></span><span class="nval" data-t="42000" data-s="">42 000</span><span class="nlbl">Alumni dans le réseau JUNIA</span></div>
   </div>
 </section>
 
 <!-- TRACKS -->
 <section class="tsec" id="programmes">
-  <span class="slbl">Programmes Grande École</span>
   <h2 class="sttl rv">3 visions, 1 seule école</h2>
   <p class="ssub rv">HEI, ISEN, ISA : trois approches complémentaires pour former les ingénieurs de toutes les transitions.</p>
   <div class="tlayout">
     <a href="hei.html" class="thero rl" aria-label="Découvrir le programme HEI">
       <div class="thero-in">
-        <div style="font-family:var(--fh);font-size:3.8rem;font-weight:900;color:rgba(255,255,255,.1);line-height:1;margin-bottom:.45rem;">HEI</div>
-        <div class="ttag">Énergie · Bâtiment · Industrie · Smart Grids</div>
-        <div class="tttl" style="font-size:1.4rem;">Transitions énergétiques, des bâtiments & des industries</div>
-        <div class="tdesc" style="max-width:380px;">Concevez les infrastructures et systèmes énergétiques de demain. Smart grids, bâtiments durables, industrie 4.0, ville en transition.</div>
+        <span class="ttag">Énergie · Bâtiment · Industrie · Smart Grids</span>
+        <p class="tttl">Transitions énergétiques, des bâtiments &amp; des industries</p>
+        <p class="tdesc">Concevez les infrastructures et systèmes énergétiques de demain. Smart grids, bâtiments durables, industrie 4.0, ville en transition.</p>
         <span class="tlink">Découvrir HEI →</span>
       </div>
     </a>
     <div class="tside rr">
       <a href="isen.html" class="tsm sm1" aria-label="Découvrir le programme ISEN">
-        <div class="tabr">ISEN</div>
-        <div class="tsmb">
-          <div class="ttag">Numérique · IA · Cyber · Électronique</div>
-          <div class="tttl" style="font-size:.98rem;">ISEN — Systèmes intelligents & transitions numériques</div>
-          <span class="tlink" style="margin-top:.4rem;">Découvrir ISEN →</span>
-        </div>
+        <span class="tabr">ISEN</span>
+        <span class="ttag">Numérique · IA · Cyber · Électronique</span>
+        <p class="tttl">ISEN — Systèmes intelligents &amp; transitions numériques</p>
+        <span class="tlink">Découvrir ISEN →</span>
       </a>
       <a href="isa.html" class="tsm sm2" aria-label="Découvrir le programme ISA">
-        <div class="tabr">ISA</div>
-        <div class="tsmb">
-          <div class="ttag">Agri · Alim · Environnement</div>
-          <div class="tttl" style="font-size:.98rem;">ISA — Transitions agricoles, alimentaires & environnementales</div>
-          <span class="tlink" style="margin-top:.4rem;">Découvrir ISA →</span>
-        </div>
+        <span class="tabr">ISA</span>
+        <span class="ttag">Agri · Alim · Environnement</span>
+        <p class="tttl">ISA — Transitions agricoles, alimentaires &amp; environnementales</p>
+        <span class="tlink">Découvrir ISA →</span>
       </a>
     </div>
     <div class="tbot rv">
-      <div class="tbot-in">
-        <div class="tabr2">3</div>
-        <div>
-          <div class="ttag">Approche combinée · JUNIA2035</div>
-          <div class="tttl">Un campus, trois expertises complémentaires</div>
-          <div class="tdesc">Des passerelles entre filières, des démonstrateurs industriels, des projets trans-disciplinaires et une communauté de 5 000 étudiants.</div>
-        </div>
-      </div>
+      <span class="ttag">Approche combinée · JUNIA2035</span>
+      <p class="tttl">Un campus, trois expertises complémentaires</p>
+      <p class="tdesc">Des passerelles entre filières, des démonstrateurs industriels, des projets trans-disciplinaires et une communauté de 5 000 étudiants.</p>
     </div>
   </div>
 </section>
 
 <!-- WHY -->
 <section class="wsec" id="why">
-  <div class="wgrid">
-    <div class="wvis rl">
-      <div class="wmain">
-        <div><div class="wlbl">Pourquoi JUNIA</div><div class="wttl">Une école qui<br>s'engage vraiment</div></div>
-        <div class="wbot">
-          <div><div class="wbn">140+</div><div class="wbl">Ans d'histoire</div></div>
-          <div><div class="wbn">CTI</div><div class="wbl">Accrédité</div></div>
-          <div><div class="wbn">A+</div><div class="wbl">Éco-score</div></div>
-        </div>
-      </div>
-      <div class="wfloat"><div class="wfi"></div><div><div class="wft">Top école régionale</div><div class="wfs">#1 Hauts-de-France 2025</div></div></div>
-    </div>
-    <div class="rr">
-      <span class="slbl" style="text-align:left;">Ce qui nous différencie</span>
-      <h2 class="sttl" style="text-align:left;font-size:clamp(1.75rem,2.7vw,2.35rem);margin-bottom:.7rem;">Bien plus qu'une école d'ingénieurs</h2>
-      <p class="ssub" style="text-align:left;margin:0 0 1.9rem;">JUNIA forme des ingénieurs-citoyens, capables de comprendre les enjeux planétaires et d'y répondre techniquement. Une stratégie assumée : JUNIA2035 — Transformation(s).</p>
-      <div class="feats">
-        <div class="feat"><div class="fic"></div><div><div class="ftt">Engagement RSE sincère</div><div class="fdd">Campus certifiés, politique carbone mesurée, site éco-conçu A+ Carbon. Politique RSE publiée et suivie annuellement.</div></div></div>
-        <div class="feat"><div class="fic"></div><div><div class="ftt">Réseau alumni actif</div><div class="fdd">42 000 diplômés, Career Center dédié, 97% d'insertion à 6 mois. Accompagnement tout au long de la carrière.</div></div></div>
-        <div class="feat"><div class="fic"></div><div><div class="ftt">Recherche & Innovation</div><div class="fdd">4 démonstrateurs industriels (Industrie du futur, Ville en transition, Agriculture & alimentation), projets de recherche appliquée.</div></div></div>
-        <div class="feat"><div class="fic"></div><div><div class="ftt">Ouverture internationale</div><div class="fdd">180+ universités partenaires, Erasmus+, doubles diplômes sur 5 continents, accueil des étudiants internationaux.</div></div></div>
-      </div>
-      <a href="ecole.html" class="btn btn-p btn-lg">Découvrir l'école →</a>
-    </div>
+  <span class="slbl">Ce qui nous différencie</span>
+  <h2 class="sttl">Bien plus qu'une école d'ingénieurs</h2>
+  <p class="ssub">JUNIA forme des ingénieurs-citoyens, capables de comprendre les enjeux planétaires et d'y répondre techniquement. Une stratégie assumée : JUNIA2035 — Transformation(s).</p>
+  <div class="feats">
+    <div class="feat"><strong class="ftt">Engagement RSE sincère</strong><p class="fdd">Campus certifiés, politique carbone mesurée, site éco-conçu A+ Carbon. Politique RSE publiée et suivie annuellement.</p></div>
+    <div class="feat"><strong class="ftt">Réseau alumni actif</strong><p class="fdd">42 000 diplômés, Career Center dédié, 97% d'insertion à 6 mois. Accompagnement tout au long de la carrière.</p></div>
+    <div class="feat"><strong class="ftt">Recherche &amp; Innovation</strong><p class="fdd">4 démonstrateurs industriels (Industrie du futur, Ville en transition, Agriculture &amp; alimentation), projets de recherche appliquée.</p></div>
+    <div class="feat"><strong class="ftt">Ouverture internationale</strong><p class="fdd">180+ universités partenaires, Erasmus+, doubles diplômes sur 5 continents, accueil des étudiants internationaux.</p></div>
   </div>
+  <a href="ecole.html" class="btn btn-p btn-lg">Découvrir l'école →</a>
 </section>
 
 <!-- TESTIMONIALS -->
 <section class="tessec" id="temoignages">
-  <span class="slbl">Témoignages</span>
   <h2 class="sttl rv">Ils ont choisi JUNIA</h2>
   <p class="ssub rv">Des étudiants, anciens élèves et partenaires racontent leur expérience.</p>
   <div class="tegrid">
     <div class="tec rv">
-      <div class="testars">★★★★★</div><p class="tebody">JUNIA m'a donné les outils pour comprendre les enjeux réels de la transition énergétique. Aujourd'hui ingénieure chez Engie, je vis ce que j'ai appris en cours.</p>
-      <div class="tefoot"><div class="teav av1">SA</div><div><div class="tename">Sofia A.</div><div class="terole">Diplômée HEI · Ingénieure Engie Renewables</div></div></div>
+      <p class="tebody">JUNIA m'a donné les outils pour comprendre les enjeux réels de la transition énergétique. Aujourd'hui ingénieure chez Engie, je vis ce que j'ai appris en cours.</p>
+      <div class="tefoot"><span class="teav av1">SA</span><p><b>Sofia A.</b> — Diplômée HEI · Ingénieure Engie Renewables</p></div>
     </div>
     <div class="tec rv">
-      <div class="testars">★★★★★</div><p class="tebody">L'alternance chez JUNIA, c'est le meilleur investissement que j'ai fait. J'ai été recruté avant même d'avoir fini mon diplôme. Le réseau alumni est incroyablement actif.</p>
-      <div class="tefoot"><div class="teav av2">TM</div><div><div class="tename">Thomas M.</div><div class="terole">Diplômé ISEN · Lead Developer chez Decathlon Tech</div></div></div>
-    </div>
-    <div class="tec rv">
-      <div class="testars">★★★★★</div><p class="tebody">ISA m'a permis de combiner ma passion pour le vivant avec une vraie approche ingénieur. Une formation rare, rigoureuse, portée par des enseignants passionnés.</p>
-      <div class="tefoot"><div class="teav av3">LB</div><div><div class="tename">Lucie B.</div><div class="terole">Étudiante ISA · 4e année · Agroécologie</div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ECO -->
-<section class="ecosec" id="rse">
-  <div class="ecoinner">
-    <div class="ecotext rl">
-      <span class="slbl">Éco-conception & RSE</span>
-      <h2 class="sttl">Un site aussi engagé<br>que l'école</h2>
-      <p class="ssub">Ce site est éco-conçu — zéro image externe, polices système natives, CSS uniquement, hébergement 100% vert. Conforme à la politique RSE de JUNIA.</p>
-      <div class="ecobadges">
-        <span class="ecobdg"><span class="esym">✦</span>Hébergement vert 100%</span>
-        <span class="ecobdg"><span class="esym">◈</span>Polices système natives</span>
-        <span class="ecobdg"><span class="esym">▪</span>Zéro image externe</span>
-        <span class="ecobdg"><span class="esym">◉</span>WCAG 2.2 AA</span>
-      </div>
-    </div>
-    <div class="ecomet rr">
-      <div class="emc"><span class="emico"></span><span class="emval">A+</span><span class="emlbl">Score Carbon Website</span></div>
-      <div class="emc"><span class="emico"></span><span class="emval">0.03g</span><span class="emlbl">CO₂ par page vue</span></div>
-      <div class="emc"><span class="emico"></span><span class="emval">100%</span><span class="emlbl">Énergie renouvelable</span></div>
-      <div class="emc"><span class="emico"></span><span class="emval">Top 5%</span><span class="emlbl">Sites les plus propres</span></div>
+      <p class="tebody">L'alternance chez JUNIA, c'est le meilleur investissement que j'ai fait. J'ai été recruté avant même d'avoir fini mon diplôme. Le réseau alumni est incroyablement actif.</p>
+      <div class="tefoot"><span class="teav av2">TM</span><p><b>Thomas M.</b> — Diplômé ISEN · Lead Developer chez Decathlon Tech</p></div>
     </div>
   </div>
 </section>
@@ -283,21 +185,12 @@
 <!-- CTA -->
 <section class="ctasec">
   <div class="ctawrap rv">
-    <div class="ctatop">
-      <div class="ctain">
-        <div class="ctatag">Parcoursup · Admissions parallèles · International</div>
-        <h2 class="ctattl">Prêt à rejoindre<br>l'école des transitions ?</h2>
-        <p class="ctasub">Candidatez dès maintenant. Notre équipe vous accompagne à chaque étape de votre dossier d'admission.</p>
-        <div class="ctabtns">
-          <a href="admissions.html" class="btn btn-c btn-lg">Déposer ma candidature →</a>
-          <a href="brochures.html" class="btn btn-gw btn-lg">Télécharger la brochure</a>
-        </div>
-      </div>
-    </div>
-    <div class="ctabot">
-      <a href="contact.html" class="ci"><span class="ciico"></span><div class="cit">Portes ouvertes</div><div class="cid">Rencontrez nos équipes à Lille, Bordeaux &amp; Châteauroux. Consultez la page contact pour les dates.</div></a>
-      <a href="contact.html" class="ci"><span class="ciico"></span><div class="cit">Besoin de conseils ?</div><div class="cid">Nos conseillers répondent sous 24h à toutes vos questions d'admission.</div></a>
-      <a href="brochures.html" class="ci"><span class="ciico ciico-sym">↓</span><div class="cit">Brochures gratuites</div><div class="cid">Téléchargez nos brochures par programme et par campus.</div></a>
+    <div class="ctain">
+      <p class="ctatag">Parcoursup · Admissions parallèles · International</p>
+      <h2 class="ctattl">Prêt à rejoindre<br>l'école des transitions ?</h2>
+      <p class="ctasub">Candidatez dès maintenant. Notre équipe vous accompagne à chaque étape de votre dossier d'admission.</p>
+      <a href="admissions.html" class="btn btn-c btn-lg">Déposer ma candidature →</a>
+      <a href="brochures.html" class="btn btn-gw btn-lg">Télécharger la brochure</a>
     </div>
   </div>
 </section>
@@ -308,46 +201,29 @@
     <div>
       <span class="flogo">JUNIA</span>
       <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA pour former les ingénieurs des transitions énergétiques, numériques et environnementales. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
-      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
     </div>
     <div>
-      <div class="fcolh">Programmes</div>
-      <ul class="flinks">
-        <li><a href="hei.html">HEI — Énergie &amp; Industrie</a></li>
-        <li><a href="isen.html">ISEN — Numérique &amp; IA</a></li>
-        <li><a href="isa.html">ISA — Agriculture</a></li>
-        <li><a href="formations.html">Toutes les formations</a></li>
-        <li><a href="admissions.html">Candidater</a></li>
-      </ul>
+      <p class="fcolh">Programmes</p>
+      <a class="flink" href="hei.html">HEI — Énergie &amp; Industrie</a>
+      <a class="flink" href="isen.html">ISEN — Numérique &amp; IA</a>
+      <a class="flink" href="isa.html">ISA — Agriculture</a>
+      <a class="flink" href="formations.html">Toutes les formations</a>
+      <a class="flink" href="admissions.html">Candidater</a>
     </div>
     <div>
-      <div class="fcolh">L'École</div>
-      <ul class="flinks">
-        <li><a href="ecole.html">Nos valeurs</a></li>
-        <li><a href="campus.html">Campus Lille</a></li>
-        <li><a href="ecole.html">Politique RSE</a></li>
-        <li><a href="ecole.html">Alumni JUNIA</a></li>
-        <li><a href="contact.html">Nous rejoindre</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fcolh">Contact</div>
-      <ul class="flinks">
-        <li><a href="admissions.html">Candidatures</a></li>
-        <li><a href="contact.html">Contact général</a></li>
-        <li><a href="international.html">Étudiants internationaux</a></li>
-        <li><a href="accessibilite.html">Accessibilité</a></li>
-      </ul>
+      <p class="fcolh">Contact</p>
+      <a class="flink" href="ecole.html">Nos valeurs &amp; Alumni</a>
+      <a class="flink" href="campus.html">Campus</a>
+      <a class="flink" href="contact.html">Contact &amp; Portes ouvertes</a>
+      <a class="flink" href="accessibilite.html">Accessibilité</a>
     </div>
   </div>
   <div class="fbot">
     <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
-    <div class="fblinks">
-      <a href="mentions-legales.html">Mentions légales</a>
-      <a href="confidentialite.html">Confidentialité</a>
-      <a href="index.html">Plan du site</a>
-      <a href="accessibilite.html">Accessibilité</a>
-    </div>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="index.html">Plan du site</a>
+    <a href="accessibilite.html">Accessibilité</a>
   </div>
 </footer>
 
