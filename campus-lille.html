@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Découvrez le campus de Lille JUNIA : IC1, IC2 et Palais Rameaux. Infrastructures, bâtiments, vie étudiante et programmes HEI, ISEN, ISA à Lille.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>Campus de Lille — JUNIA</title>
+<link rel="stylesheet" href="page.css">
+<style>
+.bld-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.35rem;}
+.bld-alg{background:#1a2a1a;}
+.bld-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);background:var(--w);transition:box-shadow .2s;}
+.bld-card:hover{box-shadow:0 8px 32px rgba(63,42,86,.1);}
+.bld-head{height:120px;display:flex;align-items:flex-end;padding:1.2rem;position:relative;}
+.bld-abbr{position:absolute;top:.6rem;right:.9rem;font-size:3rem;font-weight:900;color:rgba(255,255,255,.1);line-height:1;}
+.bld-label{font-family:var(--fh);font-size:1.45rem;font-weight:900;color:#fff;position:relative;z-index:1;line-height:1.1;}
+.bld-body{padding:1.5rem;}
+.bld-ttl{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-bottom:.55rem;}
+.bld-desc{font-size:.88rem;color:var(--im);line-height:1.65;margin-bottom:1.1rem;}
+.bld-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+.bld-tag{background:var(--ps);color:var(--p);font-size:.67rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;}
+.bld-ic1{background:#2a1a3a;}
+.bld-ic2{background:#3d2558;}
+.bld-pr{background:#1a2a3a;}
+.city-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+@media(max-width:900px){.bld-grid{grid-template-columns:1fr;}.city-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" hreflang="en" href="en/campus-lille.html">
+<link rel="alternate" hreflang="fr" href="campus-lille.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html" class="active">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a><span class="sep">›</span>
+  <a href="campus.html">Campus</a><span class="sep">›</span>
+  <span class="cur">Campus de Lille</span>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-in">
+    <div class="eyebrow">Campus principal · Hauts-de-France</div>
+    <h1>Campus de Lille</h1>
+    <p class="sub">Le campus historique de JUNIA depuis 1885. Situé au cœur de la métropole lilloise, il réunit quatre sites emblématiques — IC1, IC2, ALG et le Palais Rameaux — et accueille les programmes HEI, ISEN et ISA.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Rencontrer nos équipes →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Candidater</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-sec">
+  <span class="slbl rv">Infrastructures</span>
+  <h2 class="sttl rv">Les quatre sites du campus de Lille</h2>
+  <p class="ssub rv">Le campus lillois de JUNIA s'articule autour de quatre bâtiments complémentaires, chacun dédié à un volet de la formation et de la vie de l'école.</p>
+  <div class="bld-grid rv">
+
+    <div class="bld-card">
+      <div class="bld-head bld-ic1">
+        <div class="bld-abbr">IC1</div>
+        <div class="bld-label">IC1</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Ingénieur Campus 1</div>
+        <div class="bld-desc">Bâtiment principal d'enseignement, IC1 concentre les amphithéâtres, les salles de cours et les laboratoires des programmes HEI et ISEN. Il abrite également les espaces administratifs, la bibliothèque et les services aux étudiants.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">HEI</span>
+          <span class="bld-tag">ISEN</span>
+          <span class="bld-tag">Amphithéâtres</span>
+          <span class="bld-tag">Laboratoires</span>
+          <span class="bld-tag">Bibliothèque</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bld-card">
+      <div class="bld-head bld-ic2">
+        <div class="bld-abbr">IC2</div>
+        <div class="bld-label">IC2</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Ingénieur Campus 2</div>
+        <div class="bld-desc">IC2 complète IC1 avec des espaces dédiés aux travaux pratiques, aux ateliers et aux projets étudiants. Il accueille notamment les démonstrateurs industriels, les espaces de co-working et les salles de projet transversaux entre programmes.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">Ateliers &amp; TP</span>
+          <span class="bld-tag">Co-working</span>
+          <span class="bld-tag">Démonstrateurs</span>
+          <span class="bld-tag">Projets étudiants</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bld-card">
+      <div class="bld-head bld-pr">
+        <div class="bld-abbr">PR</div>
+        <div class="bld-label">Palais Rameaux</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Palais Rameaux — Depuis 1885</div>
+        <div class="bld-desc">Édifice emblématique du patrimoine lillois, le Palais Rameaux est indissociable de l'histoire de JUNIA. Ce bâtiment historique témoigne de l'ancrage profond de l'école dans la métropole lilloise depuis plus de 130 ans. Il accueille des espaces événementiels et institutionnels.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">Patrimoine 1885</span>
+          <span class="bld-tag">Événementiel</span>
+          <span class="bld-tag">Institutionnel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bld-card">
+      <div class="bld-head bld-alg">
+        <div class="bld-abbr">ALG</div>
+        <div class="bld-label">ALG</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Bâtiment ALG</div>
+        <div class="bld-desc">Le bâtiment ALG complète le dispositif du campus lillois avec des espaces dédiés à l'enseignement et à la recherche. Il accueille des salles spécialisées, des laboratoires et des espaces de travail collaboratif pour les étudiants des différents programmes JUNIA.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">Enseignement</span>
+          <span class="bld-tag">Laboratoires</span>
+          <span class="bld-tag">Espaces collaboratifs</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec alt">
+  <span class="slbl rv">La ville</span>
+  <h2 class="sttl rv">Étudier à Lille</h2>
+  <p class="ssub rv">Capitale des Hauts-de-France, Lille est l'une des grandes métropoles étudiantes françaises. Un cadre de vie riche, une ville dynamique et une situation géographique exceptionnelle.</p>
+  <div class="city-grid rv">
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="card-ttl">Situation géographique</div>
+      <div class="card-txt">Lille est à 1h de Paris en TGV et à 30 min de Bruxelles. Au carrefour de l'Europe du Nord, la ville offre un accès privilégié aux grandes capitales européennes et à leurs bassins d'emploi.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11.5V17c2 1.5 8 1.5 12 0v-5.5"/><line x1="22" y1="9" x2="22" y2="14"/></svg>
+      </div>
+      <div class="card-ttl">Ville étudiante</div>
+      <div class="card-txt">Avec plus de 110 000 étudiants, Lille est la 4e ville universitaire de France. Vie culturelle intense, scène artistique vivante, tissu associatif dense et offre de logements étudiants développée.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <div class="card-ttl">Bassin d'emploi</div>
+      <div class="card-txt">La métropole lilloise est l'un des premiers pôles économiques français. Présence forte de groupes industriels, de startups technologiques et d'entreprises dans les secteurs de l'énergie, du numérique et de l'agroalimentaire.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M3 9h18M3 15h18"/><line x1="12" y1="6" x2="12" y2="18"/></svg>
+      </div>
+      <div class="card-ttl">Services de santé</div>
+      <div class="card-txt">Un service de santé est disponible sur le campus : médecin, infirmerie et soutien psychologique. JUNIA veille au bien-être physique et mental de ses étudiants tout au long de leur cursus.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Venez découvrir le campus en vrai</h2>
+    <p>Journées portes ouvertes, visites guidées, rencontres avec nos équipes. Découvrez le campus de Lille avant de candidater.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Rencontrer nos équipes →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Candidater</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
+      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
+    </div>
+    <div>
+      <div class="fcolh">Campus</div>
+      <ul class="flinks">
+        <li><a href="campus-lille.html">Campus de Lille</a></li>
+        <li><a href="campus-bordeaux.html">Campus de Bordeaux</a></li>
+        <li><a href="campus-chateauroux.html">Campus de Châteauroux</a></li>
+        <li><a href="campus.html">Vue d'ensemble</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Énergie &amp; Industrie</a></li>
+        <li><a href="isen.html">ISEN — Numérique &amp; IA</a></li>
+        <li><a href="isa.html">ISA — Agriculture</a></li>
+        <li><a href="admissions.html">Candidater</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="contact.html">Contact &amp; Portes ouvertes</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="accessibilite.html">Accessibilité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="index.html">Accueil</a></div>
+  </div>
+</footer>
+
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>
