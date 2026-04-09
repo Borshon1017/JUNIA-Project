@@ -78,6 +78,13 @@ nav{position:sticky;top:0;z-index:200;height:var(--nav);background:rgba(250,249,
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
 .info-grid.three{grid-template-columns:repeat(3,1fr);gap:2rem;}
 .info-grid.center{align-items:center;}
+.info-item{display:flex;gap:1rem;align-items:flex-start;}
+.ii-ico{width:40px;height:40px;border-radius:10px;background:var(--ps);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ii-ico svg{width:18px;height:18px;color:var(--c);}
+.ii-ttl{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--p);margin-bottom:.35rem;}
+.ii-val{font-size:.9rem;color:var(--im);line-height:1.7;}
+.text-link{color:var(--p);font-weight:600;text-decoration:none;}
+.text-link:hover{text-decoration:underline;}
 
 /* ─── CARD GRID ─── */
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;}
