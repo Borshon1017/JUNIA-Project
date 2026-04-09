@@ -1,4 +1,4 @@
-// ─── REVEAL ANIMATIONS ───
+// ─── SCROLL REVEAL ───
 const io = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
@@ -8,15 +8,6 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 document.querySelectorAll('.rv, .rl, .rr').forEach(el => io.observe(el));
-
-// ─── NAV ACTIVE STATE ───
-const path = window.location.pathname.split('/').pop() || 'index.html';
-document.querySelectorAll('.nav-links a').forEach(a => {
-  const href = a.getAttribute('href');
-  if (href === path || href === path.replace(/\.html$/, '')) {
-    a.classList.add('active');
-  }
-});
 
 // ─── MOBILE NAV TOGGLE ───
 const toggle = document.querySelector('.nav-toggle');
@@ -55,40 +46,90 @@ if (toggle && navLinks) {
   });
 }
 
+// ─── LANGUAGE TOGGLE (EN → FR) ───
+const langToggle = document.getElementById('langToggle');
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    // Navigate to the equivalent French page
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    window.location.href = '../' + (page.endsWith('.html') ? page : 'index.html');
+  });
+}
+
 // ─── SEARCH DATA (English) ───
 const SEARCH_DATA = [
-  { title: 'Grande École Engineering Programme', cat: 'Course · Bac → Bac+5', icon: '🏛️', href: 'formations.html' },
-  { title: 'Work-Study Engineering', cat: 'Course · 3 years', icon: '🔄', href: 'formations.html#alternance' },
-  { title: 'Masters & Specialised Degrees', cat: 'Course · Bac+5', icon: '🔬', href: 'formations.html' },
-  { title: 'Bachelor in Software Development', cat: 'Course · Bac+3', icon: '💻', href: 'formations.html' },
-  { title: 'Continuing Education & RPL', cat: 'Course · Professional', icon: '📈', href: 'formations.html' },
-  { title: 'International Double Degrees', cat: 'International', icon: '✈️', href: 'international.html' },
-  { title: 'HEI — Energy & Industry', cat: 'Grande École Programme', icon: '⚡', href: 'hei.html' },
-  { title: 'ISEN — Digital & AI', cat: 'Grande École Programme', icon: '💡', href: 'isen.html' },
-  { title: 'ISA — Agriculture & Environment', cat: 'Grande École Programme', icon: '🌱', href: 'isa.html' },
-  { title: 'Lille Campus', cat: 'Campus', icon: '📍', href: 'campus.html' },
-  { title: 'Bordeaux Campus', cat: 'Campus', icon: '📍', href: 'campus.html' },
-  { title: 'Apply — Admissions', cat: 'Admissions', icon: '🎓', href: 'admissions.html' },
-  { title: 'Parcoursup Application', cat: 'Admissions', icon: '📝', href: 'admissions.html' },
-  { title: 'Contact & Open Days', cat: 'Contact', icon: '📅', href: 'contact.html' },
-  { title: 'CSR Policy & Eco Score', cat: 'The School', icon: '♻️', href: 'ecole.html' },
-  { title: 'Alumni Network', cat: 'The School', icon: '🤝', href: 'ecole.html' },
-  { title: 'Companies & Partnerships', cat: 'Companies', icon: '🏢', href: 'entreprises.html' },
-  { title: 'Brochures & Documents', cat: 'Documents', icon: '📥', href: 'brochures.html' },
-  { title: 'Grande École Programmes', cat: 'Programmes', icon: '🎓', href: 'programmes.html' },
-  { title: 'The School — JUNIA', cat: 'The School', icon: '🏫', href: 'ecole.html' },
+  { title: 'Grande École Engineering Programme', cat: 'Course · Bac → Bac+5', icon: '◆', href: 'formations.html' },
+  { title: 'Work-Study Engineering', cat: 'Course · 3 years', icon: '↻', href: 'formations.html#alternance' },
+  { title: 'Masters & Specialised Degrees', cat: 'Course · Bac+5', icon: '◈', href: 'formations.html' },
+  { title: 'Bachelor in Software Development', cat: 'Course · Bac+3', icon: '◇', href: 'formations.html' },
+  { title: 'Continuing Education & RPL', cat: 'Course · Professional', icon: '▲', href: 'formations.html' },
+  { title: 'International Double Degrees', cat: 'International', icon: '◉', href: 'international.html' },
+  { title: 'HEI — Energy & Industry', cat: 'Grande École Programme', icon: '◆', href: 'hei.html' },
+  { title: 'ISEN — Digital & AI', cat: 'Grande École Programme', icon: '◈', href: 'isen.html' },
+  { title: 'ISA — Agriculture & Environment', cat: 'Grande École Programme', icon: '◇', href: 'isa.html' },
+  { title: 'Lille Campus', cat: 'Campus', icon: '◉', href: 'campus.html' },
+  { title: 'Bordeaux Campus', cat: 'Campus', icon: '◉', href: 'campus.html' },
+  { title: 'Apply — Admissions', cat: 'Admissions', icon: '▸', href: 'admissions.html' },
+  { title: 'Parcoursup Application', cat: 'Admissions', icon: '▸', href: 'admissions.html' },
+  { title: 'Contact & Open Days', cat: 'Contact', icon: '◈', href: 'contact.html' },
+  { title: 'Alumni Network', cat: 'The School', icon: '◆', href: 'ecole.html' },
+  { title: 'Companies & Partnerships', cat: 'Companies', icon: '◇', href: 'entreprises.html' },
+  { title: 'Brochures & Documents', cat: 'Documents', icon: '↓', href: 'brochures.html' },
+  { title: 'The School — JUNIA', cat: 'The School', icon: '▸', href: 'ecole.html' },
 ];
 
+// ─── SEARCH BAR (LAZY INIT) ───
 const searchWrap = document.getElementById('searchWrap');
 const searchBtn = document.getElementById('searchBtn');
-const searchPanel = document.getElementById('searchPanel');
-const searchInput = document.getElementById('searchInput');
-const searchClear = document.getElementById('searchClear');
-const searchDropdown = document.getElementById('searchDropdown');
-
+let searchPanel, searchInput, searchClear, searchDropdown;
 let searchOpen = false;
 
+function initSearchUI() {
+  if (searchPanel) return;
+  searchPanel = document.createElement('div');
+  searchPanel.className = 'search-panel';
+  searchPanel.id = 'searchPanel';
+  searchPanel.setAttribute('role', 'search');
+  searchPanel.setAttribute('aria-hidden', 'true');
+
+  searchInput = document.createElement('input');
+  searchInput.className = 'search-input';
+  searchInput.type = 'text';
+  searchInput.placeholder = 'Search programmes, campus…';
+  searchInput.autocomplete = 'off';
+  searchInput.setAttribute('aria-label', 'Search');
+
+  searchClear = document.createElement('button');
+  searchClear.className = 'search-clear';
+  searchClear.setAttribute('aria-label', 'Clear');
+  searchClear.textContent = '✕';
+
+  searchDropdown = document.createElement('div');
+  searchDropdown.className = 'search-dropdown';
+  searchDropdown.setAttribute('role', 'listbox');
+  searchDropdown.setAttribute('aria-label', 'Search suggestions');
+
+  searchPanel.append(searchInput, searchClear);
+  searchWrap.append(searchPanel, searchDropdown);
+
+  searchClear.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); renderResults(''); });
+  searchInput.addEventListener('input', (e) => renderResults(e.target.value));
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
+    if (e.key === 'Enter') { const f = searchDropdown.querySelector('.sdrop-item'); if (f) f.click(); }
+    if (e.key === 'ArrowDown') { const items = searchDropdown.querySelectorAll('.sdrop-item'); if (items.length) items[0].focus(); e.preventDefault(); }
+  });
+  searchDropdown.addEventListener('keydown', (e) => {
+    const items = [...searchDropdown.querySelectorAll('.sdrop-item')];
+    const idx = items.indexOf(document.activeElement);
+    if (e.key === 'ArrowDown' && idx < items.length - 1) { items[idx + 1].focus(); e.preventDefault(); }
+    if (e.key === 'ArrowUp') { idx > 0 ? items[idx - 1].focus() : searchInput.focus(); e.preventDefault(); }
+    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
+  });
+}
+
 function openSearch() {
+  initSearchUI();
   searchOpen = true;
   searchWrap.classList.add('open');
   searchPanel.setAttribute('aria-hidden', 'false');
@@ -98,6 +139,7 @@ function openSearch() {
 }
 
 function closeSearch() {
+  if (!searchPanel) return;
   searchOpen = false;
   searchWrap.classList.remove('open', 'has-results');
   searchPanel.setAttribute('aria-hidden', 'true');
@@ -111,8 +153,7 @@ function highlight(text, query) {
   const idx = text.toLowerCase().indexOf(query.toLowerCase());
   if (idx === -1) return text;
   return text.slice(0, idx) +
-    '<mark style="background:var(--ps);color:var(--p);border-radius:3px;padding:0 2px;">' +
-    text.slice(idx, idx + query.length) + '</mark>' +
+    `<mark style="background:var(--ps);color:var(--p);border-radius:3px;padding:0 2px;">${text.slice(idx, idx + query.length)}</mark>` +
     text.slice(idx + query.length);
 }
 
@@ -125,21 +166,14 @@ function renderResults(query) {
       ).slice(0, 8);
 
   const labelText = q === '' ? 'Quick links' : 'Results';
-  let html = '<span class="sdrop-label">' + labelText + '</span>';
+  let html = `<span class="sdrop-label">${labelText}</span>`;
 
   if (results.length === 0) {
-    html += '<div class="sdrop-empty">No results found</div>';
+    html += `<div class="sdrop-empty">No results found</div>`;
   } else {
     results.forEach((item, idx) => {
-      html += '<a class="sdrop-item" href="' + item.href + '" role="option">' +
-        '<span class="sdrop-icon">' + item.icon + '</span>' +
-        '<span>' +
-        '<span class="sdrop-title">' + highlight(item.title, q) + '</span>' +
-        '<span class="sdrop-cat">' + item.cat + '</span>' +
-        '</span></a>';
-      if (idx === 2 && results.length > 3 && q === '') {
-        html += '<div class="sdrop-divider"></div>';
-      }
+      html += `<a class="sdrop-item" href="${item.href}" role="option"><span class="sdrop-icon">${item.icon}</span><span><span class="sdrop-title">${highlight(item.title, q)}</span><span class="sdrop-cat">${item.cat}</span></span></a>`;
+      if (idx === 2 && results.length > 3 && q === '') html += `<div class="sdrop-divider"></div>`;
     });
   }
 
@@ -152,28 +186,7 @@ function renderResults(query) {
 
 if (searchBtn) {
   searchBtn.addEventListener('click', () => searchOpen ? closeSearch() : openSearch());
-  searchClear.addEventListener('click', () => { searchInput.value = ''; searchInput.focus(); renderResults(''); });
-  searchInput.addEventListener('input', (e) => renderResults(e.target.value));
-  searchInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
-    if (e.key === 'Enter') {
-      const first = searchDropdown.querySelector('.sdrop-item');
-      if (first) first.click();
-    }
-    if (e.key === 'ArrowDown') {
-      const items = searchDropdown.querySelectorAll('.sdrop-item');
-      if (items.length) items[0].focus();
-      e.preventDefault();
-    }
-  });
-  searchDropdown.addEventListener('keydown', (e) => {
-    const items = [...searchDropdown.querySelectorAll('.sdrop-item')];
-    const idx = items.indexOf(document.activeElement);
-    if (e.key === 'ArrowDown' && idx < items.length - 1) { items[idx + 1].focus(); e.preventDefault(); }
-    if (e.key === 'ArrowUp') { idx > 0 ? items[idx - 1].focus() : searchInput.focus(); e.preventDefault(); }
-    if (e.key === 'Escape') { closeSearch(); searchBtn.focus(); }
-  });
   document.addEventListener('click', (e) => {
-    if (searchOpen && !searchWrap.contains(e.target)) closeSearch();
+    if (searchOpen && searchWrap && !searchWrap.contains(e.target)) closeSearch();
   });
 }
