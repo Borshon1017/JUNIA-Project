@@ -46,6 +46,8 @@
 .cc-addr{font-size:.82rem;color:var(--im);line-height:1.7;margin-top:.35rem;}
 @media(max-width:880px){.contact-layout{grid-template-columns:1fr;}.frow{grid-template-columns:1fr;}}
 @media(max-width:480px){.form-section{padding:1.3rem;}}
+.fgrp input.field-error,.fgrp select.field-error,.fgrp textarea.field-error{border-color:#e53e3e;box-shadow:0 0 0 3px rgba(229,62,62,.12);}
+.err-msg{display:block;font-size:.75rem;color:#e53e3e;margin-top:.28rem;font-weight:600;}
 </style>
 </head>
 <body>
@@ -263,31 +265,146 @@
 <script src="page.js"></script>
 <script>
 (function(){
-  // French student toggle
+  // ── Dynamic field toggles ──────────────────────────────────────────────────
   document.querySelectorAll('input[name="etudiant_fr"]').forEach(function(r){
     r.addEventListener('change',function(){ document.getElementById('pays_group').classList.toggle('hidden',this.value==='oui'); });
   });
-  // Diplome → sub-level
   var subMap={'BTS':'sub_bts','CPGE':'sub_cpge','BUT':'sub_but','Licence':'sub_licence','Licence pro':'sub_licence','Master':'sub_master'};
   var allSubs=['sub_lycee','sub_bts','sub_cpge','sub_but','sub_licence','sub_master'];
   document.getElementById('diplome').addEventListener('change',function(){
     allSubs.forEach(function(id){document.getElementById(id).classList.add('hidden');});
     if(subMap[this.value]) document.getElementById(subMap[this.value]).classList.remove('hidden');
+    clearErr(this);
   });
   document.getElementById('niveau').addEventListener('change',function(){
     allSubs.forEach(function(id){document.getElementById(id).classList.add('hidden');});
     if(this.value==='lycee') document.getElementById('sub_lycee').classList.remove('hidden');
+    clearErr(this);
   });
-  // Campus → programme
   var progMap={lille:'prog_lille',bordeaux:'prog_bordeaux',chateauroux:'prog_chateauroux'};
   document.getElementById('campus_sel').addEventListener('change',function(){
     ['prog_lille','prog_bordeaux','prog_chateauroux'].forEach(function(id){document.getElementById(id).classList.add('hidden');});
     if(progMap[this.value]) document.getElementById(progMap[this.value]).classList.remove('hidden');
+    clearErr(this);
   });
-  // Submit validation
-  document.getElementById('contactForm').addEventListener('submit',function(e){
-    var r=document.querySelector('input[name="rgpd_accept"]:checked');
-    if(!r||r.value!=='oui'){e.preventDefault();alert('Veuillez accepter l\'utilisation de vos données pour soumettre le formulaire.');}
+
+  // ── Validation helpers ─────────────────────────────────────────────────────
+  var nameRe = /^[a-zA-Z\u00C0-\u024F\s'\-]{2,}$/;
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function showErr(field, msg) {
+    field.classList.add('field-error');
+    var grp = field.closest('.fgrp');
+    var el = grp ? grp.querySelector('.err-msg') : null;
+    if (!el) { el = document.createElement('span'); el.className = 'err-msg'; if (grp) grp.appendChild(el); }
+    el.textContent = msg;
+  }
+  function clearErr(field) {
+    field.classList.remove('field-error');
+    var grp = field.closest('.fgrp');
+    var el = grp ? grp.querySelector('.err-msg') : null;
+    if (el) el.remove();
+  }
+  function showRadioErr(name, msg) {
+    var grp = document.querySelector('input[name="'+name+'"]').closest('.fgrp');
+    var el = grp.querySelector('.err-msg');
+    if (!el) { el = document.createElement('span'); el.className = 'err-msg'; grp.appendChild(el); }
+    el.textContent = msg;
+  }
+  function clearRadioErr(name) {
+    var grp = document.querySelector('input[name="'+name+'"]').closest('.fgrp');
+    var el = grp ? grp.querySelector('.err-msg') : null;
+    if (el) el.remove();
+  }
+
+  // ── Live blur validation ───────────────────────────────────────────────────
+  document.getElementById('prenom').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'Le prénom est requis.');
+    else if (!nameRe.test(this.value.trim())) showErr(this, 'Lettres uniquement, 2 caractères minimum.');
+    else clearErr(this);
+  });
+  document.getElementById('nom').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'Le nom est requis.');
+    else if (!nameRe.test(this.value.trim())) showErr(this, 'Lettres uniquement, 2 caractères minimum.');
+    else clearErr(this);
+  });
+  document.getElementById('email').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'L\'adresse e-mail est requise.');
+    else if (!emailRe.test(this.value.trim())) showErr(this, 'Veuillez saisir une adresse e-mail valide (ex\u00a0: nom@domaine.com).');
+    else clearErr(this);
+  });
+  document.getElementById('message').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'Votre message est requis.');
+    else if (this.value.trim().length < 10) showErr(this, 'Votre message doit contenir au moins 10 caractères.');
+    else clearErr(this);
+  });
+  document.querySelectorAll('input[name="rgpd_accept"]').forEach(function(r){
+    r.addEventListener('change', function(){ clearRadioErr('rgpd_accept'); });
+  });
+
+  // ── Submit with full validation ────────────────────────────────────────────
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var ok = true;
+
+    var prenom = document.getElementById('prenom');
+    if (!prenom.value.trim()) { showErr(prenom,'Le prénom est requis.'); ok=false; }
+    else if (!nameRe.test(prenom.value.trim())) { showErr(prenom,'Lettres uniquement, 2 caractères minimum.'); ok=false; }
+    else clearErr(prenom);
+
+    var nom = document.getElementById('nom');
+    if (!nom.value.trim()) { showErr(nom,'Le nom est requis.'); ok=false; }
+    else if (!nameRe.test(nom.value.trim())) { showErr(nom,'Lettres uniquement, 2 caractères minimum.'); ok=false; }
+    else clearErr(nom);
+
+    var email = document.getElementById('email');
+    if (!email.value.trim()) { showErr(email,'L\'adresse e-mail est requise.'); ok=false; }
+    else if (!emailRe.test(email.value.trim())) { showErr(email,'Veuillez saisir une adresse e-mail valide (ex\u00a0: nom@domaine.com).'); ok=false; }
+    else clearErr(email);
+
+    var diplome = document.getElementById('diplome');
+    if (!diplome.value) { showErr(diplome,'Veuillez sélectionner votre diplôme.'); ok=false; }
+    else clearErr(diplome);
+
+    var niveau = document.getElementById('niveau');
+    if (!niveau.value) { showErr(niveau,'Veuillez sélectionner votre niveau d\'études.'); ok=false; }
+    else clearErr(niveau);
+
+    var campus = document.getElementById('campus_sel');
+    if (!campus.value) { showErr(campus,'Veuillez sélectionner un campus.'); ok=false; }
+    else clearErr(campus);
+
+    var message = document.getElementById('message');
+    if (!message.value.trim()) { showErr(message,'Votre message est requis.'); ok=false; }
+    else if (message.value.trim().length < 10) { showErr(message,'Votre message doit contenir au moins 10 caractères.'); ok=false; }
+    else clearErr(message);
+
+    var rgpd = document.querySelector('input[name="rgpd_accept"]:checked');
+    if (!rgpd || rgpd.value !== 'oui') { showRadioErr('rgpd_accept','Vous devez accepter l\'utilisation de vos données.'); ok=false; }
+    else clearRadioErr('rgpd_accept');
+
+    if (!ok) {
+      var first = document.querySelector('.field-error, .fgrp .err-msg');
+      if (first) first.scrollIntoView({behavior:'smooth',block:'center'});
+      return;
+    }
+
+    var btn = this.querySelector('.submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Envoi en cours\u2026';
+    var data = { language: 'fr' };
+    new FormData(this).forEach(function(v,k){ data[k]=v; });
+    fetch('/.netlify/functions/contact', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(json){
+      if (json.success) { window.location.href='merci.html'; }
+      else { alert('Une erreur est survenue. Veuillez r\u00e9essayer.'); btn.disabled=false; btn.textContent='Envoyer ma demande \u2192'; }
+    })
+    .catch(function(){
+      alert('Une erreur est survenue. Veuillez r\u00e9essayer.'); btn.disabled=false; btn.textContent='Envoyer ma demande \u2192';
+    });
   });
 })();
 </script>

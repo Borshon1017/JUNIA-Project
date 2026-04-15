@@ -46,6 +46,8 @@
 .cc-addr{font-size:.82rem;color:var(--im);line-height:1.7;margin-top:.35rem;}
 @media(max-width:880px){.contact-layout{grid-template-columns:1fr;}.frow{grid-template-columns:1fr;}}
 @media(max-width:480px){.form-section{padding:1.3rem;}}
+.fgrp input.field-error,.fgrp select.field-error,.fgrp textarea.field-error{border-color:#e53e3e;box-shadow:0 0 0 3px rgba(229,62,62,.12);}
+.err-msg{display:block;font-size:.75rem;color:#e53e3e;margin-top:.28rem;font-weight:600;}
 </style>
 </head>
 <body>
@@ -263,6 +265,7 @@
 <script src="../page.js"></script>
 <script>
 (function(){
+  // ── Dynamic field toggles ──────────────────────────────────────────────────
   document.querySelectorAll('input[name="etudiant_fr"]').forEach(function(r){
     r.addEventListener('change',function(){ document.getElementById('pays_group').classList.toggle('hidden',this.value==='oui'); });
   });
@@ -271,23 +274,142 @@
   document.getElementById('diplome').addEventListener('change',function(){
     allSubs.forEach(function(id){document.getElementById(id).classList.add('hidden');});
     if(subMap[this.value]) document.getElementById(subMap[this.value]).classList.remove('hidden');
+    clearErr(this);
   });
   document.getElementById('niveau').addEventListener('change',function(){
     allSubs.forEach(function(id){document.getElementById(id).classList.add('hidden');});
     if(this.value==='lycee') document.getElementById('sub_lycee').classList.remove('hidden');
+    clearErr(this);
   });
   var progMap={lille:'prog_lille',bordeaux:'prog_bordeaux',chateauroux:'prog_chateauroux'};
   document.getElementById('campus_sel').addEventListener('change',function(){
     ['prog_lille','prog_bordeaux','prog_chateauroux'].forEach(function(id){document.getElementById(id).classList.add('hidden');});
     if(progMap[this.value]) document.getElementById(progMap[this.value]).classList.remove('hidden');
+    clearErr(this);
   });
-  document.getElementById('contactForm').addEventListener('submit',function(e){
-    var r=document.querySelector('input[name="rgpd_accept"]:checked');
-    if(!r||r.value!=='oui'){e.preventDefault();alert('Please accept the use of your data to submit the form.');}
+
+  // ── Validation helpers ─────────────────────────────────────────────────────
+  var nameRe = /^[a-zA-Z\u00C0-\u024F\s'\-]{2,}$/;
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function showErr(field, msg) {
+    field.classList.add('field-error');
+    var grp = field.closest('.fgrp');
+    var el = grp ? grp.querySelector('.err-msg') : null;
+    if (!el) { el = document.createElement('span'); el.className = 'err-msg'; if (grp) grp.appendChild(el); }
+    el.textContent = msg;
+  }
+  function clearErr(field) {
+    field.classList.remove('field-error');
+    var grp = field.closest('.fgrp');
+    var el = grp ? grp.querySelector('.err-msg') : null;
+    if (el) el.remove();
+  }
+  function showRadioErr(name, msg) {
+    var grp = document.querySelector('input[name="'+name+'"]').closest('.fgrp');
+    var el = grp.querySelector('.err-msg');
+    if (!el) { el = document.createElement('span'); el.className = 'err-msg'; grp.appendChild(el); }
+    el.textContent = msg;
+  }
+  function clearRadioErr(name) {
+    var grp = document.querySelector('input[name="'+name+'"]').closest('.fgrp');
+    var el = grp ? grp.querySelector('.err-msg') : null;
+    if (el) el.remove();
+  }
+
+  // ── Live blur validation ───────────────────────────────────────────────────
+  document.getElementById('prenom').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'First name is required.');
+    else if (!nameRe.test(this.value.trim())) showErr(this, 'Letters only, minimum 2 characters.');
+    else clearErr(this);
   });
+  document.getElementById('nom').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'Last name is required.');
+    else if (!nameRe.test(this.value.trim())) showErr(this, 'Letters only, minimum 2 characters.');
+    else clearErr(this);
+  });
+  document.getElementById('email').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'Email address is required.');
+    else if (!emailRe.test(this.value.trim())) showErr(this, 'Please enter a valid email address (e.g. name@domain.com).');
+    else clearErr(this);
+  });
+  document.getElementById('message').addEventListener('blur', function(){
+    if (!this.value.trim()) showErr(this, 'Your message is required.');
+    else if (this.value.trim().length < 10) showErr(this, 'Your message must be at least 10 characters.');
+    else clearErr(this);
+  });
+  document.querySelectorAll('input[name="rgpd_accept"]').forEach(function(r){
+    r.addEventListener('change', function(){ clearRadioErr('rgpd_accept'); });
+  });
+
+  // ── Submit with full validation ────────────────────────────────────────────
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var ok = true;
+
+    var prenom = document.getElementById('prenom');
+    if (!prenom.value.trim()) { showErr(prenom,'First name is required.'); ok=false; }
+    else if (!nameRe.test(prenom.value.trim())) { showErr(prenom,'Letters only, minimum 2 characters.'); ok=false; }
+    else clearErr(prenom);
+
+    var nom = document.getElementById('nom');
+    if (!nom.value.trim()) { showErr(nom,'Last name is required.'); ok=false; }
+    else if (!nameRe.test(nom.value.trim())) { showErr(nom,'Letters only, minimum 2 characters.'); ok=false; }
+    else clearErr(nom);
+
+    var email = document.getElementById('email');
+    if (!email.value.trim()) { showErr(email,'Email address is required.'); ok=false; }
+    else if (!emailRe.test(email.value.trim())) { showErr(email,'Please enter a valid email address (e.g. name@domain.com).'); ok=false; }
+    else clearErr(email);
+
+    var diplome = document.getElementById('diplome');
+    if (!diplome.value) { showErr(diplome,'Please select your qualification.'); ok=false; }
+    else clearErr(diplome);
+
+    var niveau = document.getElementById('niveau');
+    if (!niveau.value) { showErr(niveau,'Please select your study level.'); ok=false; }
+    else clearErr(niveau);
+
+    var campus = document.getElementById('campus_sel');
+    if (!campus.value) { showErr(campus,'Please select a campus.'); ok=false; }
+    else clearErr(campus);
+
+    var message = document.getElementById('message');
+    if (!message.value.trim()) { showErr(message,'Your message is required.'); ok=false; }
+    else if (message.value.trim().length < 10) { showErr(message,'Your message must be at least 10 characters.'); ok=false; }
+    else clearErr(message);
+
+    var rgpd = document.querySelector('input[name="rgpd_accept"]:checked');
+    if (!rgpd || rgpd.value !== 'oui') { showRadioErr('rgpd_accept','You must accept the use of your data.'); ok=false; }
+    else clearRadioErr('rgpd_accept');
+
+    if (!ok) {
+      var first = document.querySelector('.field-error, .fgrp .err-msg');
+      if (first) first.scrollIntoView({behavior:'smooth',block:'center'});
+      return;
+    }
+
+    var btn = this.querySelector('.submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    var data = { language: 'en' };
+    new FormData(this).forEach(function(v,k){ data[k]=v; });
+    fetch('/.netlify/functions/contact', {
+      method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(json){
+      if (json.success) { window.location.href='merci.html'; }
+      else { alert('An error occurred. Please try again.'); btn.disabled=false; btn.textContent='Send my enquiry \u2192'; }
+    })
+    .catch(function(){
+      alert('An error occurred. Please try again.'); btn.disabled=false; btn.textContent='Send my enquiry \u2192';
+    });
+  });
+
   // Lang toggle → FR
-  var lt=document.getElementById('langToggle');
-  if(lt) lt.addEventListener('click',function(){ window.location.href='../contact.html'; });
+  var lt = document.getElementById('langToggle');
+  if (lt) lt.addEventListener('click', function(){ window.location.href='../contact.html'; });
 })();
 </script>
 </body>

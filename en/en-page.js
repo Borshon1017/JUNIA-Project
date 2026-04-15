@@ -50,9 +50,11 @@ if (toggle && navLinks) {
 const langToggle = document.getElementById('langToggle');
 if (langToggle) {
   langToggle.addEventListener('click', () => {
-    // Navigate to the equivalent French page
-    const page = window.location.pathname.split('/').pop() || 'index.html';
-    window.location.href = '../' + (page.endsWith('.html') ? page : 'index.html');
+    // Netlify strips .html from URLs — add it back before navigating to FR equivalent
+    let page = window.location.pathname.split('/').pop() || '';
+    if (!page) page = 'index';
+    if (!page.endsWith('.html')) page += '.html';
+    window.location.href = '../' + page;
   });
 }
 

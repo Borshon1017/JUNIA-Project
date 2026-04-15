@@ -169,12 +169,12 @@ if (searchBtn) {
 (function(){
   var btn = document.getElementById('langToggle');
   if (!btn) return;
-  // Derive the current page filename and build en/ path
-  var page = window.location.pathname.split('/').pop() || 'index.html';
-  if (!page.endsWith('.html')) page = 'index.html';
+  // Derive the current page filename — Netlify strips .html from URLs so add it back
+  var page = window.location.pathname.split('/').pop() || '';
+  if (!page) page = 'index';
+  if (!page.endsWith('.html')) page += '.html';
   btn.addEventListener('click', function(){
     window.location.href = 'en/' + page;
   });
-  // Style the button as "active" class is not needed — it stays FR/EN
   btn.setAttribute('aria-label', 'Passer en anglais');
 })();
