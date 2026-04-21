@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Les 3 programmes Grande École JUNIA : HEI (énergie, industrie), ISEN (numérique, IA) et ISA (agriculture, alimentation). Diplôme ingénieur CTI. Comparez et choisissez votre programme.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>Programmes Grande École — HEI · ISEN · ISA — JUNIA</title>
+<link rel="stylesheet" href="page.css">
+<style>
+.prog-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.35rem;margin-top:2.5rem;}
+.prog-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);transition:all .3s var(--ease);}
+.prog-card:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(63,42,86,.1);}
+.prog-top{height:160px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem;}
+.prog-abbr{position:absolute;top:.8rem;right:1rem;font-size:3.2rem;font-weight:900;color:rgba(255,255,255,.1);line-height:1;}
+.prog-tag{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.3rem;}
+.prog-name{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2;}
+.prog-body{background:var(--w);padding:1.5rem;}
+.prog-desc{font-size:.88rem;color:var(--im);line-height:1.65;margin-bottom:1.2rem;}
+.prog-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem;}
+.prog-t{background:var(--ps);color:var(--p);font-size:.67rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;}
+.prog-link{display:inline-flex;align-items:center;gap:.35rem;font-size:.82rem;font-weight:700;color:var(--p);text-decoration:none;border-bottom:1.5px solid var(--ps);padding-bottom:1px;transition:border-color .2s;}
+.prog-link:hover{border-color:var(--p);}
+.g-hei{background:#3F2A56;}
+.g-isen{background:#1a2d42;}
+.g-isa{background:#1a3420;}
+@media(max-width:900px){.prog-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" hreflang="en" href="en/programmes.html">
+<link rel="alternate" hreflang="fr" href="programmes.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a><span class="sep">›</span>
+  <span class="cur">Programmes Grande École</span>
+</div>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-in">
+    <div class="eyebrow">Programmes Grande École</div>
+    <h1>3 visions,<br>1 seule école</h1>
+    <p class="sub">HEI, ISEN, ISA : trois programmes complémentaires pour former les ingénieurs de toutes les transitions — énergétique, numérique et agricole. Trois identités fortes, une même exigence.</p>
+    <div class="hero-btns">
+      <a href="formations.html" class="btn btn-c btn-lg">Voir toutes les formations →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Comment intégrer JUNIA</a>
+    </div>
+  </div>
+</section>
+
+<a id="hei"></a><a id="isen"></a><a id="isa"></a><!-- 3 PROGRAMMES -->
+<section class="content-sec">
+  <span class="slbl rv">Les 3 programmes</span>
+  <h2 class="sttl rv">Choisissez votre programme Grande École</h2>
+  <p class="ssub rv">Chaque programme a ses propres spécialités, ses propres débouchés et sa propre identité. Tous délivrent un diplôme d'ingénieur accrédité CTI.</p>
+  <div class="prog-grid rv">
+    <!-- HEI -->
+    <a href="hei.html" class="prog-card" aria-label="Découvrir le programme HEI en détail">
+      <div class="prog-top g-hei">
+        <div class="prog-abbr">HEI</div>
+        <div class="prog-tag">Transitions énergétiques, des bâtiments et des industries</div>
+        <div class="prog-name">HEI — Ingénieur généraliste</div>
+      </div>
+      <div class="prog-body">
+        <p class="prog-desc">Depuis plus de 130 ans, HEI forme des ingénieurs généralistes capables de répondre aux enjeux sociétaux et environnementaux actuels. Le programme couvre l'énergie, le bâtiment durable, l'industrie 4.0 et les smart grids.</p>
+        <div class="prog-tags">
+          <span class="prog-t">Énergie</span>
+          <span class="prog-t">Bâtiment durable</span>
+          <span class="prog-t">Industrie 4.0</span>
+          <span class="prog-t">Smart Grids</span>
+          <span class="prog-t">Généraliste</span>
+        </div>
+        <span class="prog-link">Voir le programme HEI complet →</span>
+      </div>
+    </a>
+    <!-- ISEN -->
+    <a href="isen.html" class="prog-card" aria-label="Découvrir le programme ISEN en détail">
+      <div class="prog-top g-isen">
+        <div class="prog-abbr">ISEN</div>
+        <div class="prog-tag">Transitions numériques, électronique et systèmes intelligents</div>
+        <div class="prog-name">ISEN — Ingénieur numérique</div>
+      </div>
+      <div class="prog-body">
+        <p class="prog-desc">ISEN forme des ingénieurs spécialisés dans les systèmes numériques intelligents. Intelligence artificielle, cybersécurité, électronique, systèmes embarqués : les métiers du numérique sont au cœur du programme.</p>
+        <div class="prog-tags">
+          <span class="prog-t">Intelligence artificielle</span>
+          <span class="prog-t">Cybersécurité</span>
+          <span class="prog-t">Électronique</span>
+          <span class="prog-t">Systèmes embarqués</span>
+        </div>
+        <span class="prog-link">Voir le programme ISEN complet →</span>
+      </div>
+    </a>
+    <!-- ISA -->
+    <a href="isa.html" class="prog-card" aria-label="Découvrir le programme ISA en détail">
+      <div class="prog-top g-isa">
+        <div class="prog-abbr">ISA</div>
+        <div class="prog-tag">Transitions agricoles, alimentaires et environnementales</div>
+        <div class="prog-name">ISA — Ingénieur agri-alimentaire</div>
+      </div>
+      <div class="prog-body">
+        <p class="prog-desc">ISA forme des ingénieurs capables de répondre aux défis de l'alimentation durable et de la transition agricole. Agroécologie, sciences du vivant, qualité alimentaire et management de projets agricoles.</p>
+        <div class="prog-tags">
+          <span class="prog-t">Agroécologie</span>
+          <span class="prog-t">Alimentation durable</span>
+          <span class="prog-t">Sciences du vivant</span>
+          <span class="prog-t">Environnement</span>
+        </div>
+        <span class="prog-link">Voir le programme ISA complet →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- CE QUI LES UNIT -->
+<section class="content-sec alt">
+  <span class="slbl rv">Tronc commun</span>
+  <h2 class="sttl rv">Ce qui unit les 3 programmes</h2>
+  <p class="ssub rv">Au-delà de leurs spécialités propres, HEI, ISEN et ISA partagent une même vision et une même exigence pédagogique au sein de JUNIA.</p>
+  <div class="card-grid rv">
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div class="card-ttl">Diplôme CTI pour les trois</div>
+      <div class="card-txt">Les trois programmes délivrent un diplôme d'ingénieur accrédité par la Commission des Titres d'Ingénieur (CTI), reconnu en France et à l'international (grade Master).</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+      <div class="card-ttl">Cycle préparatoire commun</div>
+      <div class="card-txt">Les deux premières années du cursus constituent un cycle préparatoire partagé. Les étudiants HEI, ISEN et ISA suivent ensemble des enseignements fondamentaux communs.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+      <div class="card-ttl">Transitions comme fil rouge</div>
+      <div class="card-txt">Chaque programme intègre les enjeux des transitions énergétiques, numériques et environnementales. Former des ingénieurs-citoyens engagés est au cœur de la pédagogie JUNIA.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 3h6"/><path d="M9 3v8L4 19a1 1 0 0 0 .9 1.5h14.2A1 1 0 0 0 20 19L15 11V3"/><line x1="6.5" y1="15" x2="17.5" y2="15"/></svg></div>
+      <div class="card-ttl">Démonstrateurs industriels partagés</div>
+      <div class="card-txt">Les étudiants des trois programmes accèdent aux 4 démonstrateurs industriels de JUNIA : Industrie du futur, Ville en transition, Agriculture & alimentation de demain.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <div class="card-ttl">Ouverture internationale commune</div>
+      <div class="card-txt">180+ universités partenaires accessibles aux étudiants des trois programmes. Erasmus+, doubles diplômes et séjours longue durée disponibles pour tous.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="5" y1="17" x2="19" y2="17"/></svg></div>
+      <div class="card-ttl">Réseau alumni JUNIA unifié</div>
+      <div class="card-txt">42 000 alumni partagent un même réseau, quel que soit le programme d'origine. Le Career Center accompagne tous les diplômés HEI, ISEN et ISA.</div>
+    </div>
+  </div>
+</section>
+
+<!-- RÉSEAUX ET LABELS -->
+<section class="content-sec dark">
+  <span class="slbl rv">Reconnaissance</span>
+  <h2 class="sttl rv">Réseaux & Labels</h2>
+  <p class="ssub rv">JUNIA est membre de réseaux reconnus qui garantissent la qualité et l'ouverture internationale de ses programmes.</p>
+  <div class="card-grid rv">
+    <div class="dcard">
+      <div class="card-ico" style="background:rgba(255,92,57,.15);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="14" r="7"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72"/><path d="M14.85 2.75c-4.37 6.03-6.02 9.42-8.03 17.72"/></svg></div>
+      <div class="card-ttl">CTI — Commission des Titres d'Ingénieur</div>
+      <div class="card-txt">Les trois programmes HEI, ISEN et ISA sont accrédités par la CTI. Le diplôme d'ingénieur est reconnu au niveau Master (bac+5) en Europe.</div>
+    </div>
+    <div class="dcard">
+      <div class="card-ico" style="background:rgba(255,92,57,.15);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11.5V17c2 1.5 8 1.5 12 0v-5.5"/><line x1="22" y1="9" x2="22" y2="14"/></svg></div>
+      <div class="card-ttl">CGE — Conférence des Grandes Écoles</div>
+      <div class="card-ttl" style="margin-top:.3rem;font-size:.82rem;font-weight:400;color:rgba(255,255,255,.5);">JUNIA est membre de la Conférence des Grandes Écoles, label qui garantit la qualité pédagogique et l'insertion professionnelle.</div>
+    </div>
+    <div class="dcard">
+      <div class="card-ico" style="background:rgba(255,92,57,.15);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <div class="card-ttl">Erasmus+ et partenariats internationaux</div>
+      <div class="card-txt">JUNIA est membre du programme Erasmus+ et partenaire de 180+ universités réparties sur 5 continents. Des campus partenaires accueillent les étudiants JUNIA.</div>
+    </div>
+  </div>
+  <div style="margin-top:2rem;" class="rv">
+    <a href="ecole.html#labels" class="btn btn-c">Voir tous les réseaux & labels →</a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Quel programme vous correspond ?</h2>
+    <p>Énergie, numérique ou agriculture : trouvez la voie qui correspond à votre passion et construisez votre avenir d'ingénieur avec JUNIA.</p>
+    <div class="cta-btns">
+      <a href="formations.html" class="btn btn-c btn-lg">Trouver ma formation →</a>
+      <a href="formations.html" class="btn btn-gw btn-lg">Toutes les formations</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA pour former les ingénieurs des transitions. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
+      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
+    </div>
+    <div>
+      <div class="fcolh">Formations</div>
+      <ul class="flinks">
+        <li><a href="formations.html">Cycle Ingénieur</a></li>
+        <li><a href="formations.html">Alternance</a></li>
+        <li><a href="formations.html">Masters & MS</a></li>
+        <li><a href="formations.html">Bachelors</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">L'École</div>
+      <ul class="flinks">
+        <li><a href="ecole.html">Nos valeurs</a></li>
+        <li><a href="campus.html">Nos campus</a></li>
+        <li><a href="ecole.html">RSE</a></li>
+        <li><a href="ecole.html">Alumni</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="admissions.html">Candidatures</a></li>
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="international.html">International</a></li>
+        <li><a href="accessibilite.html">Accessibilité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="index.html">Accueil</a></div>
+  </div>
+</footer>
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>

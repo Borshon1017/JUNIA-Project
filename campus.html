@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Découvrez les 3 campus JUNIA : Lille, Bordeaux et Châteauroux. Logements, transports, vie associative, services étudiants. Tout pour bien préparer votre arrivée.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>Nos Campus — JUNIA, Grande École des Transitions</title>
+<link rel="stylesheet" href="page.css">
+<style>
+.campus-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;margin-top:2.8rem;}
+.c-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);transition:all .3s var(--ease);}
+.c-card:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(63,42,86,.1);}
+.c-top{height:150px;position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding:1.3rem;}
+.c-top-bg{position:absolute;inset:0;}
+.c-abbr{position:absolute;top:.7rem;right:1rem;font-size:2.8rem;font-weight:900;color:rgba(255,255,255,.1);line-height:1;}
+.c-tag{font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.28rem;position:relative;z-index:1;}
+.c-name{font-size:1.2rem;font-weight:900;color:#fff;position:relative;z-index:1;}
+.c-body{background:var(--w);padding:1.5rem;}
+.c-desc{font-size:.88rem;color:var(--im);line-height:1.65;margin-bottom:1.1rem;}
+.c-services{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.2rem;}
+.c-srv{background:var(--ps);color:var(--p);font-size:.67rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;}
+.c-links{display:flex;flex-direction:column;gap:.4rem;}
+.c-link{font-size:.82rem;font-weight:600;color:var(--p);text-decoration:none;display:flex;align-items:center;gap:.35rem;}
+.c-link:hover{text-decoration:underline;}
+.c-lille{background:#2a1a3a;}
+.c-bx{background:#3a1a08;}
+.c-ch{background:#1a3020;}
+@media(max-width:900px){.campus-hero-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" hreflang="en" href="en/campus.html">
+<link rel="alternate" hreflang="fr" href="campus.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a><span class="sep">›</span>
+  <span class="cur">Vie étudiante & Campus</span>
+</div>
+
+<!-- HERO -->
+<section class="page-hero hero-campus">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-in">
+    <div class="eyebrow">Vie étudiante & Campus</div>
+    <h1>Vivre pleinement<br>son expérience étudiante</h1>
+    <p class="sub">JUNIA dispose de 3 campus — Lille, Bordeaux et Châteauroux — offrant chacun un cadre de vie étudiant complet avec des infrastructures modernes, des services de santé et un accompagnement personnalisé.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Rencontrer nos équipes →</a>
+      <a href="campus.html#accompagnement" class="btn btn-gw btn-lg">Services aux étudiants</a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 CAMPUS --><a id="lille"></a>
+<section class="content-sec">
+  <span class="slbl rv">Nos campus</span>
+  <h2 class="sttl rv">3 campus pour étudier en France</h2>
+  <p class="ssub rv">JUNIA est présente sur 3 campus en France. Chaque campus offre un environnement d'études complet, avec des infrastructures modernes et une vie associative dynamique.</p>
+  <div class="campus-hero-grid rv">
+
+    <!-- LILLE -->
+    <div class="c-card">
+      <div class="c-top c-lille">
+        <div class="c-abbr">LIL</div>
+        <div class="c-tag">Campus principal · Nord de France</div>
+        <div class="c-name">Campus de Lille</div>
+      </div>
+      <div class="c-body">
+        <p class="c-desc">Le campus historique et principal de JUNIA, au cœur de la métropole lilloise. Il accueille les trois programmes HEI, ISEN et ISA et comprend quatre sites : IC1, IC2, ALG et le Palais Rameaux, symbole de l'ancrage de l'école depuis 1885. Lille est à 1h de Paris et 30 min de Bruxelles en train.</p>
+        <div class="c-services">
+          <span class="c-srv">HEI · ISEN · ISA</span>
+          <span class="c-srv">IC1 · IC2 · ALG</span>
+          <span class="c-srv">Palais Rameaux</span>
+          <span class="c-srv">Santé</span>
+        </div>
+        <div class="c-links">
+          <a href="campus-lille.html" class="c-link">→ Découvrir le campus et la ville</a>
+          <a href="contact.html" class="c-link">→ Rencontrer nos équipes à Lille</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BORDEAUX -->
+    <div class="c-card">
+      <div class="c-top c-bx">
+        <div class="c-abbr">BDX</div>
+        <div class="c-tag">Campus · Sud-Ouest de la France</div>
+        <div class="c-name">Campus de Bordeaux</div>
+      </div>
+      <div class="c-body">
+        <p class="c-desc">Le campus de Bordeaux accueille des étudiants JUNIA dans la métropole bordelaise, reconnue pour sa qualité de vie et son dynamisme économique. Il dispose d'infrastructures modernes dédiées à la formation d'ingénieurs. Bordeaux est proche de l'Atlantique et des Pyrénées, avec un tissu industriel et technologique important.</p>
+        <div class="c-services">
+          <span class="c-srv">Infrastructures modernes</span>
+          <span class="c-srv">Santé</span>
+        </div>
+        <div class="c-links">
+          <a href="campus-bordeaux.html" class="c-link">→ Découvrir le campus et la ville</a>
+          <a href="contact.html" class="c-link">→ Rencontrer nos équipes à Bordeaux</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHÂTEAUROUX -->
+    <div class="c-card">
+      <div class="c-top c-ch">
+        <div class="c-abbr">CHX</div>
+        <div class="c-tag">Campus · Centre de la France</div>
+        <div class="c-name">Campus de Châteauroux</div>
+      </div>
+      <div class="c-body">
+        <p class="c-desc">Le campus de Châteauroux accueille des étudiants JUNIA dans le département de l'Indre, en région Centre-Val de Loire. Un cadre de vie paisible avec des infrastructures dédiées à la formation d'ingénieurs, à proximité du tissu industriel local et régional.</p>
+        <div class="c-services">
+          <span class="c-srv">Infrastructures modernes</span>
+          <span class="c-srv">Santé</span>
+        </div>
+        <div class="c-links">
+          <a href="campus-chateauroux.html" class="c-link">→ Découvrir le campus et la ville</a>
+          <a href="contact.html" class="c-link">→ Rencontrer nos équipes à Châteauroux</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<a id="bordeaux"></a><!-- VIE ÉTUDIANTE --><a id="chateauroux"></a>
+<section class="content-sec alt">
+  <span class="slbl rv">Vie étudiante</span>
+  <h2 class="sttl rv">Une vie étudiante riche sur tous les campus</h2>
+  <p class="ssub rv">Au-delà des cours, JUNIA offre un cadre de vie étudiant complet : associations, sports, culture, accompagnement et services sur chaque campus.</p>
+  <div class="card-grid rv">
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <div class="card-ttl">Logements étudiants</div>
+      <div class="card-txt">Des solutions de logement sont disponibles à proximité de chaque campus : résidences étudiantes, appartements en colocation, foyers. JUNIA vous aide à trouver votre logement avant votre arrivée.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="1" y="3" width="22" height="15" rx="2"/><path d="M1 9h22"/><path d="M5 3v6M19 3v6"/><circle cx="7" cy="21" r="1"/><circle cx="17" cy="21" r="1"/><path d="M5 18v3M19 18v3"/></svg></div>
+      <div class="card-ttl">Transports en commun</div>
+      <div class="card-txt">Chaque campus est desservi par les transports en commun. Des informations détaillées sur les lignes, les tarifs étudiants et les mobilités douces sont disponibles sur le site de chaque campus.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 10s3-3 3-8"/><path d="M22 10s-3-3-3-8"/><path d="M10 2c0 4.4-3.6 8-8 8"/><path d="M14 2c0 4.4 3.6 8 8 8"/><path d="M2 10s2 2 2 5"/><path d="M22 10s-2 2-2 5"/><path d="M8 15h8"/><path d="M2 22v-7"/><path d="M22 22v-7"/><path d="M6 22a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4"/></svg></div>
+      <div class="card-ttl">Vie associative dynamique</div>
+      <div class="card-txt">Les campus JUNIA accueillent de nombreuses associations étudiantes : associations sportives, culturelles, humanitaires, entrepreneuriales. Un tissu associatif vivant et engagé.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M3 9h18"/><path d="M3 15h18"/><line x1="12" y1="6" x2="12" y2="18"/></svg></div>
+      <div class="card-ttl">Services de santé</div>
+      <div class="card-txt">Un accompagnement santé est disponible sur les campus de Lille et Châteauroux. Médecin, infirmerie, soutien psychologique : JUNIA veille au bien-être de ses étudiants.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 20h20"/><path d="M5 20V10l7-7 7 7v10"/><path d="M9 20v-6h6v6"/><line x1="12" y1="3" x2="12" y2="7"/></svg></div>
+      <div class="card-ttl">Infrastructures modernes</div>
+      <div class="card-txt">Chaque campus dispose d'infrastructures dédiées à la pédagogie : laboratoires, salles informatiques, espaces de co-working, bibliothèques et démonstrateurs industriels.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="5" y1="17" x2="19" y2="17"/></svg></div>
+      <div class="card-ttl">Accompagnement étudiant</div>
+      <div class="card-txt">JUNIA propose un accompagnement global à ses étudiants : suivi pédagogique, aide à l'orientation, soutien social, mission handicap et Career Center pour l'insertion professionnelle.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Venez nous rencontrer sur vos campus</h2>
+    <p>Journées portes ouvertes, événements de rentrée, rencontres avec nos équipes : découvrez JUNIA en vrai avant de candidater.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Rencontrer nos équipes →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Candidater</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA pour former les ingénieurs des transitions. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
+      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Énergie &amp; Industrie</a></li>
+        <li><a href="isen.html">ISEN — Numérique &amp; IA</a></li>
+        <li><a href="isa.html">ISA — Agriculture</a></li>
+        <li><a href="formations.html">Toutes les formations</a></li>
+        <li><a href="admissions.html">Candidater</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Campus</div>
+      <ul class="flinks">
+        <li><a href="campus.html#lille">Campus de Lille</a></li>
+        <li><a href="campus.html#bordeaux">Campus de Bordeaux</a></li>
+        <li><a href="campus.html#chateauroux">Campus de Châteauroux</a></li>
+        <li><a href="campus.html#accompagnement">Accompagnement</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="admissions.html">Candidatures</a></li>
+        <li><a href="entreprises.html">Entreprises</a></li>
+        <li><a href="international.html">International</a></li>
+        <li><a href="accessibilite.html">Accessibilité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="index.html">Accueil</a></div>
+  </div>
+</footer>
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>

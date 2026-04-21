@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Discover JUNIA's Bordeaux campus: facilities, buildings, student life and engineering programmes in the Bordeaux metropolitan area.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<title>Bordeaux Campus — JUNIA</title>
+<link rel="stylesheet" href="../page.css">
+<style>
+.bld-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.35rem;}
+.bld-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);background:var(--w);transition:box-shadow .2s;}
+.bld-card:hover{box-shadow:0 8px 32px rgba(63,42,86,.1);}
+.bld-head{height:120px;display:flex;align-items:flex-end;padding:1.2rem;position:relative;}
+.bld-abbr{position:absolute;top:.6rem;right:.9rem;font-size:3rem;font-weight:900;color:rgba(255,255,255,.1);line-height:1;}
+.bld-label{font-family:var(--fh);font-size:1.3rem;font-weight:900;color:#fff;position:relative;z-index:1;line-height:1.15;}
+.bld-body{padding:1.5rem;}
+.bld-ttl{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-bottom:.55rem;}
+.bld-desc{font-size:.88rem;color:var(--im);line-height:1.65;margin-bottom:1.1rem;}
+.bld-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+.bld-tag{background:var(--ps);color:var(--p);font-size:.67rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;}
+.bld-bx1{background:#3a1a08;}
+.bld-bx2{background:#5a3010;}
+.city-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+@media(max-width:900px){.bld-grid,.city-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" hreflang="fr" href="../campus-bordeaux.html">
+<link rel="alternate" hreflang="en" href="campus-bordeaux.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Education</a></li>
+    <li><a href="programmes.html">Programs</a></li>
+    <li><a href="ecole.html">The School</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Companies</a></li>
+    <li><a href="campus.html" class="active">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Search" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm5.5.5L22 22"/></svg>
+      </button>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch to French">EN / FR</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Apply →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span class="sep">›</span>
+  <a href="campus.html">Campus</a><span class="sep">›</span>
+  <span class="cur">Bordeaux Campus</span>
+</div>
+
+<section class="page-hero" style="background:#3a1a08;">
+  <div class="page-hero-in">
+    <div class="eyebrow">Campus · South-West France</div>
+    <h1>Bordeaux Campus</h1>
+    <p class="sub">A JUNIA campus in the heart of the Bordeaux metropolitan area. Modern facilities dedicated to engineering education, in one of France's most attractive cities.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Meet our teams →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Apply</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-sec">
+  <span class="slbl rv">Facilities</span>
+  <h2 class="sttl rv">The Bordeaux campus sites</h2>
+  <p class="ssub rv">The Bordeaux campus offers modern, well-equipped spaces to support JUNIA students throughout their studies.</p>
+  <div class="bld-grid rv">
+
+    <div class="bld-card">
+      <div class="bld-head bld-bx1">
+        <div class="bld-abbr">BDX</div>
+        <div class="bld-label">Main building</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Bordeaux Campus — Main building</div>
+        <div class="bld-desc">The main building of the Bordeaux campus brings together classrooms, lecture theatres and administrative offices. It is the heart of academic life for JUNIA students in Bordeaux, with spaces designed to encourage learning and innovation.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">Lecture theatres</span>
+          <span class="bld-tag">Classrooms</span>
+          <span class="bld-tag">Administration</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bld-card">
+      <div class="bld-head bld-bx2">
+        <div class="bld-abbr">LAB</div>
+        <div class="bld-label">Laboratories &amp; project spaces</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Laboratories &amp; project spaces</div>
+        <div class="bld-desc">Spaces dedicated to practical work, cross-disciplinary projects and applied research. The Bordeaux campus gives students an environment that encourages experimentation, with equipment adapted to engineering programmes.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">Laboratories</span>
+          <span class="bld-tag">Practical work</span>
+          <span class="bld-tag">Co-working</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec alt">
+  <span class="slbl rv">The city</span>
+  <h2 class="sttl rv">Studying in Bordeaux</h2>
+  <p class="ssub rv">Bordeaux is one of France's most attractive cities — exceptional quality of life, economic dynamism and proximity to the Atlantic and the Pyrenees.</p>
+  <div class="city-grid rv">
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="card-ttl">Quality of life</div>
+      <div class="card-txt">Bordeaux is regularly ranked among the best French cities for quality of life. UNESCO heritage, a rich cultural scene, proximity to the Atlantic coast and the famous Bordeaux vineyards.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      </div>
+      <div class="card-ttl">Job market</div>
+      <div class="card-txt">The Bordeaux metropolitan area has a diverse economic ecosystem: aeronautics, digital, health industries, agri-food and energy. An ideal environment for internships and work-study placements.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 9L12 4 2 9l10 5 10-5z"/><path d="M6 11.5V17c2 1.5 8 1.5 12 0v-5.5"/><line x1="22" y1="9" x2="22" y2="14"/></svg>
+      </div>
+      <div class="card-ttl">Student city</div>
+      <div class="card-txt">Bordeaux welcomes more than 100,000 students. A rich cultural, sports and social scene. A city that thrives on its youth, with a dynamic and engaged student community.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M3 9h18M3 15h18"/><line x1="12" y1="6" x2="12" y2="18"/></svg>
+      </div>
+      <div class="card-ttl">Health services</div>
+      <div class="card-txt">The Bordeaux campus provides health support for students, including medical services and well-being resources to ensure the best possible study conditions.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Come and discover the Bordeaux campus</h2>
+    <p>Open Days and meetings with our teams in Bordeaux. See campus life for yourself before applying.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Meet our teams →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Apply</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Engineering School. JUNIA brings together HEI, ISEN and ISA. Present in Lille, Bordeaux and Châteauroux since 1885.</p>
+      <div class="feco">Eco-designed site · A+ Carbon Score</div>
+    </div>
+    <div>
+      <div class="fcolh">Campus</div>
+      <ul class="flinks">
+        <li><a href="campus-lille.html">Lille Campus</a></li>
+        <li><a href="campus-bordeaux.html">Bordeaux Campus</a></li>
+        <li><a href="campus-chateauroux.html">Châteauroux Campus</a></li>
+        <li><a href="campus.html">All campuses</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Energy &amp; Industry</a></li>
+        <li><a href="isen.html">ISEN — Digital &amp; AI</a></li>
+        <li><a href="isa.html">ISA — Agriculture</a></li>
+        <li><a href="admissions.html">Apply</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="contact.html">Contact &amp; Open Days</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="accessibilite.html">Accessibility</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — School of Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Legal notices</a><a href="confidentialite.html">Privacy</a><a href="index.html">Home</a></div>
+  </div>
+</footer>
+
+<script src="../page.js"></script>
+<script src="en-page.js"></script>
+</body>
+</html>

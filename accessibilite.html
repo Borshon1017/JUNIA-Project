@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>Accessibilité & Mission Handicap — JUNIA</title>
+<link rel="stylesheet" href="page.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a><span class="sep">›</span>
+  <span class="cur">Accessibilité & Mission Handicap</span>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-in">
+    <div class="eyebrow">Accessibilité & Mission Handicap</div>
+    <h1>JUNIA, une école<br>inclusive et accessible</h1>
+    <p class="sub">JUNIA s'engage pour l'égalité des chances et l'inclusion de tous ses étudiants. Mission Handicap, conformité WCAG 2.2 AA, accompagnements spécifiques sur chaque campus.</p>
+  </div>
+</section>
+
+<section class="content-sec">
+  <span class="slbl rv">Mission Handicap</span>
+  <h2 class="sttl rv">Accompagnement des étudiants en situation de handicap</h2>
+  <p class="ssub rv">La Mission Handicap de JUNIA accompagne tous les étudiants en situation de handicap tout au long de leur cursus, de l'admission à l'insertion professionnelle.</p>
+  <div class="card-grid rv">
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div class="card-ttl">Accompagnement personnalisé</div>
+      <div class="card-txt">Chaque étudiant en situation de handicap bénéficie d'un Plan d'Accompagnement de l'Étudiant (PAE) personnalisé. Aménagements d'examens, tiers-temps, supports adaptés.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="2" width="18" height="20"/><line x1="9" y1="2" x2="9" y2="22"/><line x1="15" y1="2" x2="15" y2="22"/><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="14" x2="21" y2="14"/></svg></div>
+      <div class="card-ttl">Accessibilité des campus</div>
+      <div class="card-txt">Les campus JUNIA sont progressivement mis en conformité avec les normes d'accessibilité. Rampes, ascenseurs, signalétique adaptée, places de stationnement réservées.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><line x1="12" y1="7" x2="5" y2="17"/><line x1="12" y1="7" x2="19" y2="17"/><line x1="5" y1="17" x2="19" y2="17"/></svg></div>
+      <div class="card-ttl">Référent handicap dédié</div>
+      <div class="card-txt">Un référent handicap est disponible sur chaque campus pour accompagner les étudiants dans leurs démarches, avant et pendant leur scolarité. Contact confidentiel.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="12"/><path d="M12 12h.01"/></svg></div>
+      <div class="card-ttl">Insertion professionnelle inclusive</div>
+      <div class="card-txt">Le Career Center de JUNIA accompagne spécifiquement les étudiants en situation de handicap dans leur recherche de stage et d'emploi, en lien avec des entreprises engagées.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg></div>
+      <div class="card-ttl">Sensibilisation & inclusion</div>
+      <div class="card-txt">JUNIA organise des actions de sensibilisation au handicap pour tous les étudiants et le personnel. Le handicap invisible, le handicap psychique et les troubles DYS sont pris en compte.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.07 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92z"/></svg></div>
+      <div class="card-ttl">Contact Mission Handicap</div>
+      <div class="card-txt" style="margin-bottom:.8rem;">La Mission Handicap répond à vos questions avec discrétion et bienveillance.</div>
+      <div style="font-size:.88rem;font-weight:700;color:var(--p);"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0169606f6568626071416b746f68602f626e6c">[email&#160;protected]</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="content-sec alt">
+  <span class="slbl rv">Accessibilité numérique</span>
+  <h2 class="sttl rv">Accessibilité de ce site web</h2>
+  <p class="ssub rv">Ce site respecte les normes WCAG 2.2 niveau AA et les recommandations du RGAA (Référentiel Général d'Amélioration de l'Accessibilité).</p>
+  <div class="card-grid rv">
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="4" r="2"/><path d="M5 9l7-2 7 2"/><path d="M9 22V12l3-2 3 2v10"/><path d="M7 22l2-7"/><path d="M17 22l-2-7"/></svg></div>
+      <div class="card-ttl">Conformité WCAG 2.2 AA</div>
+      <div class="card-txt">Le site JUNIA respecte les critères d'accessibilité WCAG 2.2 niveau AA : contraste des couleurs, navigation clavier, balises ARIA, textes alternatifs pour les éléments visuels.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8"/></svg></div>
+      <div class="card-ttl">Navigation clavier</div>
+      <div class="card-txt">Toutes les fonctionnalités du site sont accessibles au clavier. Les liens d'évitement permettent de sauter directement au contenu principal.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></div>
+      <div class="card-ttl">Lisibilité & contraste</div>
+      <div class="card-txt">Les contrastes de couleurs respectent les ratios minimaux requis. La taille de police est ajustable. Le site est compatible avec les lecteurs d'écran courants.</div>
+    </div>
+  </div>
+  <div style="margin-top:2rem;" class="rv">
+    <p style="font-size:.88rem;color:var(--im);">Pour signaler un problème d'accessibilité numérique : <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0c6d6f6f697f7f656e65606578694c667962656d226f6361">[email&#160;protected]</a></strong></p>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Besoin d'un accompagnement spécifique ?</h2>
+    <p>Contactez notre Mission Handicap dès votre candidature. Un accompagnement sur-mesure peut être mis en place avant même votre rentrée.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Contacter la Mission Handicap →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Candidater</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
+      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Énergie &amp; Industrie</a></li>
+        <li><a href="isen.html">ISEN — Numérique &amp; IA</a></li>
+        <li><a href="isa.html">ISA — Agriculture</a></li>
+        <li><a href="formations.html">Toutes les formations</a></li>
+        <li><a href="admissions.html">Candidater</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">L'École</div>
+      <ul class="flinks">
+        <li><a href="ecole.html">Nos valeurs</a></li>
+        <li><a href="campus.html">Nos campus</a></li>
+        <li><a href="ecole.html">Politique RSE</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="admissions.html">Candidatures</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="accessibilite.html">Accessibilité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="index.html">Accueil</a></div>
+  </div>
+</footer>
+
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Château

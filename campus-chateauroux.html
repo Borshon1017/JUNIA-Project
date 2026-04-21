@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="Découvrez le campus de Châteauroux JUNIA : infrastructures, bâtiments, formation d'ingénieurs et vie étudiante en région Centre-Val de Loire.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3F2A56">
+<meta name="color-scheme" content="light">
+<title>Campus de Châteauroux — JUNIA</title>
+<link rel="stylesheet" href="page.css">
+<style>
+.bld-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.35rem;}
+.bld-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);background:var(--w);transition:box-shadow .2s;}
+.bld-card:hover{box-shadow:0 8px 32px rgba(63,42,86,.1);}
+.bld-head{height:120px;display:flex;align-items:flex-end;padding:1.2rem;position:relative;}
+.bld-abbr{position:absolute;top:.6rem;right:.9rem;font-size:3rem;font-weight:900;color:rgba(255,255,255,.1);line-height:1;}
+.bld-label{font-family:var(--fh);font-size:1.3rem;font-weight:900;color:#fff;position:relative;z-index:1;line-height:1.15;}
+.bld-body{padding:1.5rem;}
+.bld-ttl{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--p);margin-bottom:.55rem;}
+.bld-desc{font-size:.88rem;color:var(--im);line-height:1.65;margin-bottom:1.1rem;}
+.bld-tags{display:flex;flex-wrap:wrap;gap:.4rem;}
+.bld-tag{background:var(--ps);color:var(--p);font-size:.67rem;font-weight:700;padding:.2rem .6rem;border-radius:99px;}
+.bld-ch1{background:#1a3020;}
+.bld-ch2{background:#254a2e;}
+.city-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+@media(max-width:900px){.bld-grid,.city-grid{grid-template-columns:1fr;}}
+</style>
+<link rel="alternate" hreflang="en" href="en/campus-chateauroux.html">
+<link rel="alternate" hreflang="fr" href="campus-chateauroux.html">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">JUNIA</a>
+  <ul class="nav-links" id="main-nav">
+    <li><a href="formations.html">Formations</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="ecole.html">L'École</a></li>
+    <li><a href="international.html">International</a></li>
+    <li><a href="entreprises.html">Entreprises</a></li>
+    <li><a href="campus.html" class="active">Campus</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-r">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-btn" id="searchBtn" aria-label="Rechercher" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="22" y2="22"/></svg>
+      </button>
+      <div class="search-panel" id="searchPanel" role="search" aria-hidden="true">
+        <input class="search-input" id="searchInput" type="text" placeholder="Rechercher formations, campus…" autocomplete="off" aria-label="Recherche">
+        <button class="search-clear" id="searchClear" aria-label="Effacer">✕</button>
+      </div>
+      <div class="search-dropdown" id="searchDropdown" role="listbox" aria-label="Suggestions de recherche"></div>
+    </div>
+    <button class="lang-toggle" id="langToggle" aria-label="Changer de langue">FR / EN</button>
+    <a href="brochures.html" class="btn btn-g">Brochure</a>
+    <a href="admissions.html" class="btn btn-p">Candidater →</a>
+  </div>
+  <button class="nav-toggle" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="main-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="breadcrumb">
+  <a href="index.html">Accueil</a><span class="sep">›</span>
+  <a href="campus.html">Campus</a><span class="sep">›</span>
+  <span class="cur">Campus de Châteauroux</span>
+</div>
+
+<section class="page-hero" style="background:#1a3020;">
+  <div class="page-hero-in">
+    <div class="eyebrow">Campus · Indre · Centre-Val de Loire</div>
+    <h1>Campus de Châteauroux</h1>
+    <p class="sub">Un campus à taille humaine, pensé pour la formation d'ingénieurs dans un cadre paisible et verdoyant. Au cœur du département de l'Indre, proche du tissu industriel et agricole régional.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Rencontrer nos équipes →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Candidater</a>
+    </div>
+  </div>
+</section>
+
+<section class="content-sec">
+  <span class="slbl rv">Infrastructures</span>
+  <h2 class="sttl rv">Les sites du campus de Châteauroux</h2>
+  <p class="ssub rv">Le campus de Châteauroux offre des infrastructures modernes adaptées à la formation d'ingénieurs, dans un environnement propice à la concentration et à l'épanouissement.</p>
+  <div class="bld-grid rv">
+
+    <div class="bld-card">
+      <div class="bld-head bld-ch1">
+        <div class="bld-abbr">CHX</div>
+        <div class="bld-label">Bâtiment principal</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Campus Châteauroux — Bâtiment principal</div>
+        <div class="bld-desc">Le bâtiment principal du campus châtelroussin regroupe les salles de cours, amphithéâtres et espaces administratifs. Un lieu de vie académique conçu pour favoriser les interactions entre étudiants et enseignants dans un cadre à taille humaine.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">Salles de cours</span>
+          <span class="bld-tag">Amphithéâtres</span>
+          <span class="bld-tag">Administration</span>
+          <span class="bld-tag">Santé</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bld-card">
+      <div class="bld-head bld-ch2">
+        <div class="bld-abbr">LAB</div>
+        <div class="bld-label">Laboratoires &amp; terrain</div>
+      </div>
+      <div class="bld-body">
+        <div class="bld-ttl">Laboratoires &amp; espaces de recherche</div>
+        <div class="bld-desc">Des laboratoires et espaces de travaux pratiques dédiés à la formation d'ingénieurs. Le campus bénéficie d'un accès à des terrains d'expérimentation agricole et environnementale, particulièrement adaptés aux formations en lien avec les transitions agricoles et alimentaires.</div>
+        <div class="bld-tags">
+          <span class="bld-tag">Laboratoires</span>
+          <span class="bld-tag">Terrain agricole</span>
+          <span class="bld-tag">Recherche appliquée</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec alt">
+  <span class="slbl rv">La ville &amp; la région</span>
+  <h2 class="sttl rv">Étudier à Châteauroux</h2>
+  <p class="ssub rv">Châteauroux et le département de l'Indre offrent un cadre de vie paisible, propice aux études et à l'épanouissement personnel, dans une région riche de son tissu industriel et agricole.</p>
+  <div class="city-grid rv">
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="card-ttl">Cadre de vie</div>
+      <div class="card-txt">Un environnement calme et verdoyant, propice à la concentration et aux études. Châteauroux offre un cadre de vie plus paisible que les grandes métropoles, idéal pour les étudiants souhaitant un campus à taille humaine.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="card-ttl">Tissu industriel régional</div>
+      <div class="card-txt">La région Centre-Val de Loire dispose d'un tissu industriel diversifié : industrie manufacturière, agroalimentaire, défense et aéronautique. Un bassin d'emploi riche pour les stages et l'alternance.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 20h20M5 20V8l7-6 7 6v12"/><path d="M9 20v-5h6v5"/></svg>
+      </div>
+      <div class="card-ttl">Campus à taille humaine</div>
+      <div class="card-txt">Un campus où chaque étudiant est connu et accompagné personnellement. Les liens entre étudiants et équipes pédagogiques sont plus directs, favorisant un suivi individualisé et une ambiance de promotion soudée.</div>
+    </div>
+    <div class="card">
+      <div class="card-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M6 3a3 3 0 0 0-3 3v12a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M3 9h18M3 15h18"/><line x1="12" y1="6" x2="12" y2="18"/></svg>
+      </div>
+      <div class="card-ttl">Services de santé</div>
+      <div class="card-txt">Un service de santé est disponible sur le campus : médecin, infirmerie et soutien psychologique. JUNIA veille au bien-être physique et mental de ses étudiants sur tous ses sites.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="cta-band-in">
+    <h2>Venez découvrir le campus de Châteauroux</h2>
+    <p>Journées portes ouvertes et rencontres avec nos équipes. Découvrez la vie sur le campus avant de candidater.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn btn-c btn-lg">Rencontrer nos équipes →</a>
+      <a href="admissions.html" class="btn btn-gw btn-lg">Candidater</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftop">
+    <div>
+      <span class="flogo">JUNIA</span>
+      <p class="fdesc">Grande École d'Ingénieurs. JUNIA réunit HEI, ISEN et ISA. Présente à Lille, Bordeaux et Châteauroux depuis 1885.</p>
+      <div class="feco">Site éco-conçu · Score A+ Carbon</div>
+    </div>
+    <div>
+      <div class="fcolh">Campus</div>
+      <ul class="flinks">
+        <li><a href="campus-lille.html">Campus de Lille</a></li>
+        <li><a href="campus-bordeaux.html">Campus de Bordeaux</a></li>
+        <li><a href="campus-chateauroux.html">Campus de Châteauroux</a></li>
+        <li><a href="campus.html">Vue d'ensemble</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Programmes</div>
+      <ul class="flinks">
+        <li><a href="hei.html">HEI — Énergie &amp; Industrie</a></li>
+        <li><a href="isen.html">ISEN — Numérique &amp; IA</a></li>
+        <li><a href="isa.html">ISA — Agriculture</a></li>
+        <li><a href="admissions.html">Candidater</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcolh">Contact</div>
+      <ul class="flinks">
+        <li><a href="contact.html">Contact &amp; Portes ouvertes</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="accessibilite.html">Accessibilité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbot">
+    <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Châteauroux</span>
+    <div class="fblinks"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="index.html">Accueil</a></div>
+  </div>
+</footer>
+
+<script src="page.js"></script>
+<script src="page-search.js"></script>
+</body>
+</html>
