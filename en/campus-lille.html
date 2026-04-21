@@ -7,6 +7,8 @@
 <meta name="theme-color" content="#3F2A56">
 <title>Lille Campus — JUNIA</title>
 <link rel="stylesheet" href="../page.css">
+<link rel="stylesheet" href="../reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 <style>
 .bld-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.35rem;}
 .bld-alg{background:#1a2a1a;}
@@ -240,5 +242,8 @@
 
 <script src="../page.js"></script>
 <script src="en-page.js"></script>
+<script src="../reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

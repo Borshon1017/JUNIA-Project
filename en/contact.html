@@ -7,10 +7,13 @@
 <meta name="color-scheme" content="light">
 <title>Contact — JUNIA</title>
 <link rel="stylesheet" href="../page.css">
+<link rel="stylesheet" href="../reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 <link rel="alternate" hreflang="fr" href="../contact.html">
 <link rel="alternate" hreflang="en" href="contact.html">
 <style>
-.contact-layout{display:grid;grid-template-columns:1fr 360px;gap:3rem;align-items:start;}
+.contact-layout{display:grid;grid-template-columns:1fr;gap:2rem;align-items:start;}
+.contact-sidebar{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
 .form-section{background:var(--w);border-radius:var(--r);border:1px solid var(--br);padding:2.4rem;}
 .form-section h2{font-size:1.45rem;font-weight:900;color:var(--ink);letter-spacing:-.03em;margin-bottom:.35rem;}
 .form-intro{font-size:.92rem;color:var(--im);line-height:1.7;margin-bottom:2rem;}
@@ -44,8 +47,9 @@
 .cc-tel{font-size:.93rem;font-weight:700;color:var(--p);margin-top:.5rem;display:block;text-decoration:none;}
 .cc-tel:hover{color:var(--pm);}
 .cc-addr{font-size:.82rem;color:var(--im);line-height:1.7;margin-top:.35rem;}
-@media(max-width:880px){.contact-layout{grid-template-columns:1fr;}.frow{grid-template-columns:1fr;}}
-@media(max-width:480px){.form-section{padding:1.3rem;}}
+@media(max-width:680px){.frow{grid-template-columns:1fr;}.contact-sidebar{grid-template-columns:1fr;}}
+@media(max-width:480px){.form-section{padding:1.3rem 1rem;}}
+@media(max-width:380px){.form-section{padding:1rem 0.75rem;}}
 .fgrp input.field-error,.fgrp select.field-error,.fgrp textarea.field-error{border-color:#e53e3e;box-shadow:0 0 0 3px rgba(229,62,62,.12);}
 .err-msg{display:block;font-size:.75rem;color:#e53e3e;margin-top:.28rem;font-weight:600;}
 </style>
@@ -412,5 +416,8 @@
   if (lt) lt.addEventListener('click', function(){ window.location.href='../contact.html'; });
 })();
 </script>
+<script src="../reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

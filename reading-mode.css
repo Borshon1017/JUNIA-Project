@@ -1,0 +1,308 @@
+/* ─── READING MODE — reading-mode.css ─── */
+/* Delete this file + its <link> tag to remove the feature entirely. */
+
+/* ── Floating toggle button ── */
+#rm-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 10000;
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .52rem 1.15rem;
+  border-radius: 99px;
+  border: none;
+  cursor: pointer;
+  background: var(--p, #3F2A56);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(63,42,86,.3);
+  transition: background .2s, box-shadow .2s, transform .15s;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+}
+#rm-btn:hover {
+  background: var(--pm, #5a3d78);
+  box-shadow: 0 6px 24px rgba(63,42,86,.38);
+  transform: translateY(-1px);
+}
+#rm-btn.rm-active {
+  background: var(--c, #FF5C39);
+  box-shadow: 0 4px 18px rgba(255,92,57,.3);
+}
+#rm-btn.rm-active:hover {
+  background: var(--cd, #d94420);
+  box-shadow: 0 6px 24px rgba(255,92,57,.38);
+}
+#rm-btn:focus-visible {
+  outline: 2px solid var(--p, #3F2A56);
+  outline-offset: 3px;
+}
+
+/* ── Print shortcut (only visible in reading mode) ── */
+#rm-print {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 9.5rem;
+  z-index: 10000;
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .5rem .95rem;
+  border-radius: 99px;
+  border: 1.5px solid rgba(63,42,86,.22);
+  cursor: pointer;
+  background: transparent;
+  color: var(--p, #3F2A56);
+  transition: background .18s, border-color .18s;
+  display: none;
+  align-items: center;
+  gap: .38rem;
+  white-space: nowrap;
+  line-height: 1;
+}
+#rm-print:hover {
+  background: var(--ps, #ede8f4);
+  border-color: var(--p, #3F2A56);
+}
+#rm-print:focus-visible {
+  outline: 2px solid var(--p, #3F2A56);
+  outline-offset: 3px;
+}
+body.reading-mode #rm-print { display: inline-flex; }
+
+/* ── Toast notification ── */
+#rm-toast {
+  position: fixed;
+  bottom: 4.4rem;
+  right: 1.5rem;
+  z-index: 10000;
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  font-size: .76rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--ink, #16100f);
+  padding: .52rem 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0,0,0,.18);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .28s, transform .28s;
+  max-width: 22rem;
+  line-height: 1.4;
+}
+#rm-toast.rm-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ════════════════════════════════════════
+   READING MODE — active state
+   ════════════════════════════════════════ */
+
+body.reading-mode {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* ── Hide chrome ── */
+body.reading-mode nav,
+body.reading-mode header,
+body.reading-mode footer,
+body.reading-mode .mq-band,
+body.reading-mode .nsec,
+body.reading-mode .tsec,
+body.reading-mode .ecosec,
+body.reading-mode .ctasec,
+body.reading-mode .cta-band,
+body.reading-mode .breadcrumb,
+body.reading-mode .hero-vis,
+body.reading-mode .hero-stats,
+body.reading-mode .hero-btns,
+body.reading-mode .page-hero .hero-btns,
+body.reading-mode .eyebrow,
+body.reading-mode .tessec,
+body.reading-mode img[alt=""] {
+  display: none !important;
+}
+
+/* ── Buttons (non-toggle) ── */
+body.reading-mode .btn:not(#rm-btn):not(#rm-print) {
+  display: none !important;
+}
+
+/* ── Decorative icon boxes ── */
+body.reading-mode .feat-ico,
+body.reading-mode .card-ico,
+body.reading-mode .cc-ico,
+body.reading-mode .cc-ico-sym,
+body.reading-mode .spec-ico,
+body.reading-mode .deb-ico,
+body.reading-mode .ii-ico,
+body.reading-mode .prog-badge,
+body.reading-mode .page-hero-dots,
+body.reading-mode .tl-dot,
+body.reading-mode .stat-bar,
+body.reading-mode [class$="-ico"],
+body.reading-mode [class*="-ico "] {
+  display: none !important;
+}
+
+/* ── Section backgrounds → white ── */
+body.reading-mode .hero,
+body.reading-mode .sec,
+body.reading-mode .wsec,
+body.reading-mode .progs,
+body.reading-mode .content-sec,
+body.reading-mode .page-hero {
+  background: #fff !important;
+  padding: 3rem 1.5rem !important;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: none !important;
+}
+
+/* ── Typography: serif, centered, comfortable ── */
+body.reading-mode h1,
+body.reading-mode h2,
+body.reading-mode h3,
+body.reading-mode h4,
+body.reading-mode h5,
+body.reading-mode h6 {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  color: #000 !important;
+  letter-spacing: -.01em !important;
+  line-height: 1.25 !important;
+}
+
+body.reading-mode p,
+body.reading-mode li,
+body.reading-mode .hero-sub,
+body.reading-mode .ssub,
+body.reading-mode .sub,
+body.reading-mode .pdesc,
+body.reading-mode .card-txt,
+body.reading-mode .feat-txt,
+body.reading-mode .tebody,
+body.reading-mode .ii-val,
+body.reading-mode .fdesc {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: 1.1rem !important;
+  line-height: 1.8 !important;
+  color: #000 !important;
+}
+
+body.reading-mode .slbl {
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif !important;
+  font-size: .72rem !important;
+  color: var(--c, #FF5C39) !important;
+}
+
+body.reading-mode .sttl {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  color: #000 !important;
+  text-align: left !important;
+}
+
+body.reading-mode .ssub {
+  text-align: left !important;
+  max-width: none !important;
+  margin: 0 0 1.5rem !important;
+}
+
+/* ── Collapse grids to single column ── */
+body.reading-mode .pgrid,
+body.reading-mode .card-grid,
+body.reading-mode .info-grid,
+body.reading-mode .info-grid.three,
+body.reading-mode .feats,
+body.reading-mode .tegrid,
+body.reading-mode .ngrid {
+  grid-template-columns: 1fr !important;
+  gap: 1rem !important;
+}
+
+/* ── Inline links ── */
+body.reading-mode a {
+  color: var(--p, #3F2A56) !important;
+}
+
+/* ── Page hero in reading mode ── */
+body.reading-mode .page-hero {
+  color: #000 !important;
+}
+body.reading-mode .page-hero h1,
+body.reading-mode .page-hero .sub {
+  color: #000 !important;
+}
+
+/* ── Card simplification ── */
+body.reading-mode .pc,
+body.reading-mode .card,
+body.reading-mode .feat-item,
+body.reading-mode .feat {
+  background: #f9f9f9 !important;
+  border-color: #e0e0e0 !important;
+  box-shadow: none !important;
+  padding-top: 1rem !important;
+}
+/* Remove colored top band from programme cards */
+body.reading-mode .pc::before { display: none !important; }
+
+/* ════════════════════════════════════════
+   PRINT — reading-mode layout auto-applied
+   ════════════════════════════════════════ */
+@media print {
+  /* Extend the display:none already set by styles.css / page.css */
+  nav, header, footer,
+  .mq-band, .nsec, .tsec, .ecosec, .ctasec, .cta-band,
+  .breadcrumb, .hero-vis, .hero-stats, .hero-btns,
+  .page-hero .hero-btns, .eyebrow, .tessec,
+  img[alt=""],
+  #rm-btn, #rm-print, #rm-toast,
+  .btn:not(#rm-btn):not(#rm-print) { display: none !important; }
+
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 11pt !important;
+  }
+
+  .hero, .sec, .wsec, .progs, .content-sec, .page-hero {
+    background: #fff !important;
+    padding: 1.5rem 0 !important;
+    max-width: 65ch;
+    margin: 0 auto;
+    box-shadow: none !important;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    color: #000 !important;
+  }
+
+  p, li, .hero-sub, .ssub, .pdesc, .card-txt {
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: 11pt !important;
+    line-height: 1.7 !important;
+    color: #000 !important;
+  }
+
+  a { color: #000 !important; text-decoration: underline; }
+
+  .pgrid, .card-grid, .info-grid { grid-template-columns: 1fr !important; gap: .75rem !important; }
+
+  .pc::before { display: none !important; }
+  .pc, .card, .feat-item { background: #f9f9f9 !important; border: 1px solid #ddd !important; box-shadow: none !important; padding-top: 1rem !important; }
+
+  /* Force page breaks to avoid orphaned section headers */
+  h2 { page-break-after: avoid; }
+  p, li { orphans: 3; widows: 3; }
+}

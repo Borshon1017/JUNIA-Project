@@ -8,6 +8,8 @@
 <meta name="color-scheme" content="light">
 <title>Entreprises & Partenariats — JUNIA</title>
 <link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 <link rel="alternate" hreflang="en" href="en/entreprises.html">
 <link rel="alternate" hreflang="fr" href="entreprises.html">
 </head>
@@ -240,5 +242,8 @@
 </footer>
 <script src="page.js"></script>
 <script src="page-search.js"></script>
+<script src="reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

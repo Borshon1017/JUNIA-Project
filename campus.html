@@ -8,6 +8,8 @@
 <meta name="color-scheme" content="light">
 <title>Nos Campus — JUNIA, Grande École des Transitions</title>
 <link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 <style>
 .campus-hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem;margin-top:2.8rem;}
 .c-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);transition:all .3s var(--ease);}
@@ -250,5 +252,8 @@
 </footer>
 <script src="page.js"></script>
 <script src="page-search.js"></script>
+<script src="reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

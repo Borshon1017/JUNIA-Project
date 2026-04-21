@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ISA — Agriculture, Food &amp; Environment Engineer — JUNIA</title>
 <link rel="stylesheet" href="../page.css">
+<link rel="stylesheet" href="../reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 </head>
 <body>
 <nav>
@@ -175,5 +177,8 @@
   if(btn) btn.addEventListener('click', function(){ window.location.href='../isa.html'; });
 })();
 </script>
+<script src="../reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

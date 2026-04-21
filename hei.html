@@ -8,6 +8,8 @@
 <title>HEI — Ingénieur Généraliste, Énergie & Transitions — JUNIA</title>
 <meta name="description" content="HEI, programme Grande École de JUNIA : formations ingénieur en énergie, bâtiment durable, industrie 4.0 et transitions énergétiques. Accrédité CTI depuis 1885.">
 <link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 <style>
 .hei-hero{background:#3F2A56;}
 .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;}
@@ -325,5 +327,8 @@
 </footer>
 <script src="page.js"></script>
 <script src="page-search.js"></script>
+<script src="reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

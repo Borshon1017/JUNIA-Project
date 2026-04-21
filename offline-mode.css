@@ -1,0 +1,362 @@
+/* ─── OFFLINE MODE — offline-mode.css ────────────────────────────────────
+   Delete this file + its <link> tag to remove the feature entirely.
+   All reading-mode rules are prefixed with body.reading-mode —
+   zero visual effect when that class is absent.
+   ───────────────────────────────────────────────────────────────────── */
+
+/* ── Smooth body transitions (applies always, harmless) ── */
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ══════════════════════════════════════════════
+   OFFLINE / STATUS BANNER
+   ══════════════════════════════════════════════ */
+#om-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .45);
+
+  /* Hidden by default — slides in when .om-show is added */
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.32s cubic-bezier(.4, 0, .2, 1),
+              opacity 0.32s ease;
+}
+#om-banner.om-show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+#om-banner.om-fade {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+
+/* Pulsing status dot */
+#om-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #ff4444;
+  animation: om-pulse 1.5s ease-in-out infinite;
+}
+#om-dot.om-online {
+  background: #44cc88;
+  animation: none;
+}
+@keyframes om-pulse {
+  0%, 100% { opacity: 1; transform: scale(1);    }
+  50%       { opacity: .5; transform: scale(1.4); }
+}
+
+/* Status text */
+#om-status {
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* Dismiss (✕) button */
+#om-dismiss {
+  background: none;
+  border: none;
+  color: rgba(245, 245, 245, .55);
+  font-size: 15px;
+  line-height: 1;
+  padding: 2px 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 4px;
+  transition: color 0.18s;
+}
+#om-dismiss:hover   { color: #f5f5f5; }
+#om-dismiss:focus-visible {
+  outline: 1px solid rgba(245, 245, 245, .5);
+  border-radius: 3px;
+}
+
+/* ══════════════════════════════════════════════
+   FLOATING MANUAL-TOGGLE BUTTON
+   ══════════════════════════════════════════════ */
+#om-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 10000;
+
+  font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .52rem 1.15rem;
+  border-radius: 99px;
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+
+  /* Default (outside reading mode): white button, dark text */
+  background: #ffffff;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .12);
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+#om-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .16);
+}
+#om-btn:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+/* In reading mode: flip to dark button with white text */
+body.reading-mode #om-btn {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3) !important;
+}
+body.reading-mode #om-btn:hover {
+  background: #333333 !important;
+  transform: translateY(-1px);
+}
+
+/* Hide reading-mode.js's button — offline-mode.js provides #om-btn with correct language */
+#rm-btn { display: none !important; }
+
+/* Also fix #rm-btn (from reading-mode.js) when it acts as our toggle */
+body.reading-mode #rm-btn {
+  background: #1a1a1a !important;
+  color: #ffffff !important;
+  border: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3) !important;
+}
+body.reading-mode #rm-btn:hover {
+  background: #333333 !important;
+}
+
+/* ══════════════════════════════════════════════
+   READING-MODE NAVIGATION BAR
+   Injected by JS; only present when body.reading-mode is active.
+   ══════════════════════════════════════════════ */
+#reading-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9998;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 13px;
+  color: #111;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.rn-left {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0;
+  row-gap: 4px;
+}
+
+.rn-brand {
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 14px;
+  color: #111;
+  margin-right: 20px;
+  letter-spacing: .05em;
+  user-select: none;
+}
+
+.rn-link {
+  color: #111;
+  text-decoration: none;
+  font-size: 13px;
+  margin-right: 16px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+  white-space: nowrap;
+}
+.rn-link:hover {
+  border-color: #888;
+}
+.rn-link.rn-active {
+  font-weight: bold;
+  border-bottom: 1px solid #111;
+}
+
+.rn-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.rn-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.rn-dot-online  { background: #44cc88; }
+.rn-dot-offline {
+  background: #ff4444;
+  animation: om-pulse 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 600px) {
+  #reading-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 8px 12px;
+  }
+  .rn-left {
+    row-gap: 6px;
+  }
+  .rn-brand {
+    font-size: 12px;
+    margin-right: 12px;
+  }
+  .rn-link {
+    font-size: 11px;
+    margin-right: 10px;
+  }
+  .rn-right {
+    font-size: 11px;
+  }
+}
+
+/* ══════════════════════════════════════════════
+   READING MODE  (body.reading-mode prefix throughout)
+   ══════════════════════════════════════════════ */
+
+body.reading-mode {
+  background: #fff !important;
+  color: #111  !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: 1.15rem !important;
+  line-height: 1.85 !important;
+}
+
+/* Hide structural chrome */
+body.reading-mode nav,
+body.reading-mode header,
+body.reading-mode footer {
+  display: none !important;
+}
+
+/* Hide decorative icon boxes — purely visual, no reading value */
+body.reading-mode .feat-ico,
+body.reading-mode .card-ico,
+body.reading-mode .cc-ico,
+body.reading-mode .cc-ico-sym,
+body.reading-mode .spec-ico,
+body.reading-mode .deb-ico,
+body.reading-mode .ii-ico,
+body.reading-mode .prog-badge,
+body.reading-mode .page-hero-dots,
+body.reading-mode .tl-dot,
+body.reading-mode .stat-bar,
+body.reading-mode [class$="-ico"],
+body.reading-mode [class*="-ico "] {
+  display: none !important;
+}
+
+/* Exception: our injected reading nav must stay visible */
+body.reading-mode #reading-nav {
+  display: flex !important;
+}
+
+/* Hide elements whose class names contain these keywords */
+body.reading-mode [class*="hero"],
+body.reading-mode [class*="banner"],
+body.reading-mode [class*="decoration"],
+body.reading-mode [class*="sidebar"] {
+  display: none !important;
+}
+
+/* Hide images not inside <main> or <article> */
+body.reading-mode body > img,
+body.reading-mode img:not(main img):not(article img) {
+  display: none !important;
+}
+
+/* Keep and style main / article */
+body.reading-mode main,
+body.reading-mode article {
+  max-width: 65ch    !important;
+  margin: 0 auto     !important;
+  padding: 2rem 1rem !important;
+  /* Bottom margin so last line is never hidden behind the fixed toggle button */
+  margin-bottom: 80px !important;
+  background: #fff   !important;
+  color: #111        !important;
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: 1.15rem !important;
+  line-height: 1.85  !important;
+  display: block     !important;
+}
+
+/* Headings */
+body.reading-mode h1,
+body.reading-mode h2,
+body.reading-mode h3,
+body.reading-mode h4,
+body.reading-mode h5,
+body.reading-mode h6 {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  color: #111 !important;
+  letter-spacing: -.01em !important;
+  line-height: 1.25 !important;
+}
+
+/* Body copy */
+body.reading-mode p,
+body.reading-mode li,
+body.reading-mode blockquote {
+  font-family: Georgia, 'Times New Roman', serif !important;
+  font-size: 1.15rem !important;
+  line-height: 1.85  !important;
+  color: #111 !important;
+}
+
+/* Inline links — high specificity to beat body.reading-mode a rules */
+body.reading-mode a {
+  color: #3F2A56 !important;
+}
+
+/* Reading nav links must not inherit the purple link colour */
+#reading-nav a,
+#reading-nav .rn-link {
+  color: #111 !important;
+}

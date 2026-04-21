@@ -7,6 +7,8 @@
 <meta name="color-scheme" content="light">
 <title>Message sent — JUNIA</title>
 <link rel="stylesheet" href="../page.css">
+<link rel="stylesheet" href="../reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 </head>
 <body>
 <nav>
@@ -68,5 +70,8 @@
   if (btn) btn.addEventListener('click', function(){ window.location.href = '../merci.html'; });
 })();
 </script>
+<script src="../reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

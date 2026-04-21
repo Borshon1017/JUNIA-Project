@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Apply — Admissions — JUNIA</title>
 <link rel="stylesheet" href="../page.css">
+<link rel="stylesheet" href="../reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 </head>
 <body><nav>
   <a href="index.html" class="logo">JUNIA</a>
@@ -164,5 +166,8 @@
 </footer>
 <script src="../page.js"></script>
 <script src="en-page.js"></script>
+<script src="../reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

@@ -7,6 +7,8 @@
 <meta name="color-scheme" content="light">
 <title>Accessibilité & Mission Handicap — JUNIA</title>
 <link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 </head>
 <body>
 
@@ -173,6 +175,9 @@
 
 <script src="page.js"></script>
 <script src="page-search.js"></script>
+<script src="reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>
     <span>© 2025 JUNIA — Grande École des Transitions · Lille · Bordeaux · Château

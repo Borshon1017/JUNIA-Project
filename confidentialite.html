@@ -7,6 +7,8 @@
 <meta name="color-scheme" content="light">
 <title>Politique de confidentialité — JUNIA</title>
 <link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 </head>
 <body>
 <nav>
@@ -90,6 +92,9 @@
 
 <script src="page.js"></script>
 <script src="page-search.js"></script>
+<script src="reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>
   <div class="fbot"><span>© 2025 JUNIA — Grande École des Transitions · Lill

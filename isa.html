@@ -8,6 +8,8 @@
 <title>ISA — Ingénieur Agri-Alimentaire & Environnement — JUNIA</title>
 <meta name="description" content="ISA, programme Grande École de JUNIA : formations ingénieur en agroécologie, alimentation durable, sciences du vivant et transitions agricoles. Accrédité CTI.">
 <link rel="stylesheet" href="page.css">
+<link rel="stylesheet" href="reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 <style>
 .isa-hero{background:#0f2a10;}
 .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem;}
@@ -314,5 +316,8 @@
 </footer>
 <script src="page.js"></script>
 <script src="page-search.js"></script>
+<script src="reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>

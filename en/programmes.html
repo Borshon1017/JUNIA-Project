@@ -6,6 +6,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Grande École Programmes — HEI · ISEN · ISA — JUNIA</title>
 <link rel="stylesheet" href="../page.css">
+<link rel="stylesheet" href="../reading-mode.css">
+<link rel="stylesheet" href="/offline-mode.css">
 <style>
 .prog-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.35rem;margin-top:2.5rem;}
 .prog-card{border-radius:var(--r);overflow:hidden;border:1px solid var(--br);transition:all .3s var(--ease);}
@@ -261,5 +263,8 @@
   if(btn) btn.addEventListener('click', function(){ window.location.href='../programmes.html'; });
 })();
 </script>
+<script src="../reading-mode.js"></script>
+<script src="/offline-mode.js" defer></script>
+<script>if("serviceWorker"in navigator)navigator.serviceWorker.register("/sw.js");</script>
 </body>
 </html>
